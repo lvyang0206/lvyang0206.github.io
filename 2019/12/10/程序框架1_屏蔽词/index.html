@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hello World | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="#利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能1.分词：对获取的评论进行分词处理，采用的是jieba分词2.去除无意义词：采用的是哈工大的词表，遍历每一条评论，判断是否在无用词表（这里主要包含特殊字符，标点符号，感叹词等）中，从而达到去除无意词的效果3.通过评论建立自己的词库，采用并集处理，达到词库中词的唯一性4.建立向量：将去除无意词后的评论装换成稀疏矩阵，采用的是多项式模型，这里考虑到评论一般都">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2019/07/15/hello-world/index.html">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2019/12/10/程序框架1_屏蔽词/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="#利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能1.分词：对获取的评论进行分词处理，采用的是jieba分词2.去除无意义词：采用的是哈工大的词表，遍历每一条评论，判断是否在无用词表（这里主要包含特殊字符，标点符号，感叹词等）中，从而达到去除无意词的效果3.通过评论建立自己的词库，采用并集处理，达到词库中词的唯一性4.建立向量：将去除无意词后的评论装换成稀疏矩阵，采用的是多项式模型，这里考虑到评论一般都">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-15T04:40:15.045Z">
+<meta property="og:updated_time" content="2019-12-10T13:02:59.016Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="#利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能1.分词：对获取的评论进行分词处理，采用的是jieba分词2.去除无意义词：采用的是哈工大的词表，遍历每一条评论，判断是否在无用词表（这里主要包含特殊字符，标点符号，感叹词等）中，从而达到去除无意词的效果3.通过评论建立自己的词库，采用并集处理，达到词库中词的唯一性4.建立向量：将去除无意词后的评论装换成稀疏矩阵，采用的是多项式模型，这里考虑到评论一般都">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -162,39 +162,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-程序框架1_屏蔽词" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Hello World
-    </h1>
-  
-
-        
-        <a href="/2019/07/15/hello-world/" class="archive-article-date">
-  	<time datetime="2019-07-15T04:40:15.045Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-15</time>
-</a>
-        
-      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h2 id="利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能"><a href="#利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能" class="headerlink" title="#利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能"></a>#利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能</h2><p>1.分词：对获取的评论进行分词处理，采用的是jieba分词<br>2.去除无意义词：采用的是哈工大的词表，遍历每一条评论，判断是否在无用词表（这里主要包含特殊字符，标点符号，感叹词等）中，从而达到去除无意词的效果<br>3.通过评论建立自己的词库，采用并集处理，达到词库中词的唯一性<br>4.建立向量：将去除无意词后的评论装换成稀疏矩阵，采用的是多项式模型，这里考虑到评论一般都比较短小，相对来说，几乎每一个词都会影响到最终的判断，所以采用多项式模型，而没有采用伯努利模型<br>5.划分训练集和测试集：采用random.shuffle()函数将数据随机排序，然后再通过切片处理划分数据，为了保证每条评论与其对应的标签保持一致，采用zip()函数将评论和标签绑定在一起<br>6.调用sklearn里面内置的贝叶斯算法接口</p>
+<hr>
+<h2 id="框架："><a href="#框架：" class="headerlink" title="框架："></a>框架：</h2><p>1、#导入需要的库<br>2、# 分词<br>3、# 去停用词<br>4、# 创建词库<br>5、# 构建词向量<br>6、# 划分训练和测试集<br>7、# 读取原始评论集，传入评论集的路径<br>8、#先通过调用AC自动机对原始评论（仅仅使用分词操作）进行判断。如果判断成功，说明包含有特别敏感的词，即可判断该评论为负面评论，就无需调用贝叶斯算法判断。如果判断失败，则在将评论转化为向量，然后调用贝叶斯算法判断。<br>9、# AC自动机算法<br>10、# 调用贝叶斯接口，传入训练集进行训练<br>11、# 实例化AC自动机的一个对象<br>12、# 传入敏感词材料，读取敏感词<br>13、# 先调用AC自动机判断，判断失败则再掉用贝叶斯算法判断<br>14、输出结果</p>
 
       
 
@@ -284,7 +259,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/15/hello-world/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/12/10/程序框架1_屏蔽词/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -298,15 +273,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/12/10/程序框架2_文本分类/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          (no title)
-        
-      </div>
-    </a>
   
+    <a href="/2019/12/10/程序框架2_文本分类/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -331,7 +302,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能"><span class="toc-number">1.</span> <span class="toc-text">#利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#框架："><span class="toc-number">2.</span> <span class="toc-text">框架：</span></a></li></ol>
                     </div>
                 </span>
             </div>
