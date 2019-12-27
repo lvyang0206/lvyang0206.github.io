@@ -368,28 +368,14 @@
 
       
         
-          
-            <h1 id="二、使用python和sklearn的中文文本多分类"><a href="#二、使用python和sklearn的中文文本多分类" class="headerlink" title="二、使用python和sklearn的中文文本多分类"></a>二、使用python和sklearn的中文文本多分类</h1><p>介绍：<br>文本分类一般可以分为二分类、多分类、多标签分类三种情况,二分类是指将一组文本分成两个类(0或1),比较常见的应用如垃圾邮件分类、电商网站的用户评价数据的正负面分类等,多分类是指将文本分成若干个类中的某一个类,比如说门户网站新闻可以归属到不同的栏目中(如政治、体育、社会、科技、金融等栏目)去。多标签分类指的是可以将文本分成若干个类中的多个类,比如一篇文章里即描写政治又描写金融等内容，那么这篇文章可能会别贴上政治和金融两个标签。今天我尝试使用Python和sklearn来实现一下文本的多分类实战开发。</p>
-<hr>
-<p>框架：<br>1、下载数据并分析<br>2、数据预处理<br>3、将cat类转换成id，这样便于以后的分类模型的训练。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">我们将cat转换成了Id(0到9),由于我们的评价内容都是中文,所以要对中文进行一些预处理工作,这包括删除文本中的标点符号,特殊符号,</span><br><span class="line">还要删除一些无意义的常用词(stopword),因为这些词和符号对系统分析预测文本的内容没有任何帮助,反而会增加计算的复杂度和增加系统开销,所有在使用这些文本数据之前必须要将它们清理干净。</span><br></pre></td></tr></table></figure>
-
-<p>4、去除停用词</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">中文停用词包含了很多日常使用频率很高的常用词,如 吧，吗，呢，啥等一些感叹词等,这些高频常用词无法反应出文本的主要意思,</span><br><span class="line">所以要被过滤掉。可以在这里下载中文停用词。</span><br></pre></td></tr></table></figure>
-
-<p>5、计算TF-IDF的特征值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">接下来我要计算cut_review的 TF-IDF的特征值，TF-IDF（term frequency–inverse document frequency）是一种用于信息检索与数据挖掘的常用加权技术。</span><br><span class="line">TF意思是词频(Term Frequency)，IDF意思是逆文本频率指数(Inverse Document Frequency)。TF-IDF是在单词计数的基础上，降低了常用高频词的权重,增加罕见词的权重。因为罕见词更能表达文章的主题思想,比如在一篇文章中出现了“中国”和“卷积神经网络”两个词,那么后者将更能体现文章的主题思想,而前者是常见的高频词,它不能表达文章的主题思想。所以“卷积神经网络”的TF-IDF值要高于“中国”的TF-IDF值。</span><br><span class="line">这里我们会使用sklearn.feature_extraction.text.TfidfVectorizer方法来抽取文本的TF-IDF的特征值。这里我们使用了参数ngram_range=(1,2),这表示我们除了抽取评论中的每个词语外,还要抽取每个词相邻的词并组成一个“词语对”,如: 词1，词2，词3，词4，(词1，词2)，(词2,词3)，(词3，词4)。</span><br><span class="line">这样就扩展了我们特征集的数量,有了丰富的特征集才有可能提高我们分类文本的准确度。参数norm=&apos;l2&apos;,是一种数据标准划处理的方式,可以将数据限制在一点的范围内比如说(-1,1)</span><br></pre></td></tr></table></figure>
-
-<p>6、分类器选择</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">为了训练监督学习的分类器，我们首先将“review”转变为包含数字的词向量。例如我们前面已经转换好的tf-idf的features。</span><br><span class="line">当我们有了词向量以后我们就可以开始训练我们的分类器。分类器训练完成后,就可以对没有见过的review进行预测。</span><br></pre></td></tr></table></figure>
-
-<p>7、使用朴素贝叶斯MultinomialNB（多项式模型）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">朴素贝叶斯分类器最适合用于基于词频的高维数据分类器，最典型的应用如垃圾邮件分类器等,准确率可以高达95%以上。这里我们使用的是sklearn的朴素贝叶斯分类器MultinomialNB，我们首先将review转换成词频向量,然后将词频向量再转换成TF-IDF向量，还有一种简化的方式是直接TfidfVectorizer来生成TF-IDF向量(正如前面生成features的过程)，这里我们还是按照一般的方式将生成TF-IDF向量分成两个步骤：</span><br><span class="line">1.生成词频向量. 2.生成TF-IDF向量。最后我们开始训练我们的MultinomialNB分类器。</span><br></pre></td></tr></table></figure>
-
-<p>8、模型的评估<br>接下来我们尝试不同的机器学习模型,并评估它们的准确率，我们将使用如下四种模型:</p>
-<p>Logistic Regression(逻辑回归)<br>(Multinomial) Naive Bayes(多项式朴素贝叶斯)<br>Linear Support Vector Machine(线性支持向量机)<br>Random Forest(随机森林)</p>
-
-          
+          <h1 id="二、使用python和sklearn的中文文本多分类"><a href="#二、使用python和sklearn的中文文本多分类" class="headerlink" title="二、使用python和sklearn的中文文本多分类"></a>二、使用python和sklearn的中文文本多分类</h1><p>介绍：<br>文本分类一般可以分为二分类、多分类、多标签分类三种情况,二分类是指将一组文本分成两个类(0或1),比较常见的应用如垃圾邮件分类、电商网站的用户评价数据的正负面分类等,多分类是指将文本分成若干个类中的某一个类,比如说门户网站新闻可以归属到不同的栏目中(如政治、体育、社会、科技、金融等栏目)去。多标签分类指的是可以将文本分成若干个类中的多个类,比如一篇文章里即描写政治又描写金融等内容，那么这篇文章可能会别贴上政治和金融两个标签。今天我尝试使用Python和sklearn来实现一下文本的多分类实战开发。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/12/27/程序框架2_文本分类/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -522,9 +508,7 @@
       
         
           <h1 id="Hexo-blog"><a href="#Hexo-blog" class="headerlink" title="Hexo_blog"></a>Hexo_blog</h1><ul>
-<li><strong>增加版权功能（CopyRight）</strong><br>[toc]</li>
-</ul>
-<hr>
+<li><strong>增加版权功能（CopyRight）</strong>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2019/12/27/1_Hexo_blog-增加版权功能（CopyRight）/#more" rel="contents">
@@ -534,7 +518,7 @@
           <!--/noindex-->
         
       
-    </div>
+    </li></ul></div>
     
     
     
@@ -685,13 +669,14 @@
 
       
         
-          
-            <h1 id="一、利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能"><a href="#一、利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能" class="headerlink" title="一、利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能"></a>一、利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能</h1><hr>
-<p>1.分词：对获取的评论进行分词处理，采用的是jieba分词<br>2.去除无意义词：采用的是哈工大的词表，遍历每一条评论，判断是否在无用词表（这里主要包含特殊字符，标点符号，感叹词等）中，从而达到去除无意词的效果<br>3.通过评论建立自己的词库，采用并集处理，达到词库中词的唯一性<br>4.建立向量：将去除无意词后的评论装换成稀疏矩阵，采用的是多项式模型，这里考虑到评论一般都比较短小，相对来说，几乎每一个词都会影响到最终的判断，所以采用多项式模型，而没有采用伯努利模型<br>5.划分训练集和测试集：采用random.shuffle()函数将数据随机排序，然后再通过切片处理划分数据，为了保证每条评论与其对应的标签保持一致，采用zip()函数将评论和标签绑定在一起<br>6.调用sklearn里面内置的贝叶斯算法接口</p>
-<hr>
-<h2 id="框架："><a href="#框架：" class="headerlink" title="框架："></a>框架：</h2><p>1、#导入需要的库<br>2、# 分词<br>3、# 去停用词<br>4、# 创建词库<br>5、# 构建词向量<br>6、# 划分训练和测试集<br>7、# 读取原始评论集，传入评论集的路径<br>8、#先通过调用AC自动机对原始评论（仅仅使用分词操作）进行判断。如果判断成功，说明包含有特别敏感的词，即可判断该评论为负面评论，就无需调用贝叶斯算法判断。如果判断失败，则在将评论转化为向量，然后调用贝叶斯算法判断。<br>9、# AC自动机算法<br>10、# 调用贝叶斯接口，传入训练集进行训练<br>11、# 实例化AC自动机的一个对象<br>12、# 传入敏感词材料，读取敏感词<br>13、# 先调用AC自动机判断，判断失败则再掉用贝叶斯算法判断<br>14、输出结果</p>
-
-          
+          <h1 id="一、利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能"><a href="#一、利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能" class="headerlink" title="一、利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能"></a>一、利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能</h1><hr>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/12/27/程序框架1_屏蔽词/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
