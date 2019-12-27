@@ -2,6 +2,8 @@
 
 
 
+
+
   
 
 
@@ -83,7 +85,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能">
 <meta property="og:url" content="http://yoursite.com/2019/12/27/程序框架1_屏蔽词/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="像我这样优秀的人">
 <meta property="og:description" content="#利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能1.分词：对获取的评论进行分词处理，采用的是jieba分词2.去除无意义词：采用的是哈工大的词表，遍历每一条评论，判断是否在无用词表（这里主要包含特殊字符，标点符号，感叹词等）中，从而达到去除无意词的效果3.通过评论建立自己的词库，采用并集处理，达到词库中词的唯一性4.建立向量：将去除无意词后的评论装换成稀疏矩阵，采用的是多项式模型，这里考虑到评论一般都">
 <meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2019-12-27T07:23:31.617Z">
@@ -125,7 +127,7 @@
 
 
 
-  <title>利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能 | Hexo</title>
+  <title>利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能 | 像我这样优秀的人</title>
   
 
 
@@ -146,6 +148,7 @@
 
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
+    <a href="https://github.com/lvyang0206" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style></a>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
@@ -155,12 +158,12 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Hexo</span>
+        <span class="site-title">像我这样优秀的人</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <p class="site-subtitle"></p>
+        <p class="site-subtitle">宁缺勿滥</p>
       
   </div>
 
@@ -271,7 +274,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="像我这样优秀的人">
     </span>
 
     
@@ -493,7 +496,7 @@
               <img class="site-author-image" itemprop="image" src="/images/head.jpg" alt="Pumpkin">
             
               <p class="site-author-name" itemprop="name">Pumpkin</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">宁缺勿滥</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -666,6 +669,8 @@ setInterval("createtime()",250);
   
 
 
+  
+
 
 
 
@@ -704,6 +709,11 @@ setInterval("createtime()",250);
   
   
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
 
@@ -816,4 +826,7 @@ setInterval("createtime()",250);
   
 
 </body>
+  
+    <script type="text/javascript" color="0,0,255" opacity="0.7" zindex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
 </html>
