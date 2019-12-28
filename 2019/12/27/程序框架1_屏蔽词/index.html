@@ -7,7 +7,7 @@
   
 
 
-<html class="theme-next gemini use-motion" lang>
+<html class="theme-next gemini use-motion" lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -85,18 +85,18 @@
 
 
 
-<meta name="description" content="一、利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能">
+<meta name="description" content="一、利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能朴素贝叶斯算法实现新闻敏感词的屏蔽">
 <meta name="keywords" content="机器学习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一、利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能">
 <meta property="og:url" content="http://yoursite.com/2019/12/27/程序框架1_屏蔽词/index.html">
 <meta property="og:site_name" content="像我这样优秀的人">
-<meta property="og:description" content="一、利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能">
-<meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-12-27T13:06:11.266Z">
+<meta property="og:description" content="一、利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能朴素贝叶斯算法实现新闻敏感词的屏蔽">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-12-28T04:48:59.196Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一、利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能">
-<meta name="twitter:description" content="一、利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能">
+<meta name="twitter:description" content="一、利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能朴素贝叶斯算法实现新闻敏感词的屏蔽">
 
 
 
@@ -106,13 +106,13 @@
     root: '/',
     scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -158,7 +158,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
@@ -207,7 +207,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
-            Home
+            首页
           </a>
         </li>
       
@@ -217,7 +217,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
             
-            About
+            关于
           </a>
         </li>
       
@@ -227,7 +227,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
-            Tags
+            标签
           </a>
         </li>
       
@@ -237,7 +237,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
-            Categories
+            分类
           </a>
         </li>
       
@@ -247,7 +247,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
-            Archives
+            归档
           </a>
         </li>
       
@@ -260,7 +260,7 @@
             
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
             
-            Search
+            搜索
           </a>
         </li>
       
@@ -279,7 +279,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -343,9 +343,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-27T15:11:26+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-27T15:11:26+08:00">
                 2019-12-27
               </time>
             
@@ -364,7 +364,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">In</span>
+                <span class="post-meta-item-text">分类于</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -410,10 +410,10 @@
                   <i class="fa fa-file-word-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                  <span class="post-meta-item-text">字数统计&#58;</span>
                 
-                <span title="Words count in article">
-                  532
+                <span title="字数统计">
+                  549
                 </span>
               
 
@@ -426,9 +426,9 @@
                   <i class="fa fa-clock-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="Reading time">
+                <span title="阅读时长">
                   1
                 </span>
               
@@ -450,7 +450,9 @@
       
 
       
-        <h1 id="一、利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能"><a href="#一、利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能" class="headerlink" title="一、利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能"></a>一、利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能</h1><hr>
+        <h1 id="一、利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能"><a href="#一、利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能" class="headerlink" title="一、利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能"></a>一、利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能</h1><blockquote class="blockquote-center"><p>朴素贝叶斯算法实现新闻敏感词的屏蔽 </p>
+</blockquote>
+<hr>
 <a id="more"></a>
 <p>1.分词：对获取的评论进行分词处理，采用的是jieba分词<br>2.去除无意义词：采用的是哈工大的词表，遍历每一条评论，判断是否在无用词表（这里主要包含特殊字符，标点符号，感叹词等）中，从而达到去除无意词的效果<br>3.通过评论建立自己的词库，采用并集处理，达到词库中词的唯一性<br>4.建立向量：将去除无意词后的评论装换成稀疏矩阵，采用的是多项式模型，这里考虑到评论一般都比较短小，相对来说，几乎每一个词都会影响到最终的判断，所以采用多项式模型，而没有采用伯努利模型<br>5.划分训练集和测试集：采用random.shuffle()函数将数据随机排序，然后再通过切片处理划分数据，为了保证每条评论与其对应的标签保持一致，采用zip()函数将评论和标签绑定在一起<br>6.调用sklearn里面内置的贝叶斯算法接口</p>
 <hr>
@@ -487,7 +489,7 @@
   <p><span>本文标题:</span>一、利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能</p>
   <p><span>文章作者:</span>Pumpkin</p>
   <p><span>发布时间:</span>2019年12月27日 - 15:11:26</p>
-  <p><span>最后更新:</span>2019年12月27日 - 21:06:11</p>
+  <p><span>最后更新:</span>2019年12月28日 - 12:48:59</p>
   <p><span>原始链接:</span><a href="/2019/12/27/程序框架1_屏蔽词/" title="一、利用朴素贝叶斯算法实现新闻敏感词的屏蔽功能">http://yoursite.com/2019/12/27/程序框架1_屏蔽词/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/12/27/程序框架1_屏蔽词/" aria-label="复制成功！"></i></span>
   </p>
@@ -513,6 +515,35 @@
 
     
 
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>如果这篇文章帮助到您，感恩你打赏一下。</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Pumpkin 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Pumpkin 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
     
 
     
@@ -603,10 +634,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
+            站点概览
           </li>
         </ul>
       
@@ -629,7 +660,7 @@
                 <a href="/archives/">
               
                   <span class="site-state-item-count">5</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
@@ -640,7 +671,7 @@
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
                   <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">categories</span>
+                  <span class="site-state-item-name">分类</span>
                 </a>
               </div>
             
@@ -651,7 +682,7 @@
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
                   <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">tags</span>
+                  <span class="site-state-item-name">标签</span>
                 </a>
               </div>
             
@@ -737,7 +768,7 @@
 <!--powered-next-->
 <!--
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
 
@@ -745,7 +776,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
 
 -->
 
