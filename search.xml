@@ -1,6 +1,228 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Java 基本语法_1</title>
+    <url>/2019/12/29/Java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="Java-基本语法-1"><a href="#Java-基本语法-1" class="headerlink" title="Java 基本语法_1"></a>Java 基本语法_1</h1><blockquote class="blockquote-center"><p>Java 基本语法_1 </p>
+</blockquote>
+<hr>
+<a id="more"></a>
+<p>The text is as follows :</p>
+<h2 id="1、-Java-平台-与-历史版本"><a href="#1、-Java-平台-与-历史版本" class="headerlink" title="1、 Java 平台 与 历史版本"></a>1、 Java 平台 与 历史版本</h2><ul>
+<li><ol>
+<li>Java 平台</li>
+</ol>
+<ul>
+<li>Java SE  标准版 - Java Standard Edition（J2SE,Java 2 Platform Standard Edition）<ul>
+<li>桌面应用</li>
+</ul>
+</li>
+<li>Java EE 企业版 - Java Enterprise Edition（J2EE,Java 2 Platform Enterprise Edition）<ul>
+<li>网络应用（Web 应用）</li>
+</ul>
+</li>
+<li>Java ME 微型版 Java Mirco Edition（J2ME,Java 2 Platform Mirco Edition）<ul>
+<li>手机应用</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><ol start="2">
+<li>Java 历史版本</li>
+</ol>
+<ul>
+<li>Java 1.0 -1995</li>
+<li>Java 1.2 -1998 Java 2</li>
+<li>Java 1.3 -改进</li>
+<li>Java 1.4 -稳定</li>
+<li>Java 1.5（Java 5）- 增加语法</li>
+<li>Java 1.6（Java 6）- 广泛</li>
+<li>Oracle并购Sun</li>
+<li>Java 1.7（Java 7） 2011</li>
+<li>Java 1.8（Java 8） 2014<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">注释：  2004 年 J2SE 1.5 更名为 J2SE 5.0 里程碑事件</span><br><span class="line">        2005 年 Java各种版本取消了其中数字 2 ：</span><br><span class="line">        J2SE 更名为 Java SE</span><br><span class="line">        J2EE 更名为 Java EE</span><br><span class="line">        J2ME 更名为 Java ME</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>3.Java 推动力</p>
+<ul>
+<li>JCP (Java Community Process) Java 社区过程</li>
+<li>JSR (Java Specification Requests)   Java 规范<ul>
+<li>不同规范不一样</li>
+<li>eg：JSR 335 <ul>
+<li>Lambda Expressions for the Java Programming Language（Lambda 表达式）</li>
+</ul>
+</li>
+<li>这是 Java 8 的最重要的新特性。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">注释： 1.面向对象 OO（Object-Oriented）</span><br><span class="line">       2.面向对象编程/面向对象程序设计 OOP（Object-Oriented Programming）</span><br><span class="line">       3.编程=程序设计</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="2、Java-语言的特点"><a href="#2、Java-语言的特点" class="headerlink" title="2、Java 语言的特点"></a>2、Java 语言的特点</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">注释： 1.GUI：Graphic User Interface 图形用户界面</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><ol>
+<li>简单学习</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>面向对象</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>分布式</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>高性能</li>
+</ol>
+</li>
+<li><ol start="5">
+<li>安全性</li>
+</ol>
+</li>
+<li><ol start="6">
+<li>多线程</li>
+</ol>
+</li>
+<li><ol start="7">
+<li>可移植性</li>
+</ol>
+</li>
+<li><ol start="8">
+<li>动态</li>
+</ol>
+</li>
+<li></li>
+</ul>
+<hr>
+<h2 id="3、Java-运行机制"><a href="#3、Java-运行机制" class="headerlink" title="3、Java 运行机制"></a>3、Java 运行机制</h2><ol>
+<li><p>Java 三种核心机制</p>
+<ul>
+<li>Java 虚拟机 -JVM（Java virtual Machine）</li>
+<li>代码安全性检测（Code Security）</li>
+<li>垃圾收集机制（Garbage Collection） </li>
+</ul>
+</li>
+<li><p>Java 程序的编译与运行</p>
+<ul>
+<li>Java 源程序 （.java) -编译<ul>
+<li>javac 编译</li>
+</ul>
+</li>
+<li>字节码（bytecode） （.class) -运行 【平台无关】<ul>
+<li>java 运行 调用JVM</li>
+<li>.class 经过 运行 才可以得到 cpu指令<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Java虚拟机（Java Virtual Machine）:在一台计算机上由软件和硬件模拟的计算机。</span><br><span class="line"></span><br><span class="line">Java虚拟机读取并处理经编译过的字节码.class文件。</span><br><span class="line"></span><br><span class="line">Java虚拟机规范定义：</span><br><span class="line">1.指令集</span><br><span class="line">2.寄存器集</span><br><span class="line">3.类文件结构</span><br><span class="line">4.堆栈</span><br><span class="line">5.垃圾收集堆</span><br><span class="line">6.内存区域</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Java运行环境</p>
+</li>
+</ol>
+<ul>
+<li>JRE（The Java Runtime Environment) Java运行环境</li>
+<li>JRE = JVM + API (Lib)</li>
+<li>JRE 运行程序时的三项主要功能:<ul>
+<li>加载代码：由 class loader 完成</li>
+<li>校验代码：由 bytecode verifier 完成</li>
+<li>执行代码：由 runtime interpreter 完成</li>
+</ul>
+</li>
+<li>Java 运行环境 是由虚拟机来装载这些程序并且调用相应的指令来具体的执行<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">API(Library): `Java` 应用编程接口</span><br><span class="line"></span><br><span class="line">- Application Programming Interface</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<blockquote>
+<p>Q1：为什么Java是跨平台的？<br>A：字节码文件与平台无关，字节码文件放到不同的系统，它都有不同的虚拟机来执行。</p>
+</blockquote>
+<blockquote>
+<p>Q2：为什么Java是安全的？<br>A：Java 运行程序时 JRE中有校验代码的过程，由 bytecode verifier 完成。</p>
+</blockquote>
+<ol start="4">
+<li>Java自动垃圾回收技术</li>
+</ol>
+<ul>
+<li>系统级线程跟踪存储空间的分配情况。</li>
+<li>在JVM的空闲时，检查并释放那些可被释放的存储空间。</li>
+<li>程序员无须也无法精确控制和干预该回收过程。</li>
+</ul>
+<ol start="5">
+<li>Java JDK</li>
+</ol>
+<ul>
+<li>JDK = JRE + Tools</li>
+<li>JRE = JVM + API<blockquote>
+<p>要开发 Java 程序，要下载 JDK；<br>如果只运行 Java 程序 ，则下载 JRE；</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>Java JDK 提供的工具：</p>
+<ol>
+<li>Java 编译器 - javac.exe</li>
+<li>Java 执行器 - java.exe</li>
+<li>文档生产器   - javadoc.exe</li>
+<li>Java 打包器 - jar.exe</li>
+<li>Java 调试器 - jdb.exe</li>
+</ol>
+</blockquote>
+<hr>
+<h2 id="4、面向对象程序设计"><a href="#4、面向对象程序设计" class="headerlink" title="4、面向对象程序设计"></a>4、面向对象程序设计</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 对象</span><br><span class="line"># 现实世界中：客观世界中的一个实体</span><br><span class="line"># 计算机世界中：可标识的一个存储区域</span><br><span class="line"></span><br><span class="line">2. 类</span><br><span class="line">&quot;具有共同属性和行为的对象集合&quot;</span><br><span class="line"># 属性： 变量 （Java中 字段 field）</span><br><span class="line"># 行为： 函数 （Java中 方法 method）</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>类与对象的关系</p>
+<ul>
+<li>类是对象的<strong>抽象/模板</strong></li>
+<li>对象是类的<strong>实例</strong><br><code>类和对象有时候统称为</code><strong>对象</strong>,<code>精确称呼：后者为</code><strong>对象实例</strong>。</li>
+</ul>
+</li>
+<li><p>面向对象的三大特征</p>
+<ul>
+<li>封装性<ul>
+<li>模块化：将属性和行为封装在类中，<br>程序定义很多类。</li>
+<li>信息隐蔽：将类的细节隐藏起来，<br>用户只能通过受保护的接口访问某个类。 </li>
+</ul>
+</li>
+<li>继承性<ul>
+<li>父类和子类之间共享数据和方法<br>优点：<ul>
+<li>更好地抽象与分类</li>
+<li>增加代码的重用率</li>
+<li>提高可维护性  </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>多态性<ul>
+<li>不同对象受到同一个消息（调用方法）可产生不同的效果</li>
+<li>实现细节则由接受对象自行决定<blockquote>
+<p>什么是面向对象程序设计思想的要点？</p>
+<ol>
+<li><p>认为客观世界都是由对象组成的</p>
+</li>
+<li><p>程序分析和设计都是围绕着<br>有哪些对象类<br>每个类有哪些属性和方法<br>类之间的关系（继承、关联等）<br>对象之间发送消息（调用方法）</p>
+</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>自学模型_1</title>
     <url>/2019/12/29/%E8%87%AA%E5%AD%A6%E6%96%B9%E6%B3%95_%E5%85%94%E5%85%AB%E5%93%A5/</url>
     <content><![CDATA[<h1 id="自学模型-1"><a href="#自学模型-1" class="headerlink" title="自学模型_1"></a>自学模型_1</h1><blockquote class="blockquote-center"><p>自学模型 Model-1 </p>
