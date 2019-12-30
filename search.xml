@@ -1,14 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Java 基本语法_2</title>
+    <url>/2019/12/30/Java%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/Java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95_2/</url>
+    <content><![CDATA[<h1 id="Java-基本语法-2"><a href="#Java-基本语法-2" class="headerlink" title="Java 基本语法_2"></a>Java 基本语法_2</h1><blockquote class="blockquote-center"><p>Java 基本语法_2 </p>
+</blockquote>
+<hr>
+<a id="more"></a>
+<p>The text is as follows :</p>
+<h2 id="1、Java-程序的类型"><a href="#1、Java-程序的类型" class="headerlink" title="1、Java 程序的类型"></a>1、Java 程序的类型</h2><ul>
+<li><ol>
+<li>Application</li>
+</ol>
+<ul>
+<li>独立程序，需要执行器（调用虚拟机）来运行</li>
+<li>HelloWorld.java<ul>
+<li>class 是 主体</li>
+<li>public 类名与 文件名 同名</li>
+<li>main() 的写法是固定的 </li>
+<li>System.out.print/println/printf</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><ol start="2">
+<li>Applet</li>
+</ol>
+<ul>
+<li>嵌入在HTML网页中的非独立程序<ul>
+<li>由专门的 appletViewer 来运行</li>
+<li>Web浏览器（调用Java虚拟机）来运行  </li>
+</ul>
+</li>
+<li>HelloWorldApplet.java<ul>
+<li>import - 导入</li>
+<li>extends JApplet 表示继承 </li>
+<li>paint() 方法表示如何绘制</li>
+<li>没有 main() 方法</li>
+</ul>
+</li>
+<li>HelloWorldApplet.html<ul>
+<li>在网页中导入 applet code = “HelloWorldApplet.class” </li>
+</ul>
+</li>
+</ul>
+</li>
+<li><ol start="3">
+<li>Java 更基本的程序</li>
+</ol>
+<ul>
+<li>HelloDate.java<ul>
+<li>package 0或者 1句</li>
+<li>import  0或者 多句<ul>
+<li>导入其他类的类库 </li>
+</ul>
+</li>
+<li>class   至少1个 或 多个<ul>
+<li>一个文件只能有一个public类 -与文件命名同名</li>
+<li><code>public static void main( string[] args ){}</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>类 = 类头 + 类体</strong></li>
+<li><strong>类成员 = 字段 （field，属性，变量) + 方法 （method，行为，函数）</strong></li>
+<li><strong>方法 = 方法头 + 方法体</strong> </li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="2、Java-程序的-编辑、编译、运行"><a href="#2、Java-程序的-编辑、编译、运行" class="headerlink" title="2、Java 程序的 编辑、编译、运行"></a>2、Java 程序的 编辑、编译、运行</h2><blockquote>
+<p>javac 和 java</p>
+<ul>
+<li>程序编辑：任一文本编辑器</li>
+<li>程序编译：JDK中的 javac 工具<ul>
+<li>javac Hello.java </li>
+</ul>
+</li>
+<li>程序运行：java 工具<ul>
+<li>java Hello (不要写成 java Hello.class)这里需要的是类名非文件名</li>
+</ul>
+</li>
+<li>路径配置<ul>
+<li>path 和 classpath</li>
+<li>前者是<strong>命令</strong>路径：javac及java 的路径</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li>后者是<strong>引用类</strong>路径</li>
+</ul>
+<hr>
+<h2 id="3、Applet-的-编辑、编译、运行"><a href="#3、Applet-的-编辑、编译、运行" class="headerlink" title="3、Applet 的 编辑、编译、运行"></a>3、Applet 的 编辑、编译、运行</h2><ul>
+<li><code>appletViewer HelloWorldApplet.htm</code></li>
+<li>Applet 替代方案： Flash、SilverLight、JavaScript</li>
+<li></li>
+</ul>
+<hr>
+<h2 id="4、Java-中-其他几个工具"><a href="#4、Java-中-其他几个工具" class="headerlink" title="4、Java 中 其他几个工具"></a>4、Java 中 其他几个工具</h2><p>主要的工具：</p>
+<ul>
+<li>javac 编译</li>
+<li>java  运行</li>
+<li>javaw 运行图形界面程序</li>
+<li>appletViewer 运行 Applet</li>
+<li>jar   打包工具</li>
+<li>Javadoc 生成文档</li>
+<li>Javap 查看类信息及反汇编</li>
+</ul>
+<p>打包：</p>
+<ul>
+<li>javac A.java</li>
+<li>jar cvfm A.jar A.man A.class</li>
+<li>c-create v-verbose f-指定文件名 m-清单信息</li>
+<li>运行 java -jar A.jar<ul>
+<li>A.man - 清单文件（manifest）<ul>
+<li>Manifest-Version：</li>
+<li>Class-Path：</li>
+<li>Main-Class：</li>
+<li>可任意命名，常见<code>MANIFEST.MF</code>   </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>生成文档：</p>
+<ul>
+<li>javadoc -d 目录名 xxx.java</li>
+<li>生成注释中的内容，包括<ul>
+<li>@author、@version、@see类属性方法说明 相关主题 </li>
+<li>@param 参数说明 @return 返回值说明 @exception 异常说明</li>
+</ul>
+</li>
+</ul>
+<p>javap：</p>
+<ul>
+<li>javap 类名 -查看类的信息</li>
+<li>javap -c 类名 -反汇编</li>
+</ul>
+<hr>
+<h2 id="5、Java-输入输出"><a href="#5、Java-输入输出" class="headerlink" title="5、Java 输入输出"></a>5、Java 输入输出</h2><ul>
+<li><ol>
+<li>java.util.Scanner  <code>- version1.5才有</code></li>
+</ol>
+</li>
+</ul>
+<p><code>ScannerTest.java</code></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ScannerTest</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">( String[] args)</span></span>&#123;</span><br><span class="line">        Scanner scanner = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        System.out.print(<span class="string">""</span>);</span><br><span class="line">        <span class="keyword">int</span> a = scanner.nextInt();</span><br><span class="line">        Sysetm.out.print(a);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>java.io包 是早期方法 try catch()<br>AppLineInOut.java 输入输出行<br>AppNumInOut.java  输入输出数字</p>
+</blockquote>
+<p><code>可以同时建立Applet和Application</code></p>
+<p>快捷键：<br><code>main + Alt + / = main 方法</code><br><code>sysout + Alt + / = System.out</code></p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java 基本语法_1</title>
-    <url>/2019/12/29/Java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</url>
+    <url>/2019/12/29/Java%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/Java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95_1/</url>
     <content><![CDATA[<h1 id="Java-基本语法-1"><a href="#Java-基本语法-1" class="headerlink" title="Java 基本语法_1"></a>Java 基本语法_1</h1><blockquote class="blockquote-center"><p>Java 基本语法_1 </p>
 </blockquote>
 <hr>
 <a id="more"></a>
 <p>The text is as follows :</p>
-<h2 id="1、-Java-平台-与-历史版本"><a href="#1、-Java-平台-与-历史版本" class="headerlink" title="1、 Java 平台 与 历史版本"></a>1、 Java 平台 与 历史版本</h2><ul>
+<h2 id="1、Java-平台-与-历史版本"><a href="#1、Java-平台-与-历史版本" class="headerlink" title="1、Java 平台 与 历史版本"></a>1、Java 平台 与 历史版本</h2><ul>
 <li><ol>
 <li>Java 平台</li>
 </ol>
