@@ -50,6 +50,55 @@
       </tags>
   </entry>
   <entry>
+    <title>房地产金融产品案例</title>
+    <url>/2019/12/30/%E6%88%BF%E5%9C%B0%E4%BA%A7%E9%87%91%E8%9E%8D%E5%AD%A6_%E9%80%89%E4%BF%AE/%E6%88%BF%E5%9C%B0%E4%BA%A7%E9%87%91%E8%9E%8D%E4%BA%A7%E5%93%81_%E8%AF%BE%E9%A2%98%E4%BD%9C%E4%B8%9A/</url>
+    <content><![CDATA[<h1 id="房地产金融产品案例"><a href="#房地产金融产品案例" class="headerlink" title="房地产金融产品案例"></a>房地产金融产品案例</h1><blockquote class="blockquote-center"><p>房地产金融产品案例 </p>
+</blockquote>
+<hr>
+<a id="more"></a>
+<p>The text is as follows :</p>
+<p>房地产金融产品案例</p>
+<ul>
+<li>信托收益权资产证券化产品<blockquote>
+<p>信托受益权ABS以政策性住房相关收入作为还款来源,以信托受益权为基础资产,间接为政策性住房建设提供融资。</p>
+</blockquote>
+</li>
+</ul>
+<ol>
+<li>产品内容：</li>
+</ol>
+<ul>
+<li>以江苏省镇江公住保障房信托受益权资产支持专项计划为例，江苏省镇江市公共住房投资建设有限公司作为载体,将金山水城三期东等三个保障房项目未来销售应收账款质押给保障房信托,并承诺以三个项目的保障房销售款作为信托贷款的还款来源。在镇江保障房信托受益权资产支持专项计划中，镇江城市建设产业集团有限公司（“镇江城建”）作为出资人，通过设立单一资金信托并对本公司发放信托贷款，然后以信托受益权为基础资产发起资产支持证券，实现债权（表现为信托受益权）转让和资金回笼。</li>
+</ul>
+<ol>
+<li><p>特点：</p>
+<ul>
+<li>信托公司可以主导发行</li>
+<li>低成本、长期限融资</li>
+<li>针对信托计划提供增信</li>
+<li>双SPV结构有利于合作银行降低风险，提高资金利用率</li>
+<li>实现非标转标</li>
+<li>促进机构间合作</li>
+</ul>
+</li>
+<li><p>风险分析</p>
+<ul>
+<li>镇江住建破产风险</li>
+<li>资金混同与挪用风险</li>
+<li>镇江住建城建信用风险</li>
+<li>未按时偿还抵押贷款，导致销售受限</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>选修</category>
+      </categories>
+      <tags>
+        <tag>选修</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>房地产金融学</title>
     <url>/2019/12/30/%E6%88%BF%E5%9C%B0%E4%BA%A7%E9%87%91%E8%9E%8D%E5%AD%A6_%E9%80%89%E4%BF%AE/%E6%88%BF%E5%9C%B0%E4%BA%A7%E9%87%91%E8%9E%8D%E5%AD%A6/</url>
     <content><![CDATA[<h1 id="房地产金融学"><a href="#房地产金融学" class="headerlink" title="房地产金融学"></a>房地产金融学</h1><blockquote class="blockquote-center"><p>房地产金融学 </p>
@@ -548,25 +597,6 @@
       </tags>
   </entry>
   <entry>
-    <title>JSP不用学</title>
-    <url>/2019/12/28/%E5%85%B6%E4%BB%96_%E6%9C%AA%E5%88%86%E7%B1%BB/JSP%E4%B8%8D%E7%94%A8%E5%AD%A6/</url>
-    <content><![CDATA[<h1 id="JSP不用学"><a href="#JSP不用学" class="headerlink" title="JSP不用学"></a>JSP不用学</h1><blockquote class="blockquote-center"><p>JSP不用学 </p>
-</blockquote>
-<hr>
-<a id="more"></a>
-<p>1.JSP不用学<br>前后端耦合和依赖比较强，所以被淘汰出局</p>
-<p>2.什么是JSP<br>Jsp Java Server page<br>Java 服务器页面<br>HTML文件中插入JAVA程序段和JSP标记，形成JSP文件<br>高耦合东西，网页模板技术。<br>网页=样式+数据<br>构建和驱动由服务器进行，叫服务端网页模板。</p>
-<p>控制层<br>业务层<br>DAO层</p>
-<p>3、目前都是前后端分离<br>JSP模板技术全部出局</p>
-]]></content>
-      <categories>
-        <category>计算机科学与技术</category>
-      </categories>
-      <tags>
-        <tag>JSP</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>编写简历</title>
     <url>/2019/12/28/%E5%85%B6%E4%BB%96_%E6%9C%AA%E5%88%86%E7%B1%BB/%E7%BC%96%E5%86%99%E7%AE%80%E5%8E%86/</url>
     <content><![CDATA[<h1 id="如何编写简历"><a href="#如何编写简历" class="headerlink" title="如何编写简历"></a>如何编写简历</h1><blockquote class="blockquote-center"><p>如何编写简历 </p>
@@ -587,6 +617,25 @@
       </categories>
       <tags>
         <tag>工作招聘</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JSP不用学</title>
+    <url>/2019/12/28/%E5%85%B6%E4%BB%96_%E6%9C%AA%E5%88%86%E7%B1%BB/JSP%E4%B8%8D%E7%94%A8%E5%AD%A6/</url>
+    <content><![CDATA[<h1 id="JSP不用学"><a href="#JSP不用学" class="headerlink" title="JSP不用学"></a>JSP不用学</h1><blockquote class="blockquote-center"><p>JSP不用学 </p>
+</blockquote>
+<hr>
+<a id="more"></a>
+<p>1.JSP不用学<br>前后端耦合和依赖比较强，所以被淘汰出局</p>
+<p>2.什么是JSP<br>Jsp Java Server page<br>Java 服务器页面<br>HTML文件中插入JAVA程序段和JSP标记，形成JSP文件<br>高耦合东西，网页模板技术。<br>网页=样式+数据<br>构建和驱动由服务器进行，叫服务端网页模板。</p>
+<p>控制层<br>业务层<br>DAO层</p>
+<p>3、目前都是前后端分离<br>JSP模板技术全部出局</p>
+]]></content>
+      <categories>
+        <category>计算机科学与技术</category>
+      </categories>
+      <tags>
+        <tag>JSP</tag>
       </tags>
   </entry>
   <entry>
