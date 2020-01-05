@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="像我这样优秀的人">
 <meta property="og:description" content="Java 基本语法_4Java 基本语法_4">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-01-05T10:25:30.633Z">
+<meta property="og:updated_time" content="2020-01-05T10:27:48.723Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java 基本语法_4">
 <meta name="twitter:description" content="Java 基本语法_4Java 基本语法_4">
@@ -413,7 +413,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  418
+                  415
                 </span>
               
 
@@ -496,12 +496,14 @@
 <blockquote>
 <p>C++ 自增demo</p>
 </blockquote>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="keyword">int</span> a = <span class="number">0</span>;</span><br><span class="line">   a = a++;</span><br><span class="line">   <span class="built_in">cout</span> &lt;&lt; a ; </span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">``` </span><br><span class="line">&gt;**输出结果： <span class="number">1</span>**</span><br><span class="line"></span><br><span class="line">`---`</span><br><span class="line"></span><br><span class="line">- Java： 后++方式-在下一个运算符进行时+<span class="number">1</span></span><br><span class="line">  - a++ 先赋值第三方，再调用，最后运算 </span><br><span class="line">  - ++a 先运算后赋值</span><br><span class="line"></span><br><span class="line">&gt;Java 自增demo</span><br><span class="line"></span><br><span class="line">```Java</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> &#123;</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String []args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> a = <span class="number">0</span>;</span><br><span class="line">        a = a++;</span><br><span class="line">        System.out.println(a); </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">   int a = 0;</span><br><span class="line">   a = a++;</span><br><span class="line">   cout &lt;&lt; a ; </span><br><span class="line">   return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">``` </span><br><span class="line">&gt;**输出结果： 1**</span><br><span class="line"></span><br><span class="line">`---`</span><br><span class="line"></span><br><span class="line">- Java： 后++方式-在下一个运算符进行时+1</span><br><span class="line">  - a++ 先赋值第三方，再调用，最后运算 </span><br><span class="line">  - ++a 先运算后赋值</span><br><span class="line"></span><br><span class="line">&gt;Java 自增demo</span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<p><strong>输出结果： 0</strong></p>
-</blockquote>
+<p>public class HelloWorld {<br>    public static void main(String []args) {<br>        int a = 0;<br>        a = a++;<br>        System.out.println(a);<br>    }<br>}</p>
+<pre><code>
+&gt;**输出结果： 0**
 
+
+</code></pre>
       
     </div>
     
@@ -533,7 +535,7 @@
   <p><span>本文标题:</span>Java 基本语法_4</p>
   <p><span>文章作者:</span>Pumpkin</p>
   <p><span>发布时间:</span>2020年01月05日 - 17:41:24</p>
-  <p><span>最后更新:</span>2020年01月05日 - 18:25:30</p>
+  <p><span>最后更新:</span>2020年01月05日 - 18:27:48</p>
   <p><span>原始链接:</span><a href="/2020/01/05/Java程序设计/Java基本语法_4/" title="Java 基本语法_4">http://yoursite.com/2020/01/05/Java程序设计/Java基本语法_4/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2020/01/05/Java程序设计/Java基本语法_4/" aria-label="复制成功！"></i></span>
   </p>
