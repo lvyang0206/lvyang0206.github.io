@@ -1,6 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Java 基本语法_4</title>
+    <url>/2020/01/05/Java%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/Java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95_4/</url>
+    <content><![CDATA[<h1 id="Java-基本语法-4"><a href="#Java-基本语法-4" class="headerlink" title="Java 基本语法_4"></a>Java 基本语法_4</h1><blockquote class="blockquote-center"><p>Java 基本语法_4 </p>
+</blockquote>
+
+<hr>
+<a id="more"></a>
+<p>The text is as follows :</p>
+<h2 id="1、表达式"><a href="#1、表达式" class="headerlink" title="1、表达式"></a>1、表达式</h2><ul>
+<li>2个概念<ul>
+<li>表达式的值<ul>
+<li>表达式的运算结果是表达式的值</li>
+</ul>
+</li>
+<li>表达式的类型<ul>
+<li>表达式的值的数据类型即为表达式的类型</li>
+</ul>
+</li>
+<li>表达式中的类型转换<ul>
+<li>当不同类型进行混合运算时候<ul>
+<li>int-&gt;long-&gt;float-&gt;double</li>
+</ul>
+</li>
+<li>整形提升<ul>
+<li>所有的byte、short、char参与算术运算等转为int。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>//Java ++和–算法代码</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//(1)自增,自减</span></span><br><span class="line"><span class="keyword">int</span> i = <span class="number">1</span>;<span class="comment">//i=1；结果为1</span></span><br><span class="line">System.out.println(i-- - ++i);<span class="comment">//i=0,i=1；结果为0</span></span><br><span class="line">System.out.println(i++ + ++i);<span class="comment">//i=2,i=3；结果为4</span></span><br><span class="line">System.out.println(i);<span class="comment">//i=3；结果为3</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//(2)赋值i=i++;i=i--</span></span><br><span class="line"><span class="comment">//demo_1</span></span><br><span class="line"><span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">i = i++;</span><br><span class="line">System.out.println(i);<span class="comment">//结果为1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//demo_2</span></span><br><span class="line"><span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">i = ++i;</span><br><span class="line">System.out.println(i);<span class="comment">//结果为2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//demo_3</span></span><br><span class="line"><span class="keyword">int</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> b = <span class="number">1</span>;</span><br><span class="line">System.out.println(a+++b+++a);<span class="comment">//结果为4：=((a++)+(b++)+a)</span></span><br><span class="line">System.out.println(a);<span class="comment">//a:1--&gt;2</span></span><br><span class="line">System.out.println(b);<span class="comment">//b:1--&gt;2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//demo_4</span></span><br><span class="line"><span class="keyword">int</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> b = <span class="number">1</span>;</span><br><span class="line">System.out.println((a++)+b+(++a));<span class="comment">//结果为3：=((a++)+b+(++a))=1+1+3</span></span><br><span class="line">System.out.println(a);<span class="comment">//a:1--&gt;2--&gt;3</span></span><br><span class="line">System.out.println(b);<span class="comment">//b:1</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="2、Java-和-C-的-不同自增自减运算符原理"><a href="#2、Java-和-C-的-不同自增自减运算符原理" class="headerlink" title="2、Java 和 C++的 不同自增自减运算符原理"></a>2、Java 和 C++的 不同自增自减运算符原理</h2><ul>
+<li>C++： 后++方式-在表达式运算完成后再+1<ul>
+<li>a++ 先赋值后运算</li>
+<li>++a 先运算后赋值<blockquote>
+<p>C++ 自增demo</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="keyword">int</span> a = <span class="number">0</span>;</span><br><span class="line">   a = a++;</span><br><span class="line">   <span class="built_in">cout</span> &lt;&lt; a ; </span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line">``` </span><br><span class="line">**输出结果： <span class="number">1</span>**</span><br><span class="line"></span><br><span class="line">- Java： 后++方式-在下一个运算符进行时+<span class="number">1</span></span><br><span class="line">  - a++ 先赋值第三方，再调用，最后运算 </span><br><span class="line">  - ++a 先运算后赋值</span><br><span class="line">&gt;Java 自增demo</span><br><span class="line">```Java</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> &#123;</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String []args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> a = <span class="number">0</span>;</span><br><span class="line">        a = a++;</span><br><span class="line">        System.out.println(a); </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>输出结果： 0</strong></p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>编写简历细则</title>
     <url>/2020/01/04/%E5%85%B6%E4%BB%96_%E6%9C%AA%E5%88%86%E7%B1%BB/%E7%AE%80%E5%8E%86%E7%BC%96%E5%86%99/%E7%BC%96%E5%86%99%E7%AE%80%E5%8E%86%E7%BB%86%E5%88%99/</url>
     <content><![CDATA[<h1 id="编写简历细则"><a href="#编写简历细则" class="headerlink" title="编写简历细则"></a>编写简历细则</h1><blockquote class="blockquote-center"><p>编写简历细则-Java方向 </p>
@@ -189,6 +249,7 @@
     <url>/2020/01/01/Java%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/Java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95_3/</url>
     <content><![CDATA[<h1 id="Java-基本语法-3"><a href="#Java-基本语法-3" class="headerlink" title="Java 基本语法_3"></a>Java 基本语法_3</h1><blockquote class="blockquote-center"><p>Java 基本语法_3 </p>
 </blockquote>
+
 <hr>
 <a id="more"></a>
 <p>The text is as follows :</p>
@@ -444,6 +505,7 @@
     <url>/2019/12/30/Java%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/Java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95_2/</url>
     <content><![CDATA[<h1 id="Java-基本语法-2"><a href="#Java-基本语法-2" class="headerlink" title="Java 基本语法_2"></a>Java 基本语法_2</h1><blockquote class="blockquote-center"><p>Java 基本语法_2 </p>
 </blockquote>
+
 <hr>
 <a id="more"></a>
 <p>The text is as follows :</p>
@@ -605,6 +667,7 @@
     <url>/2019/12/29/Java%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/Java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95_1/</url>
     <content><![CDATA[<h1 id="Java-基本语法-1"><a href="#Java-基本语法-1" class="headerlink" title="Java 基本语法_1"></a>Java 基本语法_1</h1><blockquote class="blockquote-center"><p>Java 基本语法_1 </p>
 </blockquote>
+
 <hr>
 <a id="more"></a>
 <p>The text is as follows :</p>
@@ -857,6 +920,25 @@
       </tags>
   </entry>
   <entry>
+    <title>JSP不用学</title>
+    <url>/2019/12/28/%E5%85%B6%E4%BB%96_%E6%9C%AA%E5%88%86%E7%B1%BB/JSP%E4%B8%8D%E7%94%A8%E5%AD%A6/</url>
+    <content><![CDATA[<h1 id="JSP不用学"><a href="#JSP不用学" class="headerlink" title="JSP不用学"></a>JSP不用学</h1><blockquote class="blockquote-center"><p>JSP不用学 </p>
+</blockquote>
+<hr>
+<a id="more"></a>
+<p>1.JSP不用学<br>前后端耦合和依赖比较强，所以被淘汰出局</p>
+<p>2.什么是JSP<br>Jsp Java Server page<br>Java 服务器页面<br>HTML文件中插入JAVA程序段和JSP标记，形成JSP文件<br>高耦合东西，网页模板技术。<br>网页=样式+数据<br>构建和驱动由服务器进行，叫服务端网页模板。</p>
+<p>控制层<br>业务层<br>DAO层</p>
+<p>3、目前都是前后端分离<br>JSP模板技术全部出局</p>
+]]></content>
+      <categories>
+        <category>计算机科学与技术</category>
+      </categories>
+      <tags>
+        <tag>JSP</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>编写简历</title>
     <url>/2019/12/28/%E5%85%B6%E4%BB%96_%E6%9C%AA%E5%88%86%E7%B1%BB/%E7%AE%80%E5%8E%86%E7%BC%96%E5%86%99/%E7%BC%96%E5%86%99%E7%AE%80%E5%8E%86%E6%A1%86%E6%9E%B6_1/</url>
     <content><![CDATA[<h1 id="如何编写简历"><a href="#如何编写简历" class="headerlink" title="如何编写简历"></a>如何编写简历</h1><blockquote class="blockquote-center"><p>如何编写简历 </p>
@@ -877,25 +959,6 @@
       </categories>
       <tags>
         <tag>工作招聘</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JSP不用学</title>
-    <url>/2019/12/28/%E5%85%B6%E4%BB%96_%E6%9C%AA%E5%88%86%E7%B1%BB/JSP%E4%B8%8D%E7%94%A8%E5%AD%A6/</url>
-    <content><![CDATA[<h1 id="JSP不用学"><a href="#JSP不用学" class="headerlink" title="JSP不用学"></a>JSP不用学</h1><blockquote class="blockquote-center"><p>JSP不用学 </p>
-</blockquote>
-<hr>
-<a id="more"></a>
-<p>1.JSP不用学<br>前后端耦合和依赖比较强，所以被淘汰出局</p>
-<p>2.什么是JSP<br>Jsp Java Server page<br>Java 服务器页面<br>HTML文件中插入JAVA程序段和JSP标记，形成JSP文件<br>高耦合东西，网页模板技术。<br>网页=样式+数据<br>构建和驱动由服务器进行，叫服务端网页模板。</p>
-<p>控制层<br>业务层<br>DAO层</p>
-<p>3、目前都是前后端分离<br>JSP模板技术全部出局</p>
-]]></content>
-      <categories>
-        <category>计算机科学与技术</category>
-      </categories>
-      <tags>
-        <tag>JSP</tag>
       </tags>
   </entry>
   <entry>
