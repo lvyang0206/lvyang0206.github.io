@@ -569,8 +569,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/12/28/其他_未分类/简历编写/编写简历框架_1/" rel="prev" title="编写简历">
-                编写简历 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/12/28/其他_未分类/JSP不用学/" rel="prev" title="JSP不用学">
+                JSP不用学 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -634,7 +634,7 @@
             站点概览
           </li>
         </ul>
-      
+            
 
       <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
@@ -680,15 +680,8 @@
                 </a>
               </div>
             
-
           </nav>
 
-          <div class="sidebar-inner">
-            
-             <!-- canvas粒子时钟 -->
-            
-            
-          </div>
 
           
 
@@ -715,7 +708,7 @@
 
           
           
-
+          <!--canvas动画时钟-->
           <div style>
   <canvas id="canvas" style="width:60%;">当前浏览器不支持canvas，请更换浏览器后再试</canvas>
 </div>
@@ -863,7 +856,7 @@ var canvas = document.getElementById('canvas');
 if(canvas.getContext){
     var cxt = canvas.getContext('2d');
     //声明canvas的宽高
-    var H = 100,W = 700;
+    var H = 80,W = 700;
     canvas.height = H;
     canvas.width = W;
     cxt.fillStyle = '#f00';
@@ -952,7 +945,7 @@ if(canvas.getContext){
     /*渲染*/
     function render(){
         //重置画布宽度，达到清空画布的效果
-        canvas.height = 100;
+        canvas.height = 80;
         //渲染时钟
         for(var i = 0; i < data.length; i++){
             renderDigit(i,data[i]);
@@ -1011,7 +1004,6 @@ if(canvas.getContext){
           
         </div>
       
-
     </div>
   </aside>
 

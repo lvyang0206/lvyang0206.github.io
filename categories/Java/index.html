@@ -451,7 +451,7 @@
 
       
 
-      
+            
 
       <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
@@ -497,15 +497,8 @@
                 </a>
               </div>
             
-
           </nav>
 
-          <div class="sidebar-inner">
-            
-             <!-- canvas粒子时钟 -->
-            
-            
-          </div>
 
           
 
@@ -532,7 +525,7 @@
 
           
           
-
+          <!--canvas动画时钟-->
           <div style>
   <canvas id="canvas" style="width:60%;">当前浏览器不支持canvas，请更换浏览器后再试</canvas>
 </div>
@@ -680,7 +673,7 @@ var canvas = document.getElementById('canvas');
 if(canvas.getContext){
     var cxt = canvas.getContext('2d');
     //声明canvas的宽高
-    var H = 100,W = 700;
+    var H = 80,W = 700;
     canvas.height = H;
     canvas.width = W;
     cxt.fillStyle = '#f00';
@@ -769,7 +762,7 @@ if(canvas.getContext){
     /*渲染*/
     function render(){
         //重置画布宽度，达到清空画布的效果
-        canvas.height = 100;
+        canvas.height = 80;
         //渲染时钟
         for(var i = 0; i < data.length; i++){
             renderDigit(i,data[i]);
@@ -812,7 +805,6 @@ if(canvas.getContext){
           
         </div>
       
-
     </div>
   </aside>
 
