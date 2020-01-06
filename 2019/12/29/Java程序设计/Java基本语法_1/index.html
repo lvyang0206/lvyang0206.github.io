@@ -980,7 +980,7 @@ var canvas = document.getElementById('canvas');
 if(canvas.getContext){
     var cxt = canvas.getContext('2d');
     //声明canvas的宽高
-    var H = 80,W = 700;
+    var H = 100,W = 700;
     canvas.height = H;
     canvas.width = W;
     cxt.fillStyle = '#f00';
@@ -1069,7 +1069,7 @@ if(canvas.getContext){
     /*渲染*/
     function render(){
         //重置画布宽度，达到清空画布的效果
-        canvas.height = 80;
+        canvas.height = 100;
         //渲染时钟
         for(var i = 0; i < data.length; i++){
             renderDigit(i,data[i]);
