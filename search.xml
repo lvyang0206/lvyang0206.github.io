@@ -1,6 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Java 基本语法_5</title>
+    <url>/2020/01/07/Java%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/Java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95_5/</url>
+    <content><![CDATA[<h1 id="Java-基本语法-5"><a href="#Java-基本语法-5" class="headerlink" title="Java 基本语法_5"></a>Java 基本语法_5</h1><blockquote class="blockquote-center"><p>Java 基本语法_5 </p>
+</blockquote>
+<hr>
+<a id="more"></a>
+<p>The text is as follows :</p>
+<h2 id="1、Java-标识符"><a href="#1、Java-标识符" class="headerlink" title="1、Java 标识符"></a>1、Java 标识符</h2><ul>
+<li><ol>
+<li>Java 程序中的命名规范</li>
+</ol>
+<ul>
+<li>变量、常量、类<ul>
+<li>变量用小写字母开始</li>
+<li>常量全部都是大写字母</li>
+<li>类大写字母开始</li>
+</ul>
+</li>
+<li>约定的 Java 命名<ul>
+<li>包名package：全小写，以.隔开</li>
+<li>类名class：首字母大写，每个单词的首字母都大写</li>
+<li>接口名interface：同类名</li>
+<li>方法名：第一个单词首字母小写（通常为动词），其余单词都已首字母大写为例</li>
+<li>变量名：同方法名</li>
+<li>常量名：<ul>
+<li>基本数据类型：大写以”_”隔开</li>
+<li>对象类型：大小写混合，大写开头，以大写隔开单词</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="2、Java-注释方法"><a href="#2、Java-注释方法" class="headerlink" title="2、Java 注释方法"></a>2、Java 注释方法</h2><ul>
+<li><ol>
+<li>3 种注释方式</li>
+</ol>
+<ul>
+<li>单行注释</li>
+<li>块注释</li>
+<li>文档注释</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="3、Java-顺序、分支、循环"><a href="#3、Java-顺序、分支、循环" class="headerlink" title="3、Java 顺序、分支、循环"></a>3、Java 顺序、分支、循环</h2><ul>
+<li><ol>
+<li>分支语句(可嵌套)</li>
+</ol>
+</li>
+</ul>
+<p><code>if else</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- if(条件表达式)</span><br><span class="line">  - 语句块;</span><br><span class="line">- else</span><br><span class="line">  - 语句块;</span><br></pre></td></tr></table></figure>
+
+<p><code>switch</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">switch(exp)&#123;</span><br><span class="line">  case const1:</span><br><span class="line">    statement1;</span><br><span class="line">    break;</span><br><span class="line">  case const2:</span><br><span class="line">    statement2;</span><br><span class="line">    break;</span><br><span class="line">  case constN;</span><br><span class="line">    statementN;</span><br><span class="line">    break;</span><br><span class="line">  [default:</span><br><span class="line">    statement_dafault;</span><br><span class="line">    break;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>switch后面的变量类型是整数、字符、字符串；<br>case后面跟常量,不能是变量;<br>注意break;</p>
+</blockquote>
+<ul>
+<li><ol start="2">
+<li>循环语句</li>
+</ol>
+</li>
+</ul>
+<p><code>for 循环</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">for(init_statement;test_exp;alter_statement)&#123;</span><br><span class="line">  body_statement</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>while 循环</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[init_statement]</span><br><span class="line">while(test_exp)&#123;</span><br><span class="line">  body_statement;</span><br><span class="line">  [alter_statement;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>do while 循环</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[init_statement]</span><br><span class="line">do&#123;</span><br><span class="line">  body_statement;</span><br><span class="line">  [alter_statement;]</span><br><span class="line">&#125;while(test_exp);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><ol start="3">
+<li>特殊流程控制语句</li>
+</ol>
+<ul>
+<li>break<ul>
+<li>终止某个语句块的执行</li>
+<li>可以通过标签指明终止哪个语句块</li>
+<li><code>break label2 ;</code> </li>
+</ul>
+</li>
+<li>continue<ul>
+<li>跳过某个循环语句块的一次执行，下面语句块不执行</li>
+<li>多层嵌套的循环语句块中，可以通过标签指明跳过哪一层循环</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java 基本语法_4</title>
     <url>/2020/01/05/Java%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/Java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95_4/</url>
     <content><![CDATA[<h1 id="Java-基本语法-4"><a href="#Java-基本语法-4" class="headerlink" title="Java 基本语法_4"></a>Java 基本语法_4</h1><blockquote class="blockquote-center"><p>Java 基本语法_4 </p>
