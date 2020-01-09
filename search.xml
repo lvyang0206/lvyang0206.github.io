@@ -1,6 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Git&amp;Github_3</title>
+    <url>/2020/01/09/Git&amp;Github/Git&amp;Github_3/</url>
+    <content><![CDATA[<h1 id="Git-amp-Github-3"><a href="#Git-amp-Github-3" class="headerlink" title="Git&amp;Github_3"></a>Git&amp;Github_3</h1><blockquote class="blockquote-center"><p>Git&amp;Github_3 </p>
+</blockquote>
+<hr>
+<a id="more"></a>
+<p>The text is as follows :<br><code>git config --list</code> // 查看设置列表 </p>
+<h2 id="1、Git-克隆"><a href="#1、Git-克隆" class="headerlink" title="1、Git 克隆"></a>1、Git 克隆</h2><ul>
+<li><ol>
+<li>将远程仓库的东西复制到本地</li>
+</ol>
+<ul>
+<li>git clone 仓库地址 // 仓库地址由来 clone with https 下的 URL</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="2、"><a href="#2、" class="headerlink" title="2、"></a>2、</h2><hr>
+<h2 id="3、"><a href="#3、" class="headerlink" title="3、"></a>3、</h2>]]></content>
+      <categories>
+        <category>Git&amp;Github</category>
+      </categories>
+      <tags>
+        <tag>Git&amp;Github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git&amp;Github_2</title>
+    <url>/2020/01/09/Git&amp;Github/Git&amp;Github_2/</url>
+    <content><![CDATA[<h1 id="Git-amp-Github-2"><a href="#Git-amp-Github-2" class="headerlink" title="Git&amp;Github_2"></a>Git&amp;Github_2</h1><blockquote class="blockquote-center"><p>Git&amp;Github_2 </p>
+</blockquote>
+<hr>
+<a id="more"></a>
+<p>The text is as follows :</p>
+<h2 id="1、Git"><a href="#1、Git" class="headerlink" title="1、Git"></a>1、Git</h2><ul>
+<li><ol>
+<li>Git官网安装    </li>
+</ol>
+<ul>
+<li>Git Bash 命令行</li>
+<li>Git Gui 图形界面</li>
+<li>桌面显示这两个是安装成功</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="2、Git工作流程"><a href="#2、Git工作流程" class="headerlink" title="2、Git工作流程"></a>2、Git工作流程</h2><h3 id="向仓库添加文件"><a href="#向仓库添加文件" class="headerlink" title="向仓库添加文件"></a>向仓库添加文件</h3><ul>
+<li>Working Directory <ul>
+<li>编辑、添加、修改文件等动作<ul>
+<li>命令 git status</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>暂存区<ul>
+<li>暂存已经修改的文件最后统一提交到git仓库<ul>
+<li>命令 git add xxx.php</li>
+<li>命令 git add xxx2.php</li>
+<li>命令 git status</li>
+<li>命令 git commit -m “提交描述”</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Git Reposition<ul>
+<li>最终确定，成为一个新的版本，供他人可见<ul>
+<li>命令 git status</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="3、Git初始化及仓库创建和操作"><a href="#3、Git初始化及仓库创建和操作" class="headerlink" title="3、Git初始化及仓库创建和操作"></a>3、Git初始化及仓库创建和操作</h2><ul>
+<li>设置用户名<ul>
+<li>命令 git config –global user.name ‘xxx’</li>
+</ul>
+</li>
+<li>设置用户名邮箱<ul>
+<li>命令 git config –global user.email ‘xxx@qq.com’</li>
+</ul>
+</li>
+</ul>
+<p>该设置在github仓库主页显示谁提交了文件</p>
+<blockquote>
+<p>如果用了 –global 选项，那么更改的配置文件就是位于你用户主目录下的那个，以后你所有的项目都会默认使用这里配置的用户信息。</p>
+</blockquote>
+<blockquote>
+<p>如果要在某个特定的项目中使用其他名字或者电邮，只要去掉 –global 选项重新配置即可，新的设定保存在当前项目的 .git/config 文件里。 </p>
+</blockquote>
+<h3 id="初始化一个新的Git仓库tianj"><a href="#初始化一个新的Git仓库tianj" class="headerlink" title="初始化一个新的Git仓库tianj"></a>初始化一个新的Git仓库tianj</h3><ul>
+<li><ol>
+<li>创建文件夹</li>
+</ol>
+<ul>
+<li>命令 mkdir xxx</li>
+</ul>
+</li>
+<li><ol start="2">
+<li>在文件内初始化 git （创建 git 仓库）</li>
+</ol>
+<ul>
+<li>命令 cd xxx</li>
+<li>git init</li>
+<li>看不见<code>.git</code>设置显示隐藏文件夹</li>
+</ul>
+</li>
+<li><ol start="3">
+<li>向仓库添加文件流程</li>
+</ol>
+<ul>
+<li>touch xxx.php</li>
+<li>git status</li>
+<li>git add xxx.php //添加到暂存区</li>
+<li>git status</li>
+<li>git commit -m ‘add xxx.php’</li>
+<li>git status</li>
+</ul>
+</li>
+<li><ol start="4">
+<li>修改仓库文件</li>
+</ol>
+<ul>
+<li>vi xxx.php //编辑信息<ul>
+<li>a // 输入</li>
+<li>esc // 退出</li>
+<li>:wq // 保存退出</li>
+</ul>
+</li>
+<li>cat xxx.php //查看信息</li>
+<li>git status</li>
+<li>git add xxx.php</li>
+<li>git commit -m ‘描述’</li>
+<li>git status</li>
+</ul>
+</li>
+<li><ol start="5">
+<li>删除仓库文件</li>
+</ol>
+<ul>
+<li>rm xxx.php</li>
+<li>git rm xxx.php</li>
+<li>git commit -m ‘描述’</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Git&amp;Github</category>
+      </categories>
+      <tags>
+        <tag>Git&amp;Github</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Git&amp;Github_1</title>
     <url>/2020/01/08/Git&amp;Github/Git&amp;Github_1/</url>
     <content><![CDATA[<h1 id="Git-amp-Github-1"><a href="#Git-amp-Github-1" class="headerlink" title="Git&amp;Github_1"></a>Git&amp;Github_1</h1><blockquote class="blockquote-center"><p>Git&amp;Github_1 </p>
