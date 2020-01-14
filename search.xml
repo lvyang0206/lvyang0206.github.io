@@ -30,6 +30,33 @@
       </tags>
   </entry>
   <entry>
+    <title>Git&amp;Github_3</title>
+    <url>/2020/01/09/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/1_%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/1_Git&amp;Github_%E5%88%86%E5%B8%83%E5%BC%8F%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/Git&amp;Github_3/</url>
+    <content><![CDATA[<h1 id="Git-amp-Github-3"><a href="#Git-amp-Github-3" class="headerlink" title="Git&amp;Github_3"></a>Git&amp;Github_3</h1><blockquote class="blockquote-center"><p>Git&amp;Github_3 </p>
+</blockquote>
+<hr>
+<a id="more"></a>
+<p>The text is as follows :<br><code>git config --list</code> // 查看设置列表 </p>
+<h2 id="1、Git-克隆"><a href="#1、Git-克隆" class="headerlink" title="1、Git 克隆"></a>1、Git 克隆</h2><ul>
+<li><ol>
+<li>将远程仓库的东西复制到本地</li>
+</ol>
+<ul>
+<li>git clone 仓库地址 // 仓库地址由来 clone with https 下的 URL</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="2、"><a href="#2、" class="headerlink" title="2、"></a>2、</h2><hr>
+<h2 id="3、"><a href="#3、" class="headerlink" title="3、"></a>3、</h2>]]></content>
+      <categories>
+        <category>Git&amp;Github</category>
+      </categories>
+      <tags>
+        <tag>Git&amp;Github</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Git&amp;Github_Git</title>
     <url>/2020/01/09/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/1_%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/1_Git&amp;Github_%E5%88%86%E5%B8%83%E5%BC%8F%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/0_Git%E5%9F%BA%E7%A1%80%E7%AE%80%E4%BB%8B/</url>
     <content><![CDATA[<h1 id="Git-amp-Github-Git"><a href="#Git-amp-Github-Git" class="headerlink" title="Git&amp;Github_Git"></a>Git&amp;Github_Git</h1><blockquote class="blockquote-center"><p>Git&amp;Github_Git 命令介绍、名词解释 </p>
@@ -188,33 +215,6 @@
 </blockquote>
 <hr>
 ]]></content>
-      <categories>
-        <category>Git&amp;Github</category>
-      </categories>
-      <tags>
-        <tag>Git&amp;Github</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Git&amp;Github_3</title>
-    <url>/2020/01/09/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/1_%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/1_Git&amp;Github_%E5%88%86%E5%B8%83%E5%BC%8F%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/Git&amp;Github_3/</url>
-    <content><![CDATA[<h1 id="Git-amp-Github-3"><a href="#Git-amp-Github-3" class="headerlink" title="Git&amp;Github_3"></a>Git&amp;Github_3</h1><blockquote class="blockquote-center"><p>Git&amp;Github_3 </p>
-</blockquote>
-<hr>
-<a id="more"></a>
-<p>The text is as follows :<br><code>git config --list</code> // 查看设置列表 </p>
-<h2 id="1、Git-克隆"><a href="#1、Git-克隆" class="headerlink" title="1、Git 克隆"></a>1、Git 克隆</h2><ul>
-<li><ol>
-<li>将远程仓库的东西复制到本地</li>
-</ol>
-<ul>
-<li>git clone 仓库地址 // 仓库地址由来 clone with https 下的 URL</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h2 id="2、"><a href="#2、" class="headerlink" title="2、"></a>2、</h2><hr>
-<h2 id="3、"><a href="#3、" class="headerlink" title="3、"></a>3、</h2>]]></content>
       <categories>
         <category>Git&amp;Github</category>
       </categories>
