@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="像我这样优秀的人">
 <meta property="og:description" content="Java 基本语法_1Java 基本语法_1">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-01-05T09:43:22.511Z">
+<meta property="og:updated_time" content="2020-01-14T15:46:38.364Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java 基本语法_1">
 <meta name="twitter:description" content="Java 基本语法_1Java 基本语法_1">
@@ -412,7 +412,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.2k
+                  2.4k
                 </span>
               
 
@@ -428,7 +428,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  4
+                  9
                 </span>mins
               
             </div>
@@ -661,6 +661,123 @@
 </ul>
 </li>
 </ul>
+<hr>
+<h2 id="Java-简介"><a href="#Java-简介" class="headerlink" title="Java 简介"></a>Java 简介</h2><p>Java介于编译型语言和解释型语言之间。编译型语言如C、C++，代码是直接编译成机器码执行，但是不同的平台（x86、ARM等）CPU的指令集不同，因此，需要编译出每一种平台的对应机器码。</p>
+<p>解释型语言如Python、Ruby没有这个问题，可以由解释器直接加载源码然后运行，代价是运行效率太低。而Java是将代码编译成一种“字节码”，它类似于抽象的CPU指令，然后，针对不同平台编写虚拟机，不同平台的虚拟机负责加载字节码并执行，这样就实现了“一次编写，到处运行”的效果。</p>
+<p>当然，这是针对Java开发者而言。对于虚拟机，需要为每个平台分别开发。为了保证不同平台、不同公司开发的虚拟机都能正确执行Java字节码，SUN公司制定了一系列的Java虚拟机规范。从实践的角度看，JVM的兼容性做得非常好，低版本的Java字节码完全可以正常运行在高版本的JVM上。</p>
+<p>随着Java的发展，SUN给Java又分出了三个不同版本：</p>
+<p>Java SE：Standard Edition</p>
+<p>Java EE：Enterprise Edition</p>
+<p>Java ME：Micro Edition</p>
+<p><strong>Java EE 包含 Java SE 包含 Java ME</strong></p>
+<p>Java SE就是标准版，包含标准的JVM和标准库，而Java EE是企业版，它只是在Java SE的基础上加上了大量的API和库，以便方便开发Web应用、数据库、消息服务等，Java EE的应用使用的虚拟机和Java SE完全相同。</p>
+<p>Java ME就和Java SE不同，它是一个针对嵌入式设备的“瘦身版”，Java SE的标准库无法在Java ME上使用，Java ME的虚拟机也是“瘦身版”。</p>
+<p>Java SE是整个Java平台的核心，而Java EE是进一步学习Web应用所必须的。我们熟悉的Spring等框架都是Java EE开源生态系统的一部分。不幸的是，Java ME从来没有真正流行起来，反而是Android开发成为了移动平台的标准之一，因此，没有特殊需求，不建议学习Java ME。</p>
+<p><strong>Java SE 是 核心</strong></p>
+<ul>
+<li><ol>
+<li>首先要学习Java SE，掌握Java语言本身、Java核心开发技术以及Java标准库的使用；</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>如果继续学习Java EE，那么Spring框架、数据库开发、分布式架构就是需要学习的；</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>如果要学习大数据开发，那么Hadoop、Spark、Flink这些大数据平台就是需要学习的，他们都基于Java或Scala开发；</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>如果想要学习移动开发，那么就深入Android平台，掌握Android App开发。</li>
+</ol>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">时间</th>
+<th align="center">版本</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1995</td>
+<td align="center">1.0</td>
+</tr>
+<tr>
+<td align="center">1998</td>
+<td align="center">1.2</td>
+</tr>
+<tr>
+<td align="center">2000</td>
+<td align="center">1.3</td>
+</tr>
+<tr>
+<td align="center">2002</td>
+<td align="center">1.4</td>
+</tr>
+<tr>
+<td align="center">2004</td>
+<td align="center">1.5/5.0</td>
+</tr>
+<tr>
+<td align="center">2005</td>
+<td align="center">1.6/6.0</td>
+</tr>
+<tr>
+<td align="center">2011</td>
+<td align="center">1.7/7.0</td>
+</tr>
+<tr>
+<td align="center">2014</td>
+<td align="center">1.8/8.0</td>
+</tr>
+<tr>
+<td align="center">2017/9</td>
+<td align="center">1.9/9.0</td>
+</tr>
+<tr>
+<td align="center">2018/3</td>
+<td align="center">10</td>
+</tr>
+<tr>
+<td align="center">2018/9</td>
+<td align="center">11</td>
+</tr>
+<tr>
+<td align="center">2019/3</td>
+<td align="center">12</td>
+</tr>
+<tr>
+<td align="center">2019/9</td>
+<td align="center">13</td>
+</tr>
+</tbody></table>
+<p><strong>名词解释</strong><br>初学者学Java，经常听到JDK、JRE这些名词，它们到底是啥？</p>
+<blockquote>
+<p>JDK：Java Development Kit<br>JRE：Java Runtime Environment</p>
+</blockquote>
+<p>简单地说，JRE就是运行Java字节码的虚拟机。但是，如果只有Java源码，要编译成Java字节码，就需要JDK，因为JDK除了包含JRE，还提供了编译器、调试器等开发工具。</p>
+<ul>
+<li><p>JRE的内部有一个Java虚拟机（Java Virtual Machine，JVM）以及一些标准的类别函数库（Class Library）</p>
+</li>
+<li><p>JRE是Java字节码的虚拟机，JDK包含JRE、编译器、调试器等开发工具。</p>
+</li>
+<li><p><strong>JDK 包含 JRE 包含 JVM</strong></p>
+</li>
+</ul>
+<blockquote>
+<p>JSR规范：Java Specification Request<br>JCP组织：Java Community Process</p>
+</blockquote>
+<p>JSR是一系列的规范，从JVM的内存模型到Web程序接口，全部都标准化了。而负责审核JSR的组织就是JCP。</p>
+<p>保证Java语言的规范性，SUN公司搞了一个JSR规范，凡是想给Java平台加一个功能，比如说访问数据库的功能，大家要先创建一个JSR规范，定义好接口，这样，各个数据库厂商都按照规范写出Java驱动程序，开发者就不用担心自己写的数据库代码在MySQL上能跑，却不能跑在PostgreSQL上。</p>
+<p><strong>一个JSR规范发布时，为了让大家有个参考，还要同时发布一个“参考实现”，以及一个“兼容性测试套件”：</strong></p>
+<blockquote>
+<p>RI：Reference Implementation<br>TCK：Technology Compatibility Kit</p>
+</blockquote>
+<p><strong>RI是JSR的实例，TCK是JSR的实例规格</strong></p>
+<p>有人提议要搞一个基于Java开发的消息服务器，这个提议很好啊，但是光有提议还不行，得贴出真正能跑的代码，这就是RI。如果有其他人也想开发这样一个消息服务器，如何保证这些消息服务器对开发者来说接口、功能都是相同的？所以还得提供TCK。</p>
+<p>通常来说，RI只是一个“能跑”的正确的代码，它不追求速度，所以，如果真正要选择一个Java的消息服务器，一般是没人用RI的，大家都会选择一个有竞争力的商用或开源产品。</p>
+<p>参考：Java 消息服务 JMS 的 <a href="https://jcp.org/en/jsr/detail?id=914" target="_blank" rel="noopener">JSR</a></p>
 
       
     </div>
@@ -693,7 +810,7 @@
   <p><span>本文标题:</span>Java 基本语法_1</p>
   <p><span>文章作者:</span>Pumpkin</p>
   <p><span>发布时间:</span>2019年12月29日 - 22:32:55</p>
-  <p><span>最后更新:</span>2020年01月05日 - 17:43:22</p>
+  <p><span>最后更新:</span>2020年01月14日 - 23:46:38</p>
   <p><span>原始链接:</span><a href="/2019/12/29/1_计算机科学与技术/0_计算机高级语言/Java_程序设计/Java基本语法_1/" title="Java 基本语法_1">https://lvyang0206.github.io/2019/12/29/1_计算机科学与技术/0_计算机高级语言/Java_程序设计/Java基本语法_1/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://lvyang0206.github.io/2019/12/29/1_计算机科学与技术/0_计算机高级语言/Java_程序设计/Java基本语法_1/" aria-label="复制成功！"></i></span>
   </p>
@@ -1216,7 +1333,7 @@ if(canvas.getContext){
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-基本语法-1"><span class="nav-number">1.</span> <span class="nav-text">Java 基本语法_1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、Java-平台-与-历史版本"><span class="nav-number">1.1.</span> <span class="nav-text">1、Java 平台 与 历史版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、Java-语言的特点"><span class="nav-number">1.2.</span> <span class="nav-text">2、Java 语言的特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、Java-运行机制"><span class="nav-number">1.3.</span> <span class="nav-text">3、Java 运行机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、面向对象程序设计"><span class="nav-number">1.4.</span> <span class="nav-text">4、面向对象程序设计</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-基本语法-1"><span class="nav-number">1.</span> <span class="nav-text">Java 基本语法_1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、Java-平台-与-历史版本"><span class="nav-number">1.1.</span> <span class="nav-text">1、Java 平台 与 历史版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、Java-语言的特点"><span class="nav-number">1.2.</span> <span class="nav-text">2、Java 语言的特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、Java-运行机制"><span class="nav-number">1.3.</span> <span class="nav-text">3、Java 运行机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、面向对象程序设计"><span class="nav-number">1.4.</span> <span class="nav-text">4、面向对象程序设计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java-简介"><span class="nav-number">1.5.</span> <span class="nav-text">Java 简介</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1302,7 +1419,7 @@ setInterval("createtime()",250);
 <!-- 网站总字数统计设置-->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count"> Blog 22.6k words in Total. </span> 
+  <span class="post-count"> Blog 23.9k words in Total. </span> 
   <br><a href="http://www.miitbeian.gov.cn/">宁ICP备xxxxxxxx号</a> 
 </div>
 

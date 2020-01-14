@@ -30,6 +30,129 @@
       </tags>
   </entry>
   <entry>
+    <title>Java 基本语法_8</title>
+    <url>/2020/01/10/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/0_%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80/Java_%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/Java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95_8/</url>
+    <content><![CDATA[<h1 id="Java-基本语法-8"><a href="#Java-基本语法-8" class="headerlink" title="Java 基本语法_8"></a>Java 基本语法_8</h1><blockquote class="blockquote-center"><p>Java 基本语法_8 </p>
+</blockquote>
+<hr>
+<a id="more"></a>
+<p>The text is as follows :</p>
+<h2 id="1、This"><a href="#1、This" class="headerlink" title="1、This"></a>1、This</h2><ul>
+<li><ol>
+<li>This 使用</li>
+</ol>
+<ul>
+<li>在方法及构造方法中，使用this来访问字段及方法</li>
+<li>this 指当前实例本身</li>
+</ul>
+</li>
+<li><ol start="2">
+<li>解决局部变量和字段本身重名</li>
+</ol>
+</li>
+</ul>
+<p>“””</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Person(int age,String name)&#123;</span><br><span class="line">    this.age = age ; // this.age 表示域变量， age 表示参数变量</span><br><span class="line">    this.name = name ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>“””</p>
+<ul>
+<li><ol start="3">
+<li>构造方法中，用 this 调用另一构造方法</li>
+</ol>
+<ul>
+<li>在构造方法中调用另一个构造，这条语句必须放在第一位</li>
+</ul>
+</li>
+</ul>
+<p>“””</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Person()&#123;</span><br><span class="line">    this (0,&quot;&quot;) ; // 特殊写法</span><br><span class="line">    ......</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>“””</p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java 基本语法_7</title>
+    <url>/2020/01/09/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/0_%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80/Java_%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/Java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95_7/</url>
+    <content><![CDATA[<h1 id="Java-基本语法-7"><a href="#Java-基本语法-7" class="headerlink" title="Java 基本语法_7"></a>Java 基本语法_7</h1><blockquote class="blockquote-center"><p>Java 基本语法_7 </p>
+</blockquote>
+<hr>
+<a id="more"></a>
+<p>The text is as follows :</p>
+<h2 id="1、面向对象OO"><a href="#1、面向对象OO" class="headerlink" title="1、面向对象OO"></a>1、面向对象OO</h2><ul>
+<li><ol>
+<li>类</li>
+</ol>
+<ul>
+<li>封装对象的状态和方法</li>
+<li>将变量与函数封装到一个类中</li>
+</ul>
+</li>
+<li><ol start="2">
+<li>字段</li>
+</ol>
+<ul>
+<li>字段是类的属性，用变量来表示</li>
+<li>又称：域、域变量、属性、成员变量</li>
+</ul>
+</li>
+<li><ol start="3">
+<li>方法</li>
+</ol>
+<ul>
+<li>方法是类的功能和操作，是用函数来表示的</li>
+<li>构造方法construct 是一种特殊的方法</li>
+<li>用来初始化该类的一个新对象</li>
+<li>构造方法和类同名，而且<strong>不写返回数据类型</strong>//没有<strong>void</strong></li>
+<li>类都有一个至多个构造方法，系统也会自动构造一个<strong>默认构造方法</strong></li>
+<li>默认构造方法没有任何成员变量</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="2、使用对象"><a href="#2、使用对象" class="headerlink" title="2、使用对象"></a>2、使用对象</h2><ul>
+<li><ol>
+<li>访问对象的字段和方法用<code>.</code>，先 new 再访问。</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>使用方式的好处</li>
+</ol>
+<ul>
+<li>封装性</li>
+<li>安全性</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="3、方法重载-（overload）"><a href="#3、方法重载-（overload）" class="headerlink" title="3、方法重载 （overload）"></a>3、方法重载 （overload）</h2><ul>
+<li><ol>
+<li>多个方法有相同的名字，编译时可以识别</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>这些方法的签名不同：参数个数/参数类型不同。</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>通过方法重载可以实现多态。</li>
+</ol>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Git&amp;Github_Git</title>
     <url>/2020/01/09/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/1_%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/1_Git&amp;Github_%E5%88%86%E5%B8%83%E5%BC%8F%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/0_Git%E5%9F%BA%E7%A1%80%E7%AE%80%E4%BB%8B/</url>
     <content><![CDATA[<h1 id="Git-amp-Github-Git"><a href="#Git-amp-Github-Git" class="headerlink" title="Git&amp;Github_Git"></a>Git&amp;Github_Git</h1><blockquote class="blockquote-center"><p>Git&amp;Github_Git 命令介绍、名词解释 </p>
@@ -416,129 +539,6 @@
       </categories>
       <tags>
         <tag>Git&amp;Github</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java 基本语法_8</title>
-    <url>/2020/01/08/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/0_%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80/Java_%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/Java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95_8/</url>
-    <content><![CDATA[<h1 id="Java-基本语法-8"><a href="#Java-基本语法-8" class="headerlink" title="Java 基本语法_8"></a>Java 基本语法_8</h1><blockquote class="blockquote-center"><p>Java 基本语法_8 </p>
-</blockquote>
-<hr>
-<a id="more"></a>
-<p>The text is as follows :</p>
-<h2 id="1、This"><a href="#1、This" class="headerlink" title="1、This"></a>1、This</h2><ul>
-<li><ol>
-<li>This 使用</li>
-</ol>
-<ul>
-<li>在方法及构造方法中，使用this来访问字段及方法</li>
-<li>this 指当前实例本身</li>
-</ul>
-</li>
-<li><ol start="2">
-<li>解决局部变量和字段本身重名</li>
-</ol>
-</li>
-</ul>
-<p>“””</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Person(int age,String name)&#123;</span><br><span class="line">    this.age = age ; // this.age 表示域变量， age 表示参数变量</span><br><span class="line">    this.name = name ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>“””</p>
-<ul>
-<li><ol start="3">
-<li>构造方法中，用 this 调用另一构造方法</li>
-</ol>
-<ul>
-<li>在构造方法中调用另一个构造，这条语句必须放在第一位</li>
-</ul>
-</li>
-</ul>
-<p>“””</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Person()&#123;</span><br><span class="line">    this (0,&quot;&quot;) ; // 特殊写法</span><br><span class="line">    ......</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>“””</p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java 基本语法_7</title>
-    <url>/2020/01/08/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/0_%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80/Java_%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/Java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95_7/</url>
-    <content><![CDATA[<h1 id="Java-基本语法-7"><a href="#Java-基本语法-7" class="headerlink" title="Java 基本语法_7"></a>Java 基本语法_7</h1><blockquote class="blockquote-center"><p>Java 基本语法_7 </p>
-</blockquote>
-<hr>
-<a id="more"></a>
-<p>The text is as follows :</p>
-<h2 id="1、面向对象OO"><a href="#1、面向对象OO" class="headerlink" title="1、面向对象OO"></a>1、面向对象OO</h2><ul>
-<li><ol>
-<li>类</li>
-</ol>
-<ul>
-<li>封装对象的状态和方法</li>
-<li>将变量与函数封装到一个类中</li>
-</ul>
-</li>
-<li><ol start="2">
-<li>字段</li>
-</ol>
-<ul>
-<li>字段是类的属性，用变量来表示</li>
-<li>又称：域、域变量、属性、成员变量</li>
-</ul>
-</li>
-<li><ol start="3">
-<li>方法</li>
-</ol>
-<ul>
-<li>方法是类的功能和操作，是用函数来表示的</li>
-<li>构造方法construct 是一种特殊的方法</li>
-<li>用来初始化该类的一个新对象</li>
-<li>构造方法和类同名，而且<strong>不写返回数据类型</strong>//没有<strong>void</strong></li>
-<li>类都有一个至多个构造方法，系统也会自动构造一个<strong>默认构造方法</strong></li>
-<li>默认构造方法没有任何成员变量</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h2 id="2、使用对象"><a href="#2、使用对象" class="headerlink" title="2、使用对象"></a>2、使用对象</h2><ul>
-<li><ol>
-<li>访问对象的字段和方法用<code>.</code>，先 new 再访问。</li>
-</ol>
-</li>
-<li><ol start="2">
-<li>使用方式的好处</li>
-</ol>
-<ul>
-<li>封装性</li>
-<li>安全性</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h2 id="3、方法重载-（overload）"><a href="#3、方法重载-（overload）" class="headerlink" title="3、方法重载 （overload）"></a>3、方法重载 （overload）</h2><ul>
-<li><ol>
-<li>多个方法有相同的名字，编译时可以识别</li>
-</ol>
-</li>
-<li><ol start="2">
-<li>这些方法的签名不同：参数个数/参数类型不同。</li>
-</ol>
-</li>
-<li><ol start="3">
-<li>通过方法重载可以实现多态。</li>
-</ol>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -1528,6 +1528,123 @@
 </ul>
 </li>
 </ul>
+<hr>
+<h2 id="Java-简介"><a href="#Java-简介" class="headerlink" title="Java 简介"></a>Java 简介</h2><p>Java介于编译型语言和解释型语言之间。编译型语言如C、C++，代码是直接编译成机器码执行，但是不同的平台（x86、ARM等）CPU的指令集不同，因此，需要编译出每一种平台的对应机器码。</p>
+<p>解释型语言如Python、Ruby没有这个问题，可以由解释器直接加载源码然后运行，代价是运行效率太低。而Java是将代码编译成一种“字节码”，它类似于抽象的CPU指令，然后，针对不同平台编写虚拟机，不同平台的虚拟机负责加载字节码并执行，这样就实现了“一次编写，到处运行”的效果。</p>
+<p>当然，这是针对Java开发者而言。对于虚拟机，需要为每个平台分别开发。为了保证不同平台、不同公司开发的虚拟机都能正确执行Java字节码，SUN公司制定了一系列的Java虚拟机规范。从实践的角度看，JVM的兼容性做得非常好，低版本的Java字节码完全可以正常运行在高版本的JVM上。</p>
+<p>随着Java的发展，SUN给Java又分出了三个不同版本：</p>
+<p>Java SE：Standard Edition</p>
+<p>Java EE：Enterprise Edition</p>
+<p>Java ME：Micro Edition</p>
+<p><strong>Java EE 包含 Java SE 包含 Java ME</strong></p>
+<p>Java SE就是标准版，包含标准的JVM和标准库，而Java EE是企业版，它只是在Java SE的基础上加上了大量的API和库，以便方便开发Web应用、数据库、消息服务等，Java EE的应用使用的虚拟机和Java SE完全相同。</p>
+<p>Java ME就和Java SE不同，它是一个针对嵌入式设备的“瘦身版”，Java SE的标准库无法在Java ME上使用，Java ME的虚拟机也是“瘦身版”。</p>
+<p>Java SE是整个Java平台的核心，而Java EE是进一步学习Web应用所必须的。我们熟悉的Spring等框架都是Java EE开源生态系统的一部分。不幸的是，Java ME从来没有真正流行起来，反而是Android开发成为了移动平台的标准之一，因此，没有特殊需求，不建议学习Java ME。</p>
+<p><strong>Java SE 是 核心</strong></p>
+<ul>
+<li><ol>
+<li>首先要学习Java SE，掌握Java语言本身、Java核心开发技术以及Java标准库的使用；</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>如果继续学习Java EE，那么Spring框架、数据库开发、分布式架构就是需要学习的；</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>如果要学习大数据开发，那么Hadoop、Spark、Flink这些大数据平台就是需要学习的，他们都基于Java或Scala开发；</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>如果想要学习移动开发，那么就深入Android平台，掌握Android App开发。</li>
+</ol>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">时间</th>
+<th align="center">版本</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1995</td>
+<td align="center">1.0</td>
+</tr>
+<tr>
+<td align="center">1998</td>
+<td align="center">1.2</td>
+</tr>
+<tr>
+<td align="center">2000</td>
+<td align="center">1.3</td>
+</tr>
+<tr>
+<td align="center">2002</td>
+<td align="center">1.4</td>
+</tr>
+<tr>
+<td align="center">2004</td>
+<td align="center">1.5/5.0</td>
+</tr>
+<tr>
+<td align="center">2005</td>
+<td align="center">1.6/6.0</td>
+</tr>
+<tr>
+<td align="center">2011</td>
+<td align="center">1.7/7.0</td>
+</tr>
+<tr>
+<td align="center">2014</td>
+<td align="center">1.8/8.0</td>
+</tr>
+<tr>
+<td align="center">2017/9</td>
+<td align="center">1.9/9.0</td>
+</tr>
+<tr>
+<td align="center">2018/3</td>
+<td align="center">10</td>
+</tr>
+<tr>
+<td align="center">2018/9</td>
+<td align="center">11</td>
+</tr>
+<tr>
+<td align="center">2019/3</td>
+<td align="center">12</td>
+</tr>
+<tr>
+<td align="center">2019/9</td>
+<td align="center">13</td>
+</tr>
+</tbody></table>
+<p><strong>名词解释</strong><br>初学者学Java，经常听到JDK、JRE这些名词，它们到底是啥？</p>
+<blockquote>
+<p>JDK：Java Development Kit<br>JRE：Java Runtime Environment</p>
+</blockquote>
+<p>简单地说，JRE就是运行Java字节码的虚拟机。但是，如果只有Java源码，要编译成Java字节码，就需要JDK，因为JDK除了包含JRE，还提供了编译器、调试器等开发工具。</p>
+<ul>
+<li><p>JRE的内部有一个Java虚拟机（Java Virtual Machine，JVM）以及一些标准的类别函数库（Class Library）</p>
+</li>
+<li><p>JRE是Java字节码的虚拟机，JDK包含JRE、编译器、调试器等开发工具。</p>
+</li>
+<li><p><strong>JDK 包含 JRE 包含 JVM</strong></p>
+</li>
+</ul>
+<blockquote>
+<p>JSR规范：Java Specification Request<br>JCP组织：Java Community Process</p>
+</blockquote>
+<p>JSR是一系列的规范，从JVM的内存模型到Web程序接口，全部都标准化了。而负责审核JSR的组织就是JCP。</p>
+<p>保证Java语言的规范性，SUN公司搞了一个JSR规范，凡是想给Java平台加一个功能，比如说访问数据库的功能，大家要先创建一个JSR规范，定义好接口，这样，各个数据库厂商都按照规范写出Java驱动程序，开发者就不用担心自己写的数据库代码在MySQL上能跑，却不能跑在PostgreSQL上。</p>
+<p><strong>一个JSR规范发布时，为了让大家有个参考，还要同时发布一个“参考实现”，以及一个“兼容性测试套件”：</strong></p>
+<blockquote>
+<p>RI：Reference Implementation<br>TCK：Technology Compatibility Kit</p>
+</blockquote>
+<p><strong>RI是JSR的实例，TCK是JSR的实例规格</strong></p>
+<p>有人提议要搞一个基于Java开发的消息服务器，这个提议很好啊，但是光有提议还不行，得贴出真正能跑的代码，这就是RI。如果有其他人也想开发这样一个消息服务器，如何保证这些消息服务器对开发者来说接口、功能都是相同的？所以还得提供TCK。</p>
+<p>通常来说，RI只是一个“能跑”的正确的代码，它不追求速度，所以，如果真正要选择一个Java的消息服务器，一般是没人用RI的，大家都会选择一个有竞争力的商用或开源产品。</p>
+<p>参考：Java 消息服务 JMS 的 <a href="https://jcp.org/en/jsr/detail?id=914" target="_blank" rel="noopener">JSR</a></p>
 ]]></content>
       <categories>
         <category>Java</category>
@@ -1571,6 +1688,25 @@
       </tags>
   </entry>
   <entry>
+    <title>JSP不用学</title>
+    <url>/2019/12/28/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/4_%E5%AD%A6%E4%B9%A0%E9%81%BF%E5%9D%91/JSP%E4%B8%8D%E7%94%A8%E5%AD%A6/</url>
+    <content><![CDATA[<h1 id="JSP不用学"><a href="#JSP不用学" class="headerlink" title="JSP不用学"></a>JSP不用学</h1><blockquote class="blockquote-center"><p>JSP不用学 </p>
+</blockquote>
+<hr>
+<a id="more"></a>
+<p>1.JSP不用学<br>前后端耦合和依赖比较强，所以被淘汰出局</p>
+<p>2.什么是JSP<br>Jsp Java Server page<br>Java 服务器页面<br>HTML文件中插入JAVA程序段和JSP标记，形成JSP文件<br>高耦合东西，网页模板技术。<br>网页=样式+数据<br>构建和驱动由服务器进行，叫服务端网页模板。</p>
+<p>控制层<br>业务层<br>DAO层</p>
+<p>3、目前都是前后端分离<br>JSP模板技术全部出局</p>
+]]></content>
+      <categories>
+        <category>计算机科学与技术</category>
+      </categories>
+      <tags>
+        <tag>JSP</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>编写简历</title>
     <url>/2019/12/28/3_%E6%8B%9B%E8%81%98%E8%80%83%E7%A0%94%E7%9B%B8%E5%85%B3/1_%E7%AE%80%E5%8E%86%E7%BC%96%E5%86%99/%E7%BC%96%E5%86%99%E7%AE%80%E5%8E%86%E6%A1%86%E6%9E%B6_1/</url>
     <content><![CDATA[<h1 id="如何编写简历"><a href="#如何编写简历" class="headerlink" title="如何编写简历"></a>如何编写简历</h1><blockquote class="blockquote-center"><p>如何编写简历 </p>
@@ -1591,25 +1727,6 @@
       </categories>
       <tags>
         <tag>工作招聘</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JSP不用学</title>
-    <url>/2019/12/28/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/4_%E5%AD%A6%E4%B9%A0%E9%81%BF%E5%9D%91/JSP%E4%B8%8D%E7%94%A8%E5%AD%A6/</url>
-    <content><![CDATA[<h1 id="JSP不用学"><a href="#JSP不用学" class="headerlink" title="JSP不用学"></a>JSP不用学</h1><blockquote class="blockquote-center"><p>JSP不用学 </p>
-</blockquote>
-<hr>
-<a id="more"></a>
-<p>1.JSP不用学<br>前后端耦合和依赖比较强，所以被淘汰出局</p>
-<p>2.什么是JSP<br>Jsp Java Server page<br>Java 服务器页面<br>HTML文件中插入JAVA程序段和JSP标记，形成JSP文件<br>高耦合东西，网页模板技术。<br>网页=样式+数据<br>构建和驱动由服务器进行，叫服务端网页模板。</p>
-<p>控制层<br>业务层<br>DAO层</p>
-<p>3、目前都是前后端分离<br>JSP模板技术全部出局</p>
-]]></content>
-      <categories>
-        <category>计算机科学与技术</category>
-      </categories>
-      <tags>
-        <tag>JSP</tag>
       </tags>
   </entry>
   <entry>
