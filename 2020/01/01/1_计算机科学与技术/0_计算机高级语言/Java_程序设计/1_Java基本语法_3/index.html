@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="像我这样优秀的人">
 <meta property="og:description" content="Java 基本语法_3Java 基本语法_3">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-01-14T16:35:50.185Z">
+<meta property="og:updated_time" content="2020-01-15T03:10:48.931Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java 基本语法_3">
 <meta name="twitter:description" content="Java 基本语法_3Java 基本语法_3">
@@ -412,7 +412,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  549
+                  752
                 </span>
               
 
@@ -459,12 +459,14 @@
 <ul>
 <li><p>数据类型不同也是数据存储方式和运算方式不同</p>
 </li>
+<li><p>基本数据类型是CPU可以直接进行运算的类型</p>
+</li>
 <li><ol>
 <li>Java 中的数据类型有两大类</li>
 </ol>
 <ul>
 <li>基本数据类型 - Primitive types</li>
-<li>引用数据类型     - reference types</li>
+<li>引用数据类型 - reference types</li>
 </ul>
 </li>
 </ul>
@@ -527,6 +529,14 @@
 </li>
 </ul>
 </li>
+<li><p>计算机内存的基本结构</p>
+<ul>
+<li>计算机内存的最小存储单元是字节（byte）</li>
+<li>一个字节 = 8 位二进制数 （bit）</li>
+<li>二进制表示范围： <code>00000000</code><del><code>11111111</code> = 十进制 <code>0</code></del><code>255</code> = 十六进制 <code>00</code>~<code>ff</code></li>
+<li>内存单元从 0 开始编号，内存地址。每个内存单元可以看作一间房间，内存地址是门牌号。</li>
+</ul>
+</li>
 </ul>
 <hr>
 <h2 id="2、标识符"><a href="#2、标识符" class="headerlink" title="2、标识符"></a>2、标识符</h2><ul>
@@ -537,7 +547,8 @@
 </li>
 </ol>
 </li>
-<li>标识符满足规定<ul>
+<li><p>标识符满足规定</p>
+<ul>
 <li>开头：字母、下划线、美元$ （不能以数字开头）</li>
 <li>内容：字母、下划线、美元$、数字</li>
 <li>Java 大小写敏感<ul>
@@ -548,7 +559,24 @@
 </li>
 </ul>
 </li>
+<li><ol start="2">
+<li>变量与常量</li>
+</ol>
+<ul>
+<li>变量可以重新赋值</li>
+<li>常量不可以重新赋值（常量便于理解程序意图）</li>
 </ul>
+</li>
+<li><ol start="3">
+<li>var 关键字<br><code>作用示例</code></li>
+</ol>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1 StringBuilder x = new StringBuilder();</span><br><span class="line"></span><br><span class="line">2 var x = new StringBuilder();</span><br><span class="line"></span><br><span class="line">上面1、2是等价的</span><br><span class="line">编译器会根据赋值语句自动推断出变量 x 的类型是 StringBuilder 。</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>var 定义变量，少写了<strong>变量类型</strong></p>
+</blockquote>
 <hr>
 <h2 id="3、运算符与表达式"><a href="#3、运算符与表达式" class="headerlink" title="3、运算符与表达式"></a>3、运算符与表达式</h2><ul>
 <li>1.常用<ul>
@@ -596,7 +624,7 @@
   <p><span>本文标题:</span>Java 基本语法_3</p>
   <p><span>文章作者:</span>Pumpkin</p>
   <p><span>发布时间:</span>2020年01月01日 - 13:26:34</p>
-  <p><span>最后更新:</span>2020年01月15日 - 00:35:50</p>
+  <p><span>最后更新:</span>2020年01月15日 - 11:10:48</p>
   <p><span>原始链接:</span><a href="/2020/01/01/1_计算机科学与技术/0_计算机高级语言/Java_程序设计/1_Java基本语法_3/" title="Java 基本语法_3">https://lvyang0206.github.io/2020/01/01/1_计算机科学与技术/0_计算机高级语言/Java_程序设计/1_Java基本语法_3/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://lvyang0206.github.io/2020/01/01/1_计算机科学与技术/0_计算机高级语言/Java_程序设计/1_Java基本语法_3/" aria-label="复制成功！"></i></span>
   </p>
@@ -672,8 +700,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/01/01/1_计算机科学与技术/0_计算机高级语言/Java_程序设计/Java基本语法_3/" rel="next" title="Java 基本语法_3">
-                <i class="fa fa-chevron-left"></i> Java 基本语法_3
+              <a href="/2019/12/30/2_非主专业学科/1_房地产金融学_选修/课题作业/房地产金融产品_课题作业/" rel="next" title="房地产金融产品案例">
+                <i class="fa fa-chevron-left"></i> 房地产金融产品案例
               </a>
             
           </div>
@@ -682,8 +710,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/01/03/5_思维心得/1_思维方式/任正非：2012思维/" rel="prev" title="任总与2012实验室座谈会纪要">
-                任总与2012实验室座谈会纪要 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/01/01/1_计算机科学与技术/0_计算机高级语言/Java_程序设计/Java基本语法_3/" rel="prev" title="Java 基本语法_3">
+                Java 基本语法_3 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -1033,7 +1061,7 @@ if(canvas.getContext){
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">35</span>
+                  <span class="site-state-item-count">36</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1205,7 +1233,7 @@ setInterval("createtime()",250);
 <!-- 网站总字数统计设置-->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count"> Blog 29.8k words in Total. </span> 
+  <span class="post-count"> Blog 30.3k words in Total. </span> 
   <br><a href="http://www.miitbeian.gov.cn/">宁ICP备xxxxxxxx号</a> 
 </div>
 
