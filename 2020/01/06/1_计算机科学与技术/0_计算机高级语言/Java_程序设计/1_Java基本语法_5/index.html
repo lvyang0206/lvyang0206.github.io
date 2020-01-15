@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="像我这样优秀的人">
 <meta property="og:description" content="Java 基本语法_5Java 基本语法_5">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-01-15T13:16:08.640Z">
+<meta property="og:updated_time" content="2020-01-15T13:40:30.098Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java 基本语法_5">
 <meta name="twitter:description" content="Java 基本语法_5Java 基本语法_5">
@@ -412,7 +412,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  854
+                  1.4k
                 </span>
               
 
@@ -428,7 +428,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  5
                 </span>mins
               
             </div>
@@ -478,12 +478,46 @@
 <h3 id="移位运算"><a href="#移位运算" class="headerlink" title="移位运算"></a>移位运算</h3><ul>
 <li>移位运算</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">int n , n1 , n2 , n3 , n4 = 7 ;</span><br><span class="line">int n = 7 ;    // 00000000 00000000 00000000 00000111 = 7</span><br><span class="line">int n1 &lt;&lt; 1 ;  // 00000000 00000000 00000000 00001110 = 14</span><br><span class="line">int n2 &lt;&lt; 2 ;  // 00000000 00000000 00000000 00011100 = 28</span><br><span class="line">int n3 &lt;&lt; 28 ; // 01110000 00000000 00000000 00000000 = 1879048192</span><br><span class="line">int n4 &lt;&lt; 29 ; // 11100000 00000000 00000000 00000000 = -536870912 最高位变为 1 ，结果为负数</span><br><span class="line"></span><br><span class="line">int n &gt;&gt; 1 ;   // 00000000 00000000 00000000 00000011 = 3</span><br><span class="line">int n = -536870912 ;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">对正数</span><br><span class="line">int n , n1 , n2 , n3 , n4 = 7 ;</span><br><span class="line">int n = 7 ;    // 00000000 00000000 00000000 00000111 = 7</span><br><span class="line">int n1 &lt;&lt; 1 ;  // 00000000 00000000 00000000 00001110 = 14</span><br><span class="line">int n2 &lt;&lt; 2 ;  // 00000000 00000000 00000000 00011100 = 28</span><br><span class="line">int n3 &lt;&lt; 28 ; // 01110000 00000000 00000000 00000000 = 1879048192</span><br><span class="line">int n4 &lt;&lt; 29 ; // 11100000 00000000 00000000 00000000 = -536870912 最高位变为 1 ，结果为负数</span><br><span class="line">int n &gt;&gt; 1 ;   // 00000000 00000000 00000000 00000011 = 3</span><br><span class="line"></span><br><span class="line">对负数</span><br><span class="line">如果对一个负数进行右移，最高位的1不动，结果仍然是一个负数:</span><br><span class="line">int n = -536870912 ;</span><br><span class="line">int n &gt;&gt; 1 ;   // 11110000 00000000 00000000 00000000 = -268435456</span><br><span class="line">int n1 = -536870912 ;</span><br><span class="line">int n1 &gt;&gt; 2 ;  // 10111000 00000000 00000000 00000000 = -134217728</span><br><span class="line"></span><br><span class="line">不带符号的右移运算</span><br><span class="line">一种不带符号的右移运算，使用&gt;&gt;&gt;，它的特点是符号位跟着动，因此，对一个负数进行&gt;&gt;&gt;右移，它会变成正数，原因是最高位的1变成了0：</span><br><span class="line">int n = -536870912;</span><br><span class="line">int n1 = n &gt;&gt;&gt; 1;  // 01110000 00000000 00000000 00000000 = 1879048192</span><br><span class="line">int n2 = n &gt;&gt;&gt; 2;  // 00111000 00000000 00000000 00000000 = 939524096</span><br><span class="line">int n3 = n &gt;&gt;&gt; 29; // 00000000 00000000 00000000 00000111 = 7</span><br><span class="line">int n4 = n &gt;&gt;&gt; 31; // 00000000 00000000 00000000 00000001 = 1</span><br></pre></td></tr></table></figure>
 
-<p>### </p>
-<ul>
-<li>位运算</li>
+<p><strong>对byte和short类型进行移位时，会首先转换为int再进行位移。</strong></p>
+<blockquote>
+<p>仔细观察可发现，左移实际上就是不断地×2，右移实际上就是不断地÷2。</p>
+</blockquote>
+<h3 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h3><ul>
+<li>位运算：位运算是按位进行 <strong>与、或、非和异或</strong> 的运算。</li>
 </ul>
+<ol>
+<li>与 运算<br>与 规则：<strong>两个数同时为1，结果才为1</strong></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">n = 0 &amp; 0; // 0</span><br><span class="line">n = 0 &amp; 1; // 0</span><br><span class="line">n = 1 &amp; 0; // 0</span><br><span class="line">n = 1 &amp; 1; // 1</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>或 运算<br>或 规则：<strong>任意一个为1，结果就为1</strong></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">n = 0 | 0; // 0</span><br><span class="line">n = 0 | 1; // 1</span><br><span class="line">n = 1 | 0; // 1</span><br><span class="line">n = 1 | 1; // 1</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>非 运算<br>非 规则：<strong>0 和 1 互换</strong></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">n = ~0; // 1</span><br><span class="line">n = ~1; // 0</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>异或 运算<br>异或 规则：<strong>两个数不同，结果为 1，否则为 0</strong></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">n = 0 ^ 0; // 0</span><br><span class="line">n = 0 ^ 1; // 1</span><br><span class="line">n = 1 ^ 0; // 1</span><br><span class="line">n = 1 ^ 1; // 0</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>对两个整数进行位运算，<strong>按位对齐，对每一位进行运算。</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int x = 167776589; // 00001010 00000000 00010001 01001101</span><br><span class="line">int y = 167776512; // 00001010 00000000 00010001 00000000</span><br><span class="line">int sum = x &amp; y ;  // 00001010 00000000 00010001 00000000</span><br><span class="line">sum = 00001010 00000000 00010001 00000000 即 167776512</span><br></pre></td></tr></table></figure>
+
+<p><strong>位与运算实际上可以看作两个整数表示的IP地址10.0.17.77和10.0.17.0，通过与运算，可以快速判断一个IP是否在给定的网段内。</strong></p>
+<h3 id="整数-的-类型自动提升和强制类型转换"><a href="#整数-的-类型自动提升和强制类型转换" class="headerlink" title="整数 的 类型自动提升和强制类型转换"></a>整数 的 类型自动提升和强制类型转换</h3><ul>
+<li>参与运算的两个数类型不一致，那么计算结果为较大类型的整型。例如，<code>short</code>和<code>int</code>计算，结果总是<code>int</code>，原因是<code>short</code>首先自动被转型为<code>int</code>：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">short x = 1234;</span><br><span class="line">int y = 123456;</span><br><span class="line">short b = x + y; // 编译错误!</span><br><span class="line">int a = x + y; // s自动转型为int</span><br></pre></td></tr></table></figure>
+
 <hr>
 <h2 id="浮点数运算"><a href="#浮点数运算" class="headerlink" title="浮点数运算"></a>浮点数运算</h2><ul>
 <li>浮点数运算和整数运算相比，只能进行加减乘除这些数值计算，不能做位运算和移位运算。</li>
@@ -543,7 +577,7 @@
   <p><span>本文标题:</span>Java 基本语法_5</p>
   <p><span>文章作者:</span>Pumpkin</p>
   <p><span>发布时间:</span>2020年01月06日 - 17:41:24</p>
-  <p><span>最后更新:</span>2020年01月15日 - 21:16:08</p>
+  <p><span>最后更新:</span>2020年01月15日 - 21:40:30</p>
   <p><span>原始链接:</span><a href="/2020/01/06/1_计算机科学与技术/0_计算机高级语言/Java_程序设计/1_Java基本语法_5/" title="Java 基本语法_5">https://lvyang0206.github.io/2020/01/06/1_计算机科学与技术/0_计算机高级语言/Java_程序设计/1_Java基本语法_5/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://lvyang0206.github.io/2020/01/06/1_计算机科学与技术/0_计算机高级语言/Java_程序设计/1_Java基本语法_5/" aria-label="复制成功！"></i></span>
   </p>
@@ -1066,7 +1100,7 @@ if(canvas.getContext){
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-基本语法-5"><span class="nav-number">1.</span> <span class="nav-text">Java 基本语法_5</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#整数运算"><span class="nav-number">1.1.</span> <span class="nav-text">整数运算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#整数运算方式"><span class="nav-number">1.1.1.</span> <span class="nav-text">整数运算方式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#溢出"><span class="nav-number">1.2.</span> <span class="nav-text">溢出</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#移位运算"><span class="nav-number">1.2.1.</span> <span class="nav-text">移位运算</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浮点数运算"><span class="nav-number">1.3.</span> <span class="nav-text">浮点数运算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#溢出-1"><span class="nav-number">1.3.1.</span> <span class="nav-text">溢出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#强制转型"><span class="nav-number">1.3.2.</span> <span class="nav-text">强制转型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#布尔运算"><span class="nav-number">1.4.</span> <span class="nav-text">布尔运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符和字符串"><span class="nav-number">1.5.</span> <span class="nav-text">字符和字符串</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-基本语法-5"><span class="nav-number">1.</span> <span class="nav-text">Java 基本语法_5</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#整数运算"><span class="nav-number">1.1.</span> <span class="nav-text">整数运算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#整数运算方式"><span class="nav-number">1.1.1.</span> <span class="nav-text">整数运算方式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#溢出"><span class="nav-number">1.2.</span> <span class="nav-text">溢出</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#移位运算"><span class="nav-number">1.2.1.</span> <span class="nav-text">移位运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#位运算"><span class="nav-number">1.2.2.</span> <span class="nav-text">位运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#整数-的-类型自动提升和强制类型转换"><span class="nav-number">1.2.3.</span> <span class="nav-text">整数 的 类型自动提升和强制类型转换</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浮点数运算"><span class="nav-number">1.3.</span> <span class="nav-text">浮点数运算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#溢出-1"><span class="nav-number">1.3.1.</span> <span class="nav-text">溢出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#强制转型"><span class="nav-number">1.3.2.</span> <span class="nav-text">强制转型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#布尔运算"><span class="nav-number">1.4.</span> <span class="nav-text">布尔运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符和字符串"><span class="nav-number">1.5.</span> <span class="nav-text">字符和字符串</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1152,7 +1186,7 @@ setInterval("createtime()",250);
 <!-- 网站总字数统计设置-->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count"> Blog 31.1k words in Total. </span> 
+  <span class="post-count"> Blog 31.6k words in Total. </span> 
   <br><a href="http://www.beian.miit.gov.cn/">宁ICP备20000073号</a> 
 </div>
 
