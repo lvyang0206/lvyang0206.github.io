@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="像我这样优秀的人">
 <meta property="og:description" content="Java 基本语法_5Java 基本语法_5">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-01-15T13:40:30.098Z">
+<meta property="og:updated_time" content="2020-01-15T14:11:12.273Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java 基本语法_5">
 <meta name="twitter:description" content="Java 基本语法_5Java 基本语法_5">
@@ -412,7 +412,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.4k
+                  1.6k
                 </span>
               
 
@@ -428,7 +428,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5
+                  6
                 </span>mins
               
             </div>
@@ -513,10 +513,26 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int x = 167776589; // 00001010 00000000 00010001 01001101</span><br><span class="line">int y = 167776512; // 00001010 00000000 00010001 00000000</span><br><span class="line">int sum = x &amp; y ;  // 00001010 00000000 00010001 00000000</span><br><span class="line">sum = 00001010 00000000 00010001 00000000 即 167776512</span><br></pre></td></tr></table></figure>
 
 <p><strong>位与运算实际上可以看作两个整数表示的IP地址10.0.17.77和10.0.17.0，通过与运算，可以快速判断一个IP是否在给定的网段内。</strong></p>
-<h3 id="整数-的-类型自动提升和强制类型转换"><a href="#整数-的-类型自动提升和强制类型转换" class="headerlink" title="整数 的 类型自动提升和强制类型转换"></a>整数 的 类型自动提升和强制类型转换</h3><ul>
+<h3 id="整数-的-类型自动提升和强制类型转换"><a href="#整数-的-类型自动提升和强制类型转换" class="headerlink" title="整数 的 类型自动提升和强制类型转换"></a>整数 的 类型自动提升和强制类型转换</h3><ol>
+<li>类型自动提升</li>
+</ol>
+<ul>
 <li>参与运算的两个数类型不一致，那么计算结果为较大类型的整型。例如，<code>short</code>和<code>int</code>计算，结果总是<code>int</code>，原因是<code>short</code>首先自动被转型为<code>int</code>：</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">short x = 1234;</span><br><span class="line">int y = 123456;</span><br><span class="line">short b = x + y; // 编译错误!</span><br><span class="line">int a = x + y; // s自动转型为int</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">short x = 1234 ;</span><br><span class="line">int y = 123456 ;</span><br><span class="line">short b = x + y ; // 编译错误!</span><br><span class="line">int a = x + y   ; // s自动转型为int</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>强制类型转换</li>
+</ol>
+<ul>
+<li>结果强制转型，即将大范围的整数转型为小范围的整数。强制转型使用(类型)。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int i = 12345 ;</span><br><span class="line">short s = (short) i ; // 12345</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>超出范围的强制转型会得到错误的结果，原因是转型时，int的两个高位字节直接被扔掉，仅保留了低位的两个字节.</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">int i1 = 1234567;      // 00000000 00010010 11010110 10000111</span><br><span class="line">  1101 0110 1000 0111</span><br><span class="line">+ 1111 1111 1111 1111 </span><br><span class="line">= 1101 0110 1000 0111 即 11010110 10000111</span><br><span class="line"></span><br><span class="line">11010110 10000111 最高位为1是负数，负数是以补码的形式存储在计算机内需要转换成原码    </span><br><span class="line"></span><br><span class="line">11010110 10000111  补码</span><br><span class="line">10101001 01111001  原码 即 -10617</span><br><span class="line"></span><br><span class="line">short s1 = (short) i1; // -10617    -1010 0101 1110 01</span><br><span class="line"></span><br><span class="line">同理可得：</span><br><span class="line">int i2 = 12345678;</span><br><span class="line">short s2 = (short) i2; // 24910</span><br></pre></td></tr></table></figure>
 
 <hr>
 <h2 id="浮点数运算"><a href="#浮点数运算" class="headerlink" title="浮点数运算"></a>浮点数运算</h2><ul>
@@ -577,7 +593,7 @@
   <p><span>本文标题:</span>Java 基本语法_5</p>
   <p><span>文章作者:</span>Pumpkin</p>
   <p><span>发布时间:</span>2020年01月06日 - 17:41:24</p>
-  <p><span>最后更新:</span>2020年01月15日 - 21:40:30</p>
+  <p><span>最后更新:</span>2020年01月15日 - 22:11:12</p>
   <p><span>原始链接:</span><a href="/2020/01/06/1_计算机科学与技术/0_计算机高级语言/Java_程序设计/1_Java基本语法_5/" title="Java 基本语法_5">https://lvyang0206.github.io/2020/01/06/1_计算机科学与技术/0_计算机高级语言/Java_程序设计/1_Java基本语法_5/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://lvyang0206.github.io/2020/01/06/1_计算机科学与技术/0_计算机高级语言/Java_程序设计/1_Java基本语法_5/" aria-label="复制成功！"></i></span>
   </p>
@@ -653,7 +669,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/01/05/1_计算机科学与技术/0_计算机高级语言/Java_程序设计/1_Java基本语法_4/" rel="next" title="Java 基本语法_4">
+              <a href="/2020/01/05/1_计算机科学与技术/0_计算机高级语言/Java_程序设计/Java基本语法_4/" rel="next" title="Java 基本语法_4">
                 <i class="fa fa-chevron-left"></i> Java 基本语法_4
               </a>
             
@@ -663,8 +679,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/01/07/1_计算机科学与技术/0_计算机高级语言/Java_程序设计/Java基本语法_5/" rel="prev" title="Java 基本语法_5">
-                Java 基本语法_5 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/01/07/1_计算机科学与技术/0_计算机高级语言/Java_程序设计/1_Java基本语法_6/" rel="prev" title="Java 基本语法_6">
+                Java 基本语法_6 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -1186,7 +1202,7 @@ setInterval("createtime()",250);
 <!-- 网站总字数统计设置-->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count"> Blog 31.6k words in Total. </span> 
+  <span class="post-count"> Blog 31.8k words in Total. </span> 
   <br><a href="http://www.beian.miit.gov.cn/">宁ICP备20000073号</a> 
 </div>
 
