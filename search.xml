@@ -1,6 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Java 基本语法_11</title>
+    <url>/2020/01/23/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/0_%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80/Java_%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/1_Java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95_11/</url>
+    <content><![CDATA[<h1 id="Java-基本语法-11"><a href="#Java-基本语法-11" class="headerlink" title="Java 基本语法_11"></a>Java 基本语法_11</h1><blockquote class="blockquote-center"><p>Java 基本语法_11 </p>
+</blockquote>
+
+<hr>
+<a id="more"></a>
+<p>The text is as follows :</p>
+<h2 id="1、super-关键词"><a href="#1、super-关键词" class="headerlink" title="1、super 关键词"></a>1、super 关键词</h2><ul>
+<li><ol>
+<li>this 可以访问父类的域与方法，但是 super 是为了指明父类的域与方法。</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>构造方法不能继承，父类有构造方法，子类没有自动拥有一个构造方法，子类里可以用 super 来调用父类的构造方法。</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>使用时候<code>super()</code>必须放在第一句。</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h2 id="2、父类对象与子类对象"><a href="#2、父类对象与子类对象" class="headerlink" title="2、父类对象与子类对象"></a>2、父类对象与子类对象</h2><ul>
+<li>子类对象也是父类对象。</li>
+<li>父类对象不是子类对象。</li>
+<li>方法形式参数对象是父类对象，调用方法时可以使用子类对象作为实际参数。</li>
+<li>父类对象引用指向实际是一个子类对象，父类对象的引用可以用强制类型转化(casting)成子类对象的引用。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java 基本语法_10</title>
+    <url>/2020/01/19/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/0_%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80/Java_%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/1_Java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95_10/</url>
+    <content><![CDATA[<h1 id="Java-基本语法-10"><a href="#Java-基本语法-10" class="headerlink" title="Java 基本语法_10"></a>Java 基本语法_10</h1><blockquote class="blockquote-center"><p>Java 基本语法_10 </p>
+</blockquote>
+
+<hr>
+<a id="more"></a>
+<p>The text is as follows :</p>
+<h2 id="1、继承"><a href="#1、继承" class="headerlink" title="1、继承"></a>1、继承</h2><ul>
+<li><ol>
+<li>一个类只能有一个直接的父类（Java 支持单继承）</li>
+</ol>
+</li>
+<li>subclass \ superclass 父类包括所有直接或间接被继承的类。</li>
+<li><ol start="2">
+<li>子类可以继承父类的状态和行为</li>
+</ol>
+</li>
+<li>可以添加/修改心动状态和行为。</li>
+</ul>
+<p>好处：</p>
+<ul>
+<li>可以提高程序的抽象程度</li>
+<li>实现代码重用，提高开发效率和可维护性。</li>
+</ul>
+<p><strong>extends</strong> 关键字实现继承</p>
+<ul>
+<li>如果没有 extends 子句 默认为 <code>java.lang.Object</code> 的子类</li>
+<li>所有的类都是通过直接或间接地继承 java.lang.Object 得到的。</li>
+<li>Object 是 万物的父类</li>
+<li>继承关系相当于 is a</li>
+<li>UML （统一模型语言）图中，用一个箭头表示子类与父类的关系。</li>
+</ul>
+<hr>
+<h2 id="2、字段的继承、隐藏、添加"><a href="#2、字段的继承、隐藏、添加" class="headerlink" title="2、字段的继承、隐藏、添加"></a>2、字段的继承、隐藏、添加</h2><ol>
+<li>字段的继承<br>子类可以继承父类所有字段</li>
+<li>字段的隐藏<br>子类重新定义一个父类拥有的字段，“域的隐藏”</li>
+<li>字段的添加<br>添加新的变量域</li>
+</ol>
+<hr>
+<h2 id="3、方法的继承、Override"><a href="#3、方法的继承、Override" class="headerlink" title="3、方法的继承、Override"></a>3、方法的继承、Override</h2><ol>
+<li>方法的继承<br>父类的非私有方法也可以被子类自动继承</li>
+<li>方法的覆盖（Override）<br>重新定义一个方法，对父类方法覆盖修改（Override）<br>通过方法的覆盖，能够修改对象的同名方法的具体实现方法。<br><code>@Override</code>覆盖注记</li>
+<li>方法的添加<br>新添加方法</li>
+<li>方法的重载<br>重载的方法实际是新加的方法。<br>变量不同，函数名相同。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>主题</title>
+    <url>/2020/01/16/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/2_%E5%89%8D%E6%B2%BF%E6%8A%80%E6%9C%AF/2_SpringBoot/SpringBoot%E5%85%A5%E9%97%A8/</url>
+    <content><![CDATA[<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><blockquote class="blockquote-center"><p>标题 </p>
+</blockquote>
+
+<hr>
+<a id="more"></a>
+<p>The text is as follows :</p>
+<h2 id="1、SpringBoot"><a href="#1、SpringBoot" class="headerlink" title="1、SpringBoot"></a>1、SpringBoot</h2><ul>
+<li><ol>
+<li>SpringBoot简化开发</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h2 id="2、"><a href="#2、" class="headerlink" title="2、"></a>2、</h2><hr>
+<h2 id="3、"><a href="#3、" class="headerlink" title="3、"></a>3、</h2>]]></content>
+      <categories>
+        <category>分类</category>
+      </categories>
+      <tags>
+        <tag>标签</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Windows效率化管理工具&amp;学习资源</title>
     <url>/2020/01/16/6_%E5%85%B6%E4%BB%96%EF%BC%88%E4%B8%8D%E5%A5%BD%E5%88%86%E7%B1%BB%EF%BC%89/%E6%95%88%E7%8E%87%E5%8C%96%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/</url>
     <content><![CDATA[<h1 id="Windows效率化管理工具-amp-学习资源"><a href="#Windows效率化管理工具-amp-学习资源" class="headerlink" title="Windows效率化管理工具&amp;学习资源"></a>Windows效率化管理工具&amp;学习资源</h1><blockquote class="blockquote-center"><p>学生四年生涯的效率化管理工具集合&amp;学习资源-精心筛选（Windows） </p>
@@ -308,33 +426,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Git&amp;Github_3</title>
-    <url>/2020/01/09/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/1_%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/1_Git&amp;Github_%E5%88%86%E5%B8%83%E5%BC%8F%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/Git&amp;Github_3/</url>
-    <content><![CDATA[<h1 id="Git-amp-Github-3"><a href="#Git-amp-Github-3" class="headerlink" title="Git&amp;Github_3"></a>Git&amp;Github_3</h1><blockquote class="blockquote-center"><p>Git&amp;Github_3 </p>
-</blockquote>
-<hr>
-<a id="more"></a>
-<p>The text is as follows :<br><code>git config --list</code> // 查看设置列表 </p>
-<h2 id="1、Git-克隆"><a href="#1、Git-克隆" class="headerlink" title="1、Git 克隆"></a>1、Git 克隆</h2><ul>
-<li><ol>
-<li>将远程仓库的东西复制到本地</li>
-</ol>
-<ul>
-<li>git clone 仓库地址 // 仓库地址由来 clone with https 下的 URL</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h2 id="2、"><a href="#2、" class="headerlink" title="2、"></a>2、</h2><hr>
-<h2 id="3、"><a href="#3、" class="headerlink" title="3、"></a>3、</h2>]]></content>
-      <categories>
-        <category>Git&amp;Github</category>
-      </categories>
-      <tags>
-        <tag>Git&amp;Github</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Git&amp;Github_Git</title>
     <url>/2020/01/09/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/1_%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/1_Git&amp;Github_%E5%88%86%E5%B8%83%E5%BC%8F%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/0_Git%E5%9F%BA%E7%A1%80%E7%AE%80%E4%BB%8B/</url>
     <content><![CDATA[<h1 id="Git-amp-Github-Git"><a href="#Git-amp-Github-Git" class="headerlink" title="Git&amp;Github_Git"></a>Git&amp;Github_Git</h1><blockquote class="blockquote-center"><p>Git&amp;Github_Git 命令介绍、名词解释 </p>
@@ -493,6 +584,33 @@
 </blockquote>
 <hr>
 ]]></content>
+      <categories>
+        <category>Git&amp;Github</category>
+      </categories>
+      <tags>
+        <tag>Git&amp;Github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git&amp;Github_3</title>
+    <url>/2020/01/09/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/1_%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/1_Git&amp;Github_%E5%88%86%E5%B8%83%E5%BC%8F%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/Git&amp;Github_3/</url>
+    <content><![CDATA[<h1 id="Git-amp-Github-3"><a href="#Git-amp-Github-3" class="headerlink" title="Git&amp;Github_3"></a>Git&amp;Github_3</h1><blockquote class="blockquote-center"><p>Git&amp;Github_3 </p>
+</blockquote>
+<hr>
+<a id="more"></a>
+<p>The text is as follows :<br><code>git config --list</code> // 查看设置列表 </p>
+<h2 id="1、Git-克隆"><a href="#1、Git-克隆" class="headerlink" title="1、Git 克隆"></a>1、Git 克隆</h2><ul>
+<li><ol>
+<li>将远程仓库的东西复制到本地</li>
+</ol>
+<ul>
+<li>git clone 仓库地址 // 仓库地址由来 clone with https 下的 URL</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="2、"><a href="#2、" class="headerlink" title="2、"></a>2、</h2><hr>
+<h2 id="3、"><a href="#3、" class="headerlink" title="3、"></a>3、</h2>]]></content>
       <categories>
         <category>Git&amp;Github</category>
       </categories>
