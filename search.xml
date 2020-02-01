@@ -1,6 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Java 基本语法_14</title>
+    <url>/2020/02/01/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/0_%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80/Java_%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/1_Java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95_14/</url>
+    <content><![CDATA[<h1 id="Java-基本语法-14"><a href="#Java-基本语法-14" class="headerlink" title="Java 基本语法_14"></a>Java 基本语法_14</h1><blockquote class="blockquote-center"><p>Java 基本语法_14 </p>
+</blockquote>
+
+<hr>
+<a id="more"></a>
+<p>The text is as follows :</p>
+<h2 id="1、其他修饰符-static-final-abstract"><a href="#1、其他修饰符-static-final-abstract" class="headerlink" title="1、其他修饰符 static final abstract"></a>1、其他修饰符 static final abstract</h2><ul>
+<li><ol>
+<li>非访问控制符</li>
+</ol>
+</li>
+</ul>
+<p><code>static</code> 静态 修饰内部类、修饰成员</p>
+<ul>
+<li>静态字段最本质的特点，它是类的特点，不属于任何一个对象实例</li>
+<li>static 一定程度已经跟类无关了（静态变量跟对象无关）</li>
+<li>static，不能访问实例变量，不能使用this 或者 super</li>
+<li>调用 static 修饰的方法时，使用类名直接调用。</li>
+<li>import static </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import static java.lang.System.* ;</span><br><span class="line">out.println() ;</span><br><span class="line">表示 System.out.println() ;</span><br></pre></td></tr></table></figure>
+
+<p><code>final</code> 最终 修饰类、成员、变量</p>
+<ul>
+<li>final 类不能被继承，即不可能有子类;</li>
+<li>final 字段、final 局部变量（方法中的变量）<ul>
+<li>值一旦给定，就不能更改</li>
+<li>只读量，只能被赋值一次</li>
+</ul>
+</li>
+<li>static final 两个修饰符所限定都可以表示常量</li>
+</ul>
+<p><code>abstract</code> 抽象 修饰类、成员</p>
+<ul>
+<li>抽象类不能够被实例化</li>
+<li>抽象方法只需要声明，不需要实现，用<code>;</code></li>
+<li>抽象类中包含抽象方法，一旦类的方法是<code>抽象方法</code>，类也必须是<code>抽象类</code></li>
+<li>抽象方法在子类中必须被实现，否则子类任然是要用<code>abstract</code>修饰。</li>
+</ul>
+<hr>
+<h2 id="2、接口-interface"><a href="#2、接口-interface" class="headerlink" title="2、接口 interface"></a>2、接口 interface</h2><p>本质：接口 <code>interface</code> 是 约定、协议，也是<code>一种引用类型</code><br>定义接口 interface = public abstract<br>实现接口 implements</p>
+<ul>
+<li>可以实现多继承</li>
+<li>与类的继承关系无关</li>
+</ul>
+<p>面向接口编程，而不是面向实现。</p>
+<hr>
+<h2 id="3、枚举-enum"><a href="#3、枚举-enum" class="headerlink" title="3、枚举 enum"></a>3、枚举 enum</h2><p>枚举类型 enum</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">enum Light &#123; Red,Yellow,Green &#125;</span><br><span class="line">Light light = Light.Red ;</span><br><span class="line">switch (light)...</span><br></pre></td></tr></table></figure>
+
+<p>Java 8 以上，接口成员还可以是：<br>static 方法<br>具有实现体的方法(default方法)</p>
+<hr>
+<h2 id="4、完整类定义"><a href="#4、完整类定义" class="headerlink" title="4、完整类定义"></a>4、完整类定义</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">public abstract|final class xxx extends xxx</span><br><span class="line">implements xxx &#123;</span><br><span class="line">    public static final transient volatile Type xxx ;</span><br><span class="line">    public static final|abstract native synchronized returnType xxx ([paramList])</span><br><span class="line">    [throws exceptionList]&#123;</span><br><span class="line">        statements</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="5、完整-Java-源文件"><a href="#5、完整-Java-源文件" class="headerlink" title="5、完整 Java 源文件"></a>5、完整 Java 源文件</h2><p>package xxx ;<br>import xxx ;<br>public classxxx ;<br>interface xxx ;</p>
+<ul>
+<li>源文件名字和属性为public的类的类名完全相同。</li>
+<li>在一个.java文件中 , <code>package</code> 和 <code>public</code> 最多只能有1个。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>招聘启事相关_1</title>
     <url>/2020/01/28/3_%E6%8B%9B%E8%81%98%E8%80%83%E7%A0%94%E7%9B%B8%E5%85%B3/3_%E6%8B%9B%E8%81%98%E4%BA%8B%E9%A1%B9/%E6%8B%9B%E8%81%98%E5%90%AF%E4%BA%8B%E7%9B%B8%E5%85%B3_1/</url>
     <content><![CDATA[<h1 id="招聘启事相关-1"><a href="#招聘启事相关-1" class="headerlink" title="招聘启事相关_1"></a>招聘启事相关_1</h1><blockquote class="blockquote-center"><p>招聘启事相关_1 </p>
