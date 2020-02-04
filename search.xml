@@ -1,6 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>计算机组成原理_2</title>
+    <url>/2020/02/04/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/6_%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E8%AF%BE%E7%A8%8B/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86_2/</url>
+    <content><![CDATA[<h1 id="计算机组成原理-2"><a href="#计算机组成原理-2" class="headerlink" title="计算机组成原理_2"></a>计算机组成原理_2</h1><blockquote class="blockquote-center"><p>计算机组成原理_2 </p>
+</blockquote>
+
+<hr>
+<a id="more"></a>
+<p>The text is as follows :</p>
+<h2 id="1、"><a href="#1、" class="headerlink" title="1、"></a>1、</h2><ul>
+<li><ol>
+<li></li>
+</ol>
+</li>
+</ul>
+<hr>
+<h2 id="2、"><a href="#2、" class="headerlink" title="2、"></a>2、</h2><hr>
+<h2 id="3、"><a href="#3、" class="headerlink" title="3、"></a>3、</h2>]]></content>
+      <categories>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机组成原理_1</title>
+    <url>/2020/02/04/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/6_%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E8%AF%BE%E7%A8%8B/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86_1/</url>
+    <content><![CDATA[<h1 id="计算机组成原理-1"><a href="#计算机组成原理-1" class="headerlink" title="计算机组成原理_1"></a>计算机组成原理_1</h1><blockquote class="blockquote-center"><p>计算机组成原理_1 </p>
+</blockquote>
+
+<hr>
+<a id="more"></a>
+<p>The text is as follows :</p>
+<h2 id="1、计算机组成原理"><a href="#1、计算机组成原理" class="headerlink" title="1、计算机组成原理"></a>1、计算机组成原理</h2><ul>
+<li><ol>
+<li>机械式、模拟电子计算机、数字电子计算机</li>
+</ol>
+<ul>
+<li>计算机组成 = 计算机组织 （Organization）</li>
+<li>关注<code>逻辑实现</code>|不关注<code>物理实现</code></li>
+<li>1-基本部件的结构和组织方式</li>
+<li>2-基本运算的操作原理</li>
+<li>3-基本部件和单元的设计思想</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="2、计算机系统简介"><a href="#2、计算机系统简介" class="headerlink" title="2、计算机系统简介"></a>2、计算机系统简介</h2><p>sensors、laptop、client、server</p>
+<p>计算机是由什么组成？<br>计算机系统：<code>硬件</code>和<code>软件</code></p>
+<ul>
+<li>硬件：计算机的实体</li>
+<li>软件：<code>系统软件</code>和<code>应用软件</code><ul>
+<li>由具有各类特殊功能的信息组成</li>
+<li><code>系统软件</code> ：语言处理程序、操作系统、数据库管理系统、网络软件</li>
+<li><code>应用软件</code> ：按任务需要编织成的各种程序</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="3、计算机发展历程"><a href="#3、计算机发展历程" class="headerlink" title="3、计算机发展历程"></a>3、计算机发展历程</h2><ul>
+<li>什么样的力量推动计算机发展<ul>
+<li>需求</li>
+<li>科技</li>
+</ul>
+</li>
+</ul>
+<p>逻辑元件: 电子管、晶体管、集成电路</p>
+<p>第一代计算机<br>电子管时代（真空管）<br>第一台<code>电子数字</code>计算机:ENIAC<br>机器语言</p>
+<p>第二代计算机<br>晶体管时代<br>面向过程的程序设计语言：FORTRAN<br>有了操作系统的雏形</p>
+<p>第三代计算机<br>中小规模集成电路时代</p>
+<p>第四代计算机<br>大规模、超大规模集成电路时代<br>产生了微处理器<br>新的概念：<br>并行、流水线、高速缓存、虚拟存储器</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">计算机编程语言</span><br><span class="line">机器语言：二进制代码 0000 0000 0000。。。</span><br><span class="line">汇编器↑（汇编程序）</span><br><span class="line">汇编语言: 助记符 LOAD A , 16 (LOAD=0000)|(STORE=0001)</span><br><span class="line">编译器↑（编译程序）</span><br><span class="line">高级语言：C/C++、Java </span><br><span class="line">或者直接解释程序解释成机器语言00000.。。。。（**不用先转汇编再转机器语言**）</span><br><span class="line">机器字长：计算机一次整数运算所能处理的二进制位数</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java 基本语法_14</title>
     <url>/2020/02/01/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/0_%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%AB%98%E7%BA%A7%E8%AF%AD%E8%A8%80/Java_%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/1_Java%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95_14/</url>
     <content><![CDATA[<h1 id="Java-基本语法-14"><a href="#Java-基本语法-14" class="headerlink" title="Java 基本语法_14"></a>Java 基本语法_14</h1><blockquote class="blockquote-center"><p>Java 基本语法_14 </p>
@@ -2456,25 +2538,6 @@
       </tags>
   </entry>
   <entry>
-    <title>JSP不用学</title>
-    <url>/2019/12/28/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/4_%E5%AD%A6%E4%B9%A0%E9%81%BF%E5%9D%91/JSP%E4%B8%8D%E7%94%A8%E5%AD%A6/</url>
-    <content><![CDATA[<h1 id="JSP不用学"><a href="#JSP不用学" class="headerlink" title="JSP不用学"></a>JSP不用学</h1><blockquote class="blockquote-center"><p>JSP不用学 </p>
-</blockquote>
-<hr>
-<a id="more"></a>
-<p>1.JSP不用学<br>前后端耦合和依赖比较强，所以被淘汰出局</p>
-<p>2.什么是JSP<br>Jsp Java Server page<br>Java 服务器页面<br>HTML文件中插入JAVA程序段和JSP标记，形成JSP文件<br>高耦合东西，网页模板技术。<br>网页=样式+数据<br>构建和驱动由服务器进行，叫服务端网页模板。</p>
-<p>控制层<br>业务层<br>DAO层</p>
-<p>3、目前都是前后端分离<br>JSP模板技术全部出局</p>
-]]></content>
-      <categories>
-        <category>计算机科学与技术</category>
-      </categories>
-      <tags>
-        <tag>JSP</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>编写简历</title>
     <url>/2019/12/28/3_%E6%8B%9B%E8%81%98%E8%80%83%E7%A0%94%E7%9B%B8%E5%85%B3/1_%E7%AE%80%E5%8E%86%E7%BC%96%E5%86%99/%E7%BC%96%E5%86%99%E7%AE%80%E5%8E%86%E6%A1%86%E6%9E%B6_1/</url>
     <content><![CDATA[<h1 id="如何编写简历"><a href="#如何编写简历" class="headerlink" title="如何编写简历"></a>如何编写简历</h1><blockquote class="blockquote-center"><p>如何编写简历 </p>
@@ -2495,6 +2558,25 @@
       </categories>
       <tags>
         <tag>工作招聘</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JSP不用学</title>
+    <url>/2019/12/28/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/4_%E5%AD%A6%E4%B9%A0%E9%81%BF%E5%9D%91/JSP%E4%B8%8D%E7%94%A8%E5%AD%A6/</url>
+    <content><![CDATA[<h1 id="JSP不用学"><a href="#JSP不用学" class="headerlink" title="JSP不用学"></a>JSP不用学</h1><blockquote class="blockquote-center"><p>JSP不用学 </p>
+</blockquote>
+<hr>
+<a id="more"></a>
+<p>1.JSP不用学<br>前后端耦合和依赖比较强，所以被淘汰出局</p>
+<p>2.什么是JSP<br>Jsp Java Server page<br>Java 服务器页面<br>HTML文件中插入JAVA程序段和JSP标记，形成JSP文件<br>高耦合东西，网页模板技术。<br>网页=样式+数据<br>构建和驱动由服务器进行，叫服务端网页模板。</p>
+<p>控制层<br>业务层<br>DAO层</p>
+<p>3、目前都是前后端分离<br>JSP模板技术全部出局</p>
+]]></content>
+      <categories>
+        <category>计算机科学与技术</category>
+      </categories>
+      <tags>
+        <tag>JSP</tag>
       </tags>
   </entry>
   <entry>
