@@ -9,15 +9,43 @@
 <hr>
 <a id="more"></a>
 <p>The text is as follows :</p>
-<h2 id="1、"><a href="#1、" class="headerlink" title="1、"></a>1、</h2><ul>
+<h2 id="1、计算机的功能部件、存储器"><a href="#1、计算机的功能部件、存储器" class="headerlink" title="1、计算机的功能部件、存储器"></a>1、计算机的功能部件、存储器</h2><ul>
 <li><ol>
-<li></li>
+<li>功能部件-存储器</li>
 </ol>
+<ul>
+<li>主存储器（主存、内存）</li>
+<li>辅助存贮器（辅存、外存）</li>
+</ul>
+</li>
+<li><ol start="2">
+<li>存储体+MAR+MDR</li>
+</ol>
+<ul>
+<li>Memory Address Register</li>
+<li>Memory Data Register</li>
+</ul>
+</li>
+<li>地址寄存器-&gt;存储体-&gt;数据寄存器（时序控制逻辑）<ul>
+<li>存储元</li>
+<li>存储体由一个个存储单元构成</li>
+<li>存储单元由一个个存储元构成</li>
+</ul>
 </li>
 </ul>
+<p>译码器<br>n位地址 2^n 次方个地址单元,</p>
+<p>总容量 = 存储单元个数x存储字长 = 2^n x 8 bit = 2^n x 1 Byte = 8 B</p>
+<p>实际硬件实现MAR和MDR是在CUP中实现，逻辑是在主存里。</p>
 <hr>
-<h2 id="2、"><a href="#2、" class="headerlink" title="2、"></a>2、</h2><hr>
-<h2 id="3、"><a href="#3、" class="headerlink" title="3、"></a>3、</h2>]]></content>
+<h2 id="2、运算器、控制器、工作过程"><a href="#2、运算器、控制器、工作过程" class="headerlink" title="2、运算器、控制器、工作过程"></a>2、运算器、控制器、工作过程</h2><p>运算器<br>算术运算<br>逻辑运算<br>MQ<br>ACC<br>ALU 算术运算和逻辑运算单元<br>X<br>PSW</p>
+<p>控制器<br>CU Control Unit<br>IR Instruction Register<br>PC Program Counter</p>
+<p>计算机的工作过程-取数指令<br>PC 存放指令的地址<br>(PC) -&gt; MAR  // 取相应寄存器中的数据，取 PC 中指令地址传给 MAR 寄存器<br>M(MAR) -&gt; MDR // 根据地址指令取 MAR 中的数据(存储题内)，传给 MDR 寄存器<br>(MDR) -&gt; IR // 将指令数据传给IR<br>取指令结束</p>
+<p>OP(IR) -&gt; CU // 取操作码传给 CU 控制单元<br>分析指令结束</p>
+<p>Ad(IR) -&gt; MAR // 取地址码给MAR<br>M(MAR) -&gt; MDR // 取数给MDR<br>(MDR) -&gt; ACC // 取指令给ACC<br>执行指令结束</p>
+<p><code>指令是由操作码和地址码构成</code></p>
+<p><code>CPU区分指令和数据的依据：指令周期的不同阶段</code></p>
+<p>I/O设备-输入设备/输出设备</p>
+]]></content>
       <categories>
         <category>计算机组成原理</category>
       </categories>
