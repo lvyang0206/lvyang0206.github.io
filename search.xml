@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>计算机组成原理_2</title>
-    <url>/2020/02/04/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/6_%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E8%AF%BE%E7%A8%8B/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86_2/</url>
-    <content><![CDATA[<h1 id="计算机组成原理-2"><a href="#计算机组成原理-2" class="headerlink" title="计算机组成原理_2"></a>计算机组成原理_2</h1><blockquote class="blockquote-center"><p>计算机组成原理_2 </p>
+    <title>计算机组成原理_3</title>
+    <url>/2020/02/05/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/6_%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E8%AF%BE%E7%A8%8B/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86_3/</url>
+    <content><![CDATA[<h1 id="计算机组成原理-3"><a href="#计算机组成原理-3" class="headerlink" title="计算机组成原理_3"></a>计算机组成原理_3</h1><blockquote class="blockquote-center"><p>计算机组成原理_3 </p>
 </blockquote>
 
 <hr>
@@ -18,6 +18,91 @@
 <hr>
 <h2 id="2、"><a href="#2、" class="headerlink" title="2、"></a>2、</h2><hr>
 <h2 id="3、"><a href="#3、" class="headerlink" title="3、"></a>3、</h2>]]></content>
+      <categories>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机组成原理_2</title>
+    <url>/2020/02/04/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/6_%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E8%AF%BE%E7%A8%8B/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86_2/</url>
+    <content><![CDATA[<h1 id="计算机组成原理-2"><a href="#计算机组成原理-2" class="headerlink" title="计算机组成原理_2"></a>计算机组成原理_2</h1><blockquote class="blockquote-center"><p>计算机组成原理_2 </p>
+</blockquote>
+
+<hr>
+<a id="more"></a>
+<p>The text is as follows :</p>
+<h2 id="1、计算机的分类与发展方向"><a href="#1、计算机的分类与发展方向" class="headerlink" title="1、计算机的分类与发展方向"></a>1、计算机的分类与发展方向</h2><ul>
+<li>1. </li>
+<li>电子模拟计算机（数值连续）</li>
+<li>电子数字计算机（数值离散）<ul>
+<li>通用计算机<ul>
+<li>巨型机</li>
+<li>大型机</li>
+<li>中型机</li>
+<li>小型机</li>
+<li>微型机</li>
+<li>单片机</li>
+</ul>
+</li>
+<li>专用计算机</li>
+</ul>
+</li>
+</ul>
+<p>指令和数据流</p>
+<ul>
+<li><ol>
+<li>单指令流和单数据流 （SISD）: 冯诺依曼体系结构</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>单指令流和多数据流 （SIMD）: 列阵处理器、向量处理器</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>多指令流和单数据流 （MISD）: 实际不存在</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>多指令流和多数据流 （MIMD）: 多处理器、多计算机</li>
+</ol>
+</li>
+</ul>
+<p>计算机分类和发展方向<br>发展趋势：“两级” 分化<br>更大、更小</p>
+<hr>
+<h2 id="2、计算机硬件的基本组成"><a href="#2、计算机硬件的基本组成" class="headerlink" title="2、计算机硬件的基本组成"></a>2、计算机硬件的基本组成</h2><ul>
+<li>计算机的硬件组成<ul>
+<li>冯诺依曼计算机</li>
+<li>现代计算机的组织结构</li>
+<li>计算机的功能部件</li>
+</ul>
+</li>
+</ul>
+<h3 id="冯诺依曼-六大特点"><a href="#冯诺依曼-六大特点" class="headerlink" title="冯诺依曼(六大特点)"></a>冯诺依曼(六大特点)</h3><p>“存储程序” 指令以代码的形式存储 ;<br>1.计算机的硬件是由 运算器 存储器 控制器 输入设备 输出设备<br>2.指令和数据以同等地位存储于存储器内，并可按地址寻访<br>3.指令和数据均用二进制代码表示<br>4.指令由操作码和地址码组成，操作码用来表示操作的性质，地址码用来表示操作数在存储器中的位置。<br>5.指令在存储器内按照顺序存放。可以特定条件改变执行顺序。<br>6.早期冯诺依曼以运算器为中心，输入/输出设备通过运算器与存储器传送数据。</p>
+<hr>
+<h2 id="3、计算机系统的组成"><a href="#3、计算机系统的组成" class="headerlink" title="3、计算机系统的组成"></a>3、计算机系统的组成</h2><blockquote>
+<p>以运算器为中心</p>
+<ul>
+<li>原始数据/计算步骤<ul>
+<li>输入设备</li>
+<li>运算器<ul>
+<li>存储器（和控制器和运算器交互、将指令传给控制器）</li>
+<li>控制器（直接和输入设备、运算器、输出设备交互、和存储器交互）</li>
+</ul>
+</li>
+<li>输出设备</li>
+</ul>
+</li>
+<li>计算结果</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>现代计算机以存储器为中心</p>
+</blockquote>
+<p>主机:<code>非现实的主机，以运算器和控制器组成cpu</code>,<code>以主存储器和cpu构成主机</code><br>外设:<code>输入设备和输出设备组成I/O设备</code>,<code>以I/O设备和辅助存储器组成外设</code></p>
+]]></content>
       <categories>
         <category>计算机组成原理</category>
       </categories>
