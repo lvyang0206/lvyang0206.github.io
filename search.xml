@@ -1,6 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>计算机组成原理_4</title>
+    <url>/2020/02/07/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/6_%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E8%AF%BE%E7%A8%8B/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86_4/</url>
+    <content><![CDATA[<h1 id="计算机组成原理-4"><a href="#计算机组成原理-4" class="headerlink" title="计算机组成原理_4"></a>计算机组成原理_4</h1><blockquote class="blockquote-center"><p>计算机组成原理_4 </p>
+</blockquote>
+
+<hr>
+<a id="more"></a>
+<p>The text is as follows :</p>
+<h2 id="1、计算机系统的层次结构"><a href="#1、计算机系统的层次结构" class="headerlink" title="1、计算机系统的层次结构"></a>1、计算机系统的层次结构</h2><ul>
+<li><ol start="0">
+<li>微程序机器 M0 微指令程序 执行微指令</li>
+</ol>
+</li>
+<li><ol>
+<li>传统机器 M1 二进制</li>
+</ol>
+</li>
+<li><code>--------------</code>软硬件接口<code>---------------</code> //无严格界限，协同发展<ul>
+<li>虚拟机器 M1-2 操作系统机器 用机器语言解释操作指令//混合层</li>
+</ul>
+</li>
+<li><ol start="2">
+<li>虚拟机器 M2 汇编语言</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>虚拟机器 M3 高级语言程序</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h2 id="2、计算机的性能指标"><a href="#2、计算机的性能指标" class="headerlink" title="2、计算机的性能指标**"></a>2、计算机的性能指标**</h2><p>最合适的计算机<br>计算机性能指标</p>
+<ul>
+<li>容量<ul>
+<li>总容量 = 存储单元个数 x 存储字长 bit</li>
+<li>行数 x 列数</li>
+<li>n位 地址 则 2^n次方个存储单元（行数）</li>
+<li>地址寄存器的位数 （存储单元个数）和 数据寄存器的位数 （bit/Byte）<blockquote>
+<p>系统能支持的最大容量 = 2^n x 存储字长<br>1位两个状态，n个二进制位 则 2^n 次方个存储单元</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<p>2^10 ：K<br>2^20 ：M<br>2^30 ：G<br>2^40 ：T</p>
+<ul>
+<li>速度</li>
+</ul>
+<p>机器字长: 计算机进行一次整数运算所能处理的二进制数据的位数 // 速度指标<br>存储字长 和 机器字长 和 指令字长<br>机器字长 = 内部寄存器大小，决定运算精度和速度<br>存储字长 是 存储单元的二进制数目<br>指令字长 是 存储字长的整数倍</p>
+<p>CLK ：</p>
+<ul>
+<li>CPU 时钟周期 是时间一个周期</li>
+<li>CPU 时钟频率 是主频 = 1 / CPU 时钟周期</li>
+<li>CPI 执行一条指令的所需的时钟周期数</li>
+<li>指令耗时 = CPI x CPU 时钟周期</li>
+<li>整个程序耗时 = 指令总耗时相加<br>= （指令1CPI+指令2CPI+指令3CPI……）x CPU 时钟周期<br>= 平均CPI x 指令周期 x CPU时钟周期</li>
+</ul>
+<p>注：<br>MIPS 每秒执行多少百万条指令<br>MIPS = 指令条数 / （执行时间 x 10^6 ） = 主频/CPI</p>
+<p>数据通路带宽:数据总线一次所能并行传送数据信息的位数<br>吞吐量:指系统在单位时间内处理请求的数量<br>响应时间:指响应时间，用户请求到结果出现的时间</p>
+]]></content>
+      <categories>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>学习模型</title>
+    <url>/2020/02/06/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/7_%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/1_%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95_PowerByGaolengleng/2_%E5%AD%A6%E4%B9%A0%E6%A8%A1%E5%9E%8B/</url>
+    <content><![CDATA[<h1 id="学习模型"><a href="#学习模型" class="headerlink" title="学习模型"></a>学习模型</h1><blockquote class="blockquote-center"><p>学习模型 </p>
+</blockquote>
+
+<hr>
+<a id="more"></a>
+<p>The text is as follows :</p>
+<h2 id="1、"><a href="#1、" class="headerlink" title="1、"></a>1、</h2><ul>
+<li><ol>
+<li></li>
+</ol>
+</li>
+</ul>
+<hr>
+<h2 id="2、"><a href="#2、" class="headerlink" title="2、"></a>2、</h2><hr>
+<h2 id="3、"><a href="#3、" class="headerlink" title="3、"></a>3、</h2>]]></content>
+      <categories>
+        <category>学习模型</category>
+      </categories>
+      <tags>
+        <tag>学习模型</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>学习方法</title>
+    <url>/2020/02/06/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/7_%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/1_%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95_PowerByGaolengleng/1_%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="学习方法"><a href="#学习方法" class="headerlink" title="学习方法"></a>学习方法</h1><blockquote class="blockquote-center"><p>学习方法 </p>
+</blockquote>
+
+<hr>
+<a id="more"></a>
+<p>The text is as follows :</p>
+<h2 id="1、解决学习体验"><a href="#1、解决学习体验" class="headerlink" title="1、解决学习体验"></a>1、解决学习体验</h2><p>1、峰终值</p>
+<ul>
+<li><p>反馈感很强，正向立刻停手。</p>
+</li>
+<li><p>学习过程：穿插一定好的易学的</p>
+</li>
+<li><p>难学科目：在负面情绪达到顶峰，穿插易学的</p>
+</li>
+<li><p>触发条件 （执行相应行为）</p>
+</li>
+<li><p>行为 （启动过程、简单）</p>
+<ul>
+<li>前一天提前规定今天的事情</li>
+<li>先从容易开始</li>
+<li>简化流程和步骤</li>
+</ul>
+</li>
+<li><p>不确定奖赏机制</p>
+<ul>
+<li>每次完成任务 更有动力 抽取一个奖励</li>
+</ul>
+</li>
+<li><p>投入</p>
+<ul>
+<li>坚持一定时间努力，正反馈，已经付出很多，有了沉没成本</li>
+</ul>
+</li>
+<li><p>有意识把握学习体验，是必要的。</p>
+</li>
+</ul>
+<hr>
+<h2 id="2、解决低效率"><a href="#2、解决低效率" class="headerlink" title="2、解决低效率"></a>2、解决低效率</h2><p>解决问题的愉悦，付出更多的努力，<br>垫一垫脚能够获得的<br>检测自己的学习<br>学的东西要立刻检测<br>对于真正的勤奋，<br>功利，非常功利<br>不要凭借直觉解决问题</p>
+<p>善于学习，善于总结方法</p>
+<p>停留于舒适圈的努力不是合适的</p>
+<p>解决道德许可问题，将想做的事情最简化<br>直接开始，之后再完善</p>
+<p>善于总结规律</p>
+<hr>
+<h2 id="3、"><a href="#3、" class="headerlink" title="3、"></a>3、</h2>]]></content>
+      <categories>
+        <category>学习方法</category>
+      </categories>
+      <tags>
+        <tag>学习方法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>计算机组成原理_3</title>
     <url>/2020/02/05/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/6_%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E8%AF%BE%E7%A8%8B/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86_3/</url>
     <content><![CDATA[<h1 id="计算机组成原理-3"><a href="#计算机组成原理-3" class="headerlink" title="计算机组成原理_3"></a>计算机组成原理_3</h1><blockquote class="blockquote-center"><p>计算机组成原理_3 </p>
@@ -921,33 +1068,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Git&amp;Github_3</title>
-    <url>/2020/01/09/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/1_%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/1_Git&amp;Github_%E5%88%86%E5%B8%83%E5%BC%8F%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/Git&amp;Github_3/</url>
-    <content><![CDATA[<h1 id="Git-amp-Github-3"><a href="#Git-amp-Github-3" class="headerlink" title="Git&amp;Github_3"></a>Git&amp;Github_3</h1><blockquote class="blockquote-center"><p>Git&amp;Github_3 </p>
-</blockquote>
-<hr>
-<a id="more"></a>
-<p>The text is as follows :<br><code>git config --list</code> // 查看设置列表 </p>
-<h2 id="1、Git-克隆"><a href="#1、Git-克隆" class="headerlink" title="1、Git 克隆"></a>1、Git 克隆</h2><ul>
-<li><ol>
-<li>将远程仓库的东西复制到本地</li>
-</ol>
-<ul>
-<li>git clone 仓库地址 // 仓库地址由来 clone with https 下的 URL</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h2 id="2、"><a href="#2、" class="headerlink" title="2、"></a>2、</h2><hr>
-<h2 id="3、"><a href="#3、" class="headerlink" title="3、"></a>3、</h2>]]></content>
-      <categories>
-        <category>Git&amp;Github</category>
-      </categories>
-      <tags>
-        <tag>Git&amp;Github</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Git&amp;Github_Git</title>
     <url>/2020/01/09/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/1_%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/1_Git&amp;Github_%E5%88%86%E5%B8%83%E5%BC%8F%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/0_Git%E5%9F%BA%E7%A1%80%E7%AE%80%E4%BB%8B/</url>
     <content><![CDATA[<h1 id="Git-amp-Github-Git"><a href="#Git-amp-Github-Git" class="headerlink" title="Git&amp;Github_Git"></a>Git&amp;Github_Git</h1><blockquote class="blockquote-center"><p>Git&amp;Github_Git 命令介绍、名词解释 </p>
@@ -1106,6 +1226,33 @@
 </blockquote>
 <hr>
 ]]></content>
+      <categories>
+        <category>Git&amp;Github</category>
+      </categories>
+      <tags>
+        <tag>Git&amp;Github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git&amp;Github_3</title>
+    <url>/2020/01/09/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/1_%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/1_Git&amp;Github_%E5%88%86%E5%B8%83%E5%BC%8F%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/Git&amp;Github_3/</url>
+    <content><![CDATA[<h1 id="Git-amp-Github-3"><a href="#Git-amp-Github-3" class="headerlink" title="Git&amp;Github_3"></a>Git&amp;Github_3</h1><blockquote class="blockquote-center"><p>Git&amp;Github_3 </p>
+</blockquote>
+<hr>
+<a id="more"></a>
+<p>The text is as follows :<br><code>git config --list</code> // 查看设置列表 </p>
+<h2 id="1、Git-克隆"><a href="#1、Git-克隆" class="headerlink" title="1、Git 克隆"></a>1、Git 克隆</h2><ul>
+<li><ol>
+<li>将远程仓库的东西复制到本地</li>
+</ol>
+<ul>
+<li>git clone 仓库地址 // 仓库地址由来 clone with https 下的 URL</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="2、"><a href="#2、" class="headerlink" title="2、"></a>2、</h2><hr>
+<h2 id="3、"><a href="#3、" class="headerlink" title="3、"></a>3、</h2>]]></content>
       <categories>
         <category>Git&amp;Github</category>
       </categories>
@@ -2651,6 +2798,25 @@
       </tags>
   </entry>
   <entry>
+    <title>JSP不用学</title>
+    <url>/2019/12/28/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/4_%E5%AD%A6%E4%B9%A0%E9%81%BF%E5%9D%91/JSP%E4%B8%8D%E7%94%A8%E5%AD%A6/</url>
+    <content><![CDATA[<h1 id="JSP不用学"><a href="#JSP不用学" class="headerlink" title="JSP不用学"></a>JSP不用学</h1><blockquote class="blockquote-center"><p>JSP不用学 </p>
+</blockquote>
+<hr>
+<a id="more"></a>
+<p>1.JSP不用学<br>前后端耦合和依赖比较强，所以被淘汰出局</p>
+<p>2.什么是JSP<br>Jsp Java Server page<br>Java 服务器页面<br>HTML文件中插入JAVA程序段和JSP标记，形成JSP文件<br>高耦合东西，网页模板技术。<br>网页=样式+数据<br>构建和驱动由服务器进行，叫服务端网页模板。</p>
+<p>控制层<br>业务层<br>DAO层</p>
+<p>3、目前都是前后端分离<br>JSP模板技术全部出局</p>
+]]></content>
+      <categories>
+        <category>计算机科学与技术</category>
+      </categories>
+      <tags>
+        <tag>JSP</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>编写简历</title>
     <url>/2019/12/28/3_%E6%8B%9B%E8%81%98%E8%80%83%E7%A0%94%E7%9B%B8%E5%85%B3/1_%E7%AE%80%E5%8E%86%E7%BC%96%E5%86%99/%E7%BC%96%E5%86%99%E7%AE%80%E5%8E%86%E6%A1%86%E6%9E%B6_1/</url>
     <content><![CDATA[<h1 id="如何编写简历"><a href="#如何编写简历" class="headerlink" title="如何编写简历"></a>如何编写简历</h1><blockquote class="blockquote-center"><p>如何编写简历 </p>
@@ -2671,25 +2837,6 @@
       </categories>
       <tags>
         <tag>工作招聘</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JSP不用学</title>
-    <url>/2019/12/28/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/4_%E5%AD%A6%E4%B9%A0%E9%81%BF%E5%9D%91/JSP%E4%B8%8D%E7%94%A8%E5%AD%A6/</url>
-    <content><![CDATA[<h1 id="JSP不用学"><a href="#JSP不用学" class="headerlink" title="JSP不用学"></a>JSP不用学</h1><blockquote class="blockquote-center"><p>JSP不用学 </p>
-</blockquote>
-<hr>
-<a id="more"></a>
-<p>1.JSP不用学<br>前后端耦合和依赖比较强，所以被淘汰出局</p>
-<p>2.什么是JSP<br>Jsp Java Server page<br>Java 服务器页面<br>HTML文件中插入JAVA程序段和JSP标记，形成JSP文件<br>高耦合东西，网页模板技术。<br>网页=样式+数据<br>构建和驱动由服务器进行，叫服务端网页模板。</p>
-<p>控制层<br>业务层<br>DAO层</p>
-<p>3、目前都是前后端分离<br>JSP模板技术全部出局</p>
-]]></content>
-      <categories>
-        <category>计算机科学与技术</category>
-      </categories>
-      <tags>
-        <tag>JSP</tag>
       </tags>
   </entry>
   <entry>
