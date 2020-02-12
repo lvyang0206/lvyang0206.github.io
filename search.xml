@@ -1,6 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>计算机组成原理_5</title>
+    <url>/2020/02/12/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/6_%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E8%AF%BE%E7%A8%8B/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86_5/</url>
+    <content><![CDATA[<h1 id="计算机组成原理-5"><a href="#计算机组成原理-5" class="headerlink" title="计算机组成原理_5"></a>计算机组成原理_5</h1><blockquote class="blockquote-center"><p>计算机组成原理_5 </p>
+</blockquote>
+
+<hr>
+<a id="more"></a>
+<p>The text is as follows :</p>
+<h2 id="1、计算机中数的表示"><a href="#1、计算机中数的表示" class="headerlink" title="1、计算机中数的表示"></a>1、计算机中数的表示</h2><h3 id="数制与编码"><a href="#数制与编码" class="headerlink" title="数制与编码"></a>数制与编码</h3><h4 id="进位计数法"><a href="#进位计数法" class="headerlink" title="进位计数法"></a>进位计数法</h4><p>一进制：</p>
+<p>二进制：物理特性高低电频/开关 <code>B</code></p>
+<p>四进制：0，1，2，3 </p>
+<p>八进制：0，1，2，3，4，5，6，7</p>
+<p>十进制： <code>D</code></p>
+<p>十六进制：0，1，2，3，4，5，6，7，8，9，A,B,C,D,E,F <code>H</code></p>
+<p>基数：每个数位所用到的不同符号的个数</p>
+<p><code>十进制基数</code>=10；即 r=10；<br><code>二进制基数</code>=2 ；即 r=2 ；</p>
+<p>位数：基数大（十进制），位数少；基数小（二进制），位数大。<br>运算（乘法为例）：十进制：100种情况，二进制：4种情况。</p>
+<h4 id="进制转换"><a href="#进制转换" class="headerlink" title="进制转换"></a>进制转换</h4><p>十进制<br>75： 7x10^1 + 5x10^0:7,5是位数。</p>
+<p>r进制类似<br>位数×指数幂，7，5是<code>位权</code><br>位权×指数幂</p>
+<blockquote>
+<p>如何转化？</p>
+</blockquote>
+<p><code>任意进制数转化为十进制数：位权x指数幂</code></p>
+<p><code>十进制转化为任意进制: 整数部分-除以目标基数r，余数是 k0，k1，k2......则短除法/小数部分，乘一个基数r，余数是 k-1，k-2</code></p>
+<p>二进制转化为四进制，八进制，十六进制：<br><code>分组转化法</code>：</p>
+<p>n位一组：<br>四进制 ：2位一组<br>八进制 ：3位一组<br>十六进制：4位一组</p>
+<h4 id="BCD-码"><a href="#BCD-码" class="headerlink" title="BCD 码"></a>BCD 码</h4><p>BCD 快速转化，解决转化麻烦；一一对应</p>
+<h5 id="8421码："><a href="#8421码：" class="headerlink" title="8421码："></a>8421码：</h5><p>8421 指 权值<br><code>映射关系</code><br>十进制 | 0 | 1| 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9<br>:-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |<br>8421码 | 0000 | 0001 | 0010 | 0011 | 0100 | 0101 | 0110 | 0111 | 1000 | 1001 </p>
+<p>eg：<br>十进制：5+8 = 13<br>8421码：0101 + 1000 = 1101 ( 不在表里 )</p>
+<p>8421码中 10（1010）~ 15（1111最大4位二进制数 2^4-1=15）没有，</p>
+<blockquote>
+<p>如何在8421码中表示 13 ？</p>
+</blockquote>
+<p>方法： <code>加 +0110 (6)</code></p>
+<p>13<br>1101+0110 = 1 0011 (即 1 3 ) <code>进位思想</code></p>
+<h5 id="余3码"><a href="#余3码" class="headerlink" title="余3码"></a>余3码</h5><p>余3码 ： 8421码+(0011)<br><code>映射关系</code><br>十进制 | 0 | 1| 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9<br>:-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |<br>余3码 | 0011 | 0100 | 0101 | 0110 | 0111 | 1000 | 1001 | 1010 | 1011 | 1100 </p>
+<h5 id="2421码"><a href="#2421码" class="headerlink" title="2421码"></a>2421码</h5><p>改变权值定义：<br><code>映射关系</code><br>十进制 | 0 | 1| 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9<br>:-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |<br>2421码 | 0000 | 0001 | 0010 | 0011 | 0100 | 1011 | 1100 | 1101 | 1110 | 1111 </p>
+<p>2421：5及5以上都是权值为 2 </p>
+<h4 id="字符和字符串"><a href="#字符和字符串" class="headerlink" title="字符和字符串"></a>字符和字符串</h4><h5 id="字符"><a href="#字符" class="headerlink" title="字符"></a>字符</h5><p>ASCII码</p>
+<ul>
+<li>7位 2进制码</li>
+<li>32-126号字符可印刷；31及以前都不可印刷，127及以后不可印刷 <code>32：空格</code><br>存储单元是字节的整数倍 Byte<h5 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h5><blockquote>
+<p>字符串怎么存在存储单元中</p>
+</blockquote>
+</li>
+</ul>
+<p>大端模式：先存高位字节，再存低位字节<br><code>依据：存储单位容量一组区分高位字节和低位字节</code><br>小端模式：先存低位字节，再存高位字节</p>
+<p>汉字 GB2312-80：汉字+符号 7445 个<br>94个区位码，每个区 94 个位置，每个位置4位，前两位区码，后两位位码</p>
+<p>eg：啊</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">16 01</span><br><span class="line">10H 01H</span><br><span class="line">+20H</span><br><span class="line">国标码</span><br><span class="line">+80H</span><br><span class="line">汉字内码</span><br></pre></td></tr></table></figure>
+
+<p>输入：输入编码<br>输出：汉字字形码</p>
+<h4 id="校验码"><a href="#校验码" class="headerlink" title="校验码"></a>校验码</h4><h5 id="校验原理"><a href="#校验原理" class="headerlink" title="校验原理"></a>校验原理</h5><p>校验信号跳变<br>码距 = 两个 合法 码字上 数字不同位 个数</p>
+<h5 id="奇偶校验码"><a href="#奇偶校验码" class="headerlink" title="奇偶校验码"></a>奇偶校验码</h5><p>奇校验： 奇数个1<br>偶校验： 偶数个1</p>
+<p>校验位 1 位 + 有效信息位</p>
+<h5 id="海明校验码"><a href="#海明校验码" class="headerlink" title="海明校验码"></a>海明校验码</h5><p>思路： 分组校验 -&gt; 多个校验位 -&gt; 校验位标注出错位置</p>
+<blockquote>
+<p>需要多少校验位?</p>
+</blockquote>
+<p>信息位n  校验位k<br><code>2^k</code> 种状态<br>要包含 <code>n+k</code>个位置 <code>1</code> 个正确状态<br>即 <code>2^k &gt;= n + k + 1</code></p>
+<p>校验位在 2 ^ i-1<br>数值 1 对应的位置 异或</p>
+<h5 id="循环冗余校验码（CRC）"><a href="#循环冗余校验码（CRC）" class="headerlink" title="循环冗余校验码（CRC）"></a>循环冗余校验码（CRC）</h5><p>生成多项式G(x)<br><code>G(x) = x^3 + x^2 + 1</code><br><code>信息码 = 101001</code><br>信息位 K ； 校验位 R</p>
+<ol>
+<li><p>确定 K 、 R 、多项式二进制码<br><code>K = 信息码长度 = 6</code><br><code>R = 生成多项式最高次幂 = 3</code><br>校验码位数 <code>K + R = 9</code><br>多项式对应二进制码<br><code>G(x) = 1·x^3 + 1·x^2 + 0·x^1 + 1·x^0 =  1101</code></p>
+</li>
+<li><p>移位<br>信息码低位补 0<br><code>信息码 左移 R 位，低位补零</code><br>101001<code>000</code></p>
+</li>
+<li><p>相除：2步骤得出的结构除以 多项式对应二进制码<br><code>101001000/1101</code> = 110101… 001</p>
+</li>
+</ol>
+<p>对应校验位  = <code>001</code><br>CRC码 = 信息位+校验位 = <code>101001 001</code></p>
+<ul>
+<li>检错<br>发送： 101001 001 记为 C9 C8 C7 C6 C5 C4 C3 C2 C1<br>接受： 101001 001 则 101001 001 用 1101 进行模2除 余数为 000，无错<br>若为 101001 011 则余数为 010 C2出错</li>
+</ul>
+<hr>
+<h2 id="2、计算机的运算方法"><a href="#2、计算机的运算方法" class="headerlink" title="2、计算机的运算方法"></a>2、计算机的运算方法</h2><h3 id="定点数的表示与运算"><a href="#定点数的表示与运算" class="headerlink" title="定点数的表示与运算"></a>定点数的表示与运算</h3><h4 id="无符号数和有符号数"><a href="#无符号数和有符号数" class="headerlink" title="无符号数和有符号数"></a>无符号数和有符号数</h4><p>无符号数：没有符号位<br>0 ~ 2^n-1</p>
+<p>有符号数：包含符号位</p>
+<h4 id="真值与机器数"><a href="#真值与机器数" class="headerlink" title="真值与机器数"></a>真值与机器数</h4><table>
+<thead>
+<tr>
+<th align="center">真值</th>
+<th align="center">机器数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">+ 156D</td>
+<td align="center">0 101 1100B</td>
+</tr>
+<tr>
+<td align="center">- 156D</td>
+<td align="center">1 101 1100B</td>
+</tr>
+</tbody></table>
+<p>小数点:约定的方式 隐含存储<br>纯小数：符号位后面是(隐含)小数点。</p>
+<p>定点小数<br>+0.75D = 0.11B 存储<code>011</code><br>-0.75D = 1.11B 存储<code>111</code><br>表示范围：<br>n位尾数的定点小数：<code>-(1-2^-n) ~ +(1-2^-n)</code></p>
+<p>定点整数<br>+3D = 011.B 存储<code>011</code><br>-3D = 111.B 存储<code>111</code><br>表示范围：<br>n位尾数的定点整数：<code>-(2^n-1) ~ +(2^n-1)</code></p>
+<h4 id="原码、补码、反码、移码"><a href="#原码、补码、反码、移码" class="headerlink" title="原码、补码、反码、移码"></a>原码、补码、反码、移码</h4><h4 id="移位、加减、符号拓展、溢出判断"><a href="#移位、加减、符号拓展、溢出判断" class="headerlink" title="移位、加减、符号拓展、溢出判断"></a>移位、加减、符号拓展、溢出判断</h4><h4 id="乘除、"><a href="#乘除、" class="headerlink" title="乘除、"></a>乘除、</h4><hr>
+<h2 id="3、运算器的设计"><a href="#3、运算器的设计" class="headerlink" title="3、运算器的设计"></a>3、运算器的设计</h2>]]></content>
+      <categories>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>计算机组成原理_4</title>
     <url>/2020/02/07/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/6_%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E8%AF%BE%E7%A8%8B/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86_4/</url>
     <content><![CDATA[<h1 id="计算机组成原理-4"><a href="#计算机组成原理-4" class="headerlink" title="计算机组成原理_4"></a>计算机组成原理_4</h1><blockquote class="blockquote-center"><p>计算机组成原理_4 </p>
@@ -58,7 +164,7 @@
 <li>指令耗时 = CPI x CPU 时钟周期</li>
 <li>整个程序耗时 = 指令总耗时相加<br>= （指令1CPI+指令2CPI+指令3CPI……）x CPU 时钟周期<br>= 平均CPI x 指令周期 x CPU时钟周期</li>
 </ul>
-<p>注：<br>MIPS 每秒执行多少百万条指令<br>MIPS = 指令条数 / （执行时间 x 10^6 ） = 主频/CPI</p>
+<p>注：<br>MIPS 每秒执行多少百万条指令<br>MIPS = 指令条数 / （执行时间 秒 x 10^6 ） = 主频/CPI</p>
 <p>数据通路带宽:数据总线一次所能并行传送数据信息的位数<br>吞吐量:指系统在单位时间内处理请求的数量<br>响应时间:指响应时间，用户请求到结果出现的时间</p>
 ]]></content>
       <categories>
@@ -1094,6 +1200,33 @@
       </tags>
   </entry>
   <entry>
+    <title>Git&amp;Github_3</title>
+    <url>/2020/01/09/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/1_%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/1_Git&amp;Github_%E5%88%86%E5%B8%83%E5%BC%8F%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/Git&amp;Github_3/</url>
+    <content><![CDATA[<h1 id="Git-amp-Github-3"><a href="#Git-amp-Github-3" class="headerlink" title="Git&amp;Github_3"></a>Git&amp;Github_3</h1><blockquote class="blockquote-center"><p>Git&amp;Github_3 </p>
+</blockquote>
+<hr>
+<a id="more"></a>
+<p>The text is as follows :<br><code>git config --list</code> // 查看设置列表 </p>
+<h2 id="1、Git-克隆"><a href="#1、Git-克隆" class="headerlink" title="1、Git 克隆"></a>1、Git 克隆</h2><ul>
+<li><ol>
+<li>将远程仓库的东西复制到本地</li>
+</ol>
+<ul>
+<li>git clone 仓库地址 // 仓库地址由来 clone with https 下的 URL</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="2、"><a href="#2、" class="headerlink" title="2、"></a>2、</h2><hr>
+<h2 id="3、"><a href="#3、" class="headerlink" title="3、"></a>3、</h2>]]></content>
+      <categories>
+        <category>Git&amp;Github</category>
+      </categories>
+      <tags>
+        <tag>Git&amp;Github</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Git&amp;Github_Git</title>
     <url>/2020/01/09/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/1_%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/1_Git&amp;Github_%E5%88%86%E5%B8%83%E5%BC%8F%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/0_Git%E5%9F%BA%E7%A1%80%E7%AE%80%E4%BB%8B/</url>
     <content><![CDATA[<h1 id="Git-amp-Github-Git"><a href="#Git-amp-Github-Git" class="headerlink" title="Git&amp;Github_Git"></a>Git&amp;Github_Git</h1><blockquote class="blockquote-center"><p>Git&amp;Github_Git 命令介绍、名词解释 </p>
@@ -1252,33 +1385,6 @@
 </blockquote>
 <hr>
 ]]></content>
-      <categories>
-        <category>Git&amp;Github</category>
-      </categories>
-      <tags>
-        <tag>Git&amp;Github</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Git&amp;Github_3</title>
-    <url>/2020/01/09/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/1_%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/1_Git&amp;Github_%E5%88%86%E5%B8%83%E5%BC%8F%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/Git&amp;Github_3/</url>
-    <content><![CDATA[<h1 id="Git-amp-Github-3"><a href="#Git-amp-Github-3" class="headerlink" title="Git&amp;Github_3"></a>Git&amp;Github_3</h1><blockquote class="blockquote-center"><p>Git&amp;Github_3 </p>
-</blockquote>
-<hr>
-<a id="more"></a>
-<p>The text is as follows :<br><code>git config --list</code> // 查看设置列表 </p>
-<h2 id="1、Git-克隆"><a href="#1、Git-克隆" class="headerlink" title="1、Git 克隆"></a>1、Git 克隆</h2><ul>
-<li><ol>
-<li>将远程仓库的东西复制到本地</li>
-</ol>
-<ul>
-<li>git clone 仓库地址 // 仓库地址由来 clone with https 下的 URL</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h2 id="2、"><a href="#2、" class="headerlink" title="2、"></a>2、</h2><hr>
-<h2 id="3、"><a href="#3、" class="headerlink" title="3、"></a>3、</h2>]]></content>
       <categories>
         <category>Git&amp;Github</category>
       </categories>
