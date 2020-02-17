@@ -54,9 +54,9 @@
 
 <p>输入：输入编码<br>输出：汉字字形码</p>
 <h4 id="校验码"><a href="#校验码" class="headerlink" title="校验码"></a>校验码</h4><h5 id="校验原理"><a href="#校验原理" class="headerlink" title="校验原理"></a>校验原理</h5><p>校验信号跳变<br>码距 = 两个 合法 码字上 数字不同位 个数</p>
-<h5 id="奇偶校验码"><a href="#奇偶校验码" class="headerlink" title="奇偶校验码"></a>奇偶校验码</h5><p>奇校验： 奇数个1<br>偶校验： 偶数个1</p>
+<h5 id="奇偶校验码"><a href="#奇偶校验码" class="headerlink" title="奇偶校验码"></a>奇偶校验码</h5><p><code>只能检错不能纠错</code><br>奇校验： 奇数个1<br>偶校验： 偶数个1</p>
 <p>校验位 1 位 + 有效信息位</p>
-<h5 id="海明校验码"><a href="#海明校验码" class="headerlink" title="海明校验码"></a>海明校验码</h5><p>思路： 分组校验 -&gt; 多个校验位 -&gt; 校验位标注出错位置</p>
+<h5 id="海明校验码"><a href="#海明校验码" class="headerlink" title="海明校验码"></a>海明校验码</h5><p><code>本质：多重奇偶校验码</code><br>思路： 分组校验 -&gt; 多个校验位 -&gt; 校验位标注出错位置<br>冗余码<code>校验码</code>标注出错位置</p>
 <blockquote>
 <p>需要多少校验位?</p>
 </blockquote>
@@ -97,8 +97,56 @@
 <p>小数点:约定的方式 隐含存储<br>纯小数：符号位后面是(隐含)小数点。</p>
 <p>定点小数<br>+0.75D = 0.11B 存储<code>011</code><br>-0.75D = 1.11B 存储<code>111</code><br>表示范围：<br>n位尾数的定点小数：<code>-(1-2^-n) ~ +(1-2^-n)</code></p>
 <p>定点整数<br>+3D = 011.B 存储<code>011</code><br>-3D = 111.B 存储<code>111</code><br>表示范围：<br>n位尾数的定点整数：<code>-(2^n-1) ~ +(2^n-1)</code></p>
-<h4 id="原码、补码、反码、移码"><a href="#原码、补码、反码、移码" class="headerlink" title="原码、补码、反码、移码"></a>原码、补码、反码、移码</h4><h4 id="移位、加减、符号拓展、溢出判断"><a href="#移位、加减、符号拓展、溢出判断" class="headerlink" title="移位、加减、符号拓展、溢出判断"></a>移位、加减、符号拓展、溢出判断</h4><h4 id="乘除、"><a href="#乘除、" class="headerlink" title="乘除、"></a>乘除、</h4><hr>
-<h2 id="3、运算器的设计"><a href="#3、运算器的设计" class="headerlink" title="3、运算器的设计"></a>3、运算器的设计</h2>]]></content>
+<h4 id="原码、补码、反码、移码"><a href="#原码、补码、反码、移码" class="headerlink" title="原码、补码、反码、移码"></a>原码、补码、反码、移码</h4><h4 id="移位、加减、符号拓展、溢出判断"><a href="#移位、加减、符号拓展、溢出判断" class="headerlink" title="移位、加减、符号拓展、溢出判断"></a>移位、加减、符号拓展、溢出判断</h4><h4 id="乘除"><a href="#乘除" class="headerlink" title="乘除"></a>乘除</h4><h3 id="浮点数的表示与运算"><a href="#浮点数的表示与运算" class="headerlink" title="浮点数的表示与运算"></a>浮点数的表示与运算</h3><h4 id="浮点数的基本格式"><a href="#浮点数的基本格式" class="headerlink" title="浮点数的基本格式"></a>浮点数的基本格式</h4><p>阶码</p>
+<p>尾数</p>
+<h4 id="浮点数的规格化"><a href="#浮点数的规格化" class="headerlink" title="浮点数的规格化"></a>浮点数的规格化</h4><p>规格化： 规定尾数的最高数位必须是一个有效值<br>即满足 尾数 <code>1/r&lt;=|M|&lt;=1</code><br>r一般是2</p>
+<ul>
+<li>原码规格化形式<ul>
+<li>正数</li>
+<li>负数</li>
+</ul>
+</li>
+<li>补码规格化形式<ul>
+<li>正数</li>
+<li>负数</li>
+</ul>
+</li>
+</ul>
+<h4 id="IEEE-754标准"><a href="#IEEE-754标准" class="headerlink" title="IEEE 754标准"></a>IEEE 754标准</h4><ul>
+<li>最高位为数符</li>
+<li>阶码用移码表示</li>
+<li>尾数用原码表示</li>
+<li>隐含表示数值最高位1</li>
+<li>短浮点数、长浮点数、临时浮点数</li>
+</ul>
+<h4 id="表示范围（已经取消）"><a href="#表示范围（已经取消）" class="headerlink" title="表示范围（已经取消）"></a>表示范围（已经取消）</h4><h4 id="浮点数的运算"><a href="#浮点数的运算" class="headerlink" title="浮点数的运算"></a>浮点数的运算</h4><ul>
+<li>加减运算<ul>
+<li>真值到机器数的转换</li>
+<li>对阶</li>
+<li>尾数加减</li>
+<li>规格化</li>
+<li>舍入<ul>
+<li>“0”舍“1”入法</li>
+<li>恒置“1”法</li>
+</ul>
+</li>
+<li>溢出判断<ul>
+<li>阶码上溢，中断处理</li>
+<li>阶码下溢，按机器0处理</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>强制类型转换<ul>
+<li>无损</li>
+<li>无符号数与有符号数</li>
+<li>int和float（精度和表示范围）</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="3、运算器的设计"><a href="#3、运算器的设计" class="headerlink" title="3、运算器的设计"></a>3、运算器的设计</h2><p>(arithmetic and logic unit)ALU</p>
+]]></content>
       <categories>
         <category>计算机组成原理</category>
       </categories>
@@ -271,6 +319,41 @@
 <li><p>考试时候：默念。</p>
 </li>
 </ol>
+<hr>
+<p>LUX</p>
+<p>第一课<br>动力、毅力、能力<br>生物基础（生而为人）-学习的基础</p>
+<ul>
+<li>生物节律</li>
+<li>休息<ul>
+<li>糖</li>
+<li>休息时间<ul>
+<li>小睡(15min) 咖啡因</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>第二课<br>1天小睡，每学习单元都是10-15min睡眠<br>判断生物节律到底是什么样子的人？早起鸟，夜猫子，中间人</p>
+<p>第三课<br>机械性运动可以一心两用，其他模式都是一心一用</p>
+<p>主动思考：主动运用，才可以真正输出性学习。（有意识输出）</p>
+<blockquote>
+<p>碎片化时间和整体时间？如何利用？</p>
+</blockquote>
+<ul>
+<li><p>程序化：整体时间，整体利用。化碎片化时间为程序化。</p>
+<ul>
+<li>心流： Flow（赤赤会做到这个，我以前也是这样）</li>
+<li>心流：长时间专注。//刻意练习。</li>
+<li>心流：显著提升学习效率<br>碎片化闭环，完成下一任务的开头|整体时间闭环<blockquote>
+<p>找出碎片化时间处理不需要脑力的活动。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>设定 小部分阶段性目标</p>
+</li>
+</ul>
+<p>将优先级最低的最不重要的先做。</p>
 ]]></content>
       <categories>
         <category>学习方法</category>
@@ -1200,6 +1283,33 @@
       </tags>
   </entry>
   <entry>
+    <title>Git&amp;Github_3</title>
+    <url>/2020/01/09/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/1_%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/1_Git&amp;Github_%E5%88%86%E5%B8%83%E5%BC%8F%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/Git&amp;Github_3/</url>
+    <content><![CDATA[<h1 id="Git-amp-Github-3"><a href="#Git-amp-Github-3" class="headerlink" title="Git&amp;Github_3"></a>Git&amp;Github_3</h1><blockquote class="blockquote-center"><p>Git&amp;Github_3 </p>
+</blockquote>
+<hr>
+<a id="more"></a>
+<p>The text is as follows :<br><code>git config --list</code> // 查看设置列表 </p>
+<h2 id="1、Git-克隆"><a href="#1、Git-克隆" class="headerlink" title="1、Git 克隆"></a>1、Git 克隆</h2><ul>
+<li><ol>
+<li>将远程仓库的东西复制到本地</li>
+</ol>
+<ul>
+<li>git clone 仓库地址 // 仓库地址由来 clone with https 下的 URL</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="2、"><a href="#2、" class="headerlink" title="2、"></a>2、</h2><hr>
+<h2 id="3、"><a href="#3、" class="headerlink" title="3、"></a>3、</h2>]]></content>
+      <categories>
+        <category>Git&amp;Github</category>
+      </categories>
+      <tags>
+        <tag>Git&amp;Github</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Git&amp;Github_Git</title>
     <url>/2020/01/09/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/1_%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/1_Git&amp;Github_%E5%88%86%E5%B8%83%E5%BC%8F%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/0_Git%E5%9F%BA%E7%A1%80%E7%AE%80%E4%BB%8B/</url>
     <content><![CDATA[<h1 id="Git-amp-Github-Git"><a href="#Git-amp-Github-Git" class="headerlink" title="Git&amp;Github_Git"></a>Git&amp;Github_Git</h1><blockquote class="blockquote-center"><p>Git&amp;Github_Git 命令介绍、名词解释 </p>
@@ -1358,33 +1468,6 @@
 </blockquote>
 <hr>
 ]]></content>
-      <categories>
-        <category>Git&amp;Github</category>
-      </categories>
-      <tags>
-        <tag>Git&amp;Github</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Git&amp;Github_3</title>
-    <url>/2020/01/09/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/1_%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/1_Git&amp;Github_%E5%88%86%E5%B8%83%E5%BC%8F%E4%BB%A3%E7%A0%81%E7%AE%A1%E7%90%86/Git&amp;Github_3/</url>
-    <content><![CDATA[<h1 id="Git-amp-Github-3"><a href="#Git-amp-Github-3" class="headerlink" title="Git&amp;Github_3"></a>Git&amp;Github_3</h1><blockquote class="blockquote-center"><p>Git&amp;Github_3 </p>
-</blockquote>
-<hr>
-<a id="more"></a>
-<p>The text is as follows :<br><code>git config --list</code> // 查看设置列表 </p>
-<h2 id="1、Git-克隆"><a href="#1、Git-克隆" class="headerlink" title="1、Git 克隆"></a>1、Git 克隆</h2><ul>
-<li><ol>
-<li>将远程仓库的东西复制到本地</li>
-</ol>
-<ul>
-<li>git clone 仓库地址 // 仓库地址由来 clone with https 下的 URL</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h2 id="2、"><a href="#2、" class="headerlink" title="2、"></a>2、</h2><hr>
-<h2 id="3、"><a href="#3、" class="headerlink" title="3、"></a>3、</h2>]]></content>
       <categories>
         <category>Git&amp;Github</category>
       </categories>
