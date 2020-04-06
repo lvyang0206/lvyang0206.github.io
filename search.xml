@@ -1,6 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>服务器</title>
+    <url>/2020/04/06/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/8_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9F%A5%E8%AF%86/%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
+    <content><![CDATA[<h1 id="服务器软件"><a href="#服务器软件" class="headerlink" title="服务器软件"></a>服务器软件</h1><blockquote class="blockquote-center"><p>服务器软件 </p>
+</blockquote>
+
+<hr>
+<a id="more"></a>
+<p>The text is as follows :</p>
+<h2 id="1、静态服务和动态服务"><a href="#1、静态服务和动态服务" class="headerlink" title="1、静态服务和动态服务"></a>1、静态服务和动态服务</h2><ul>
+<li><ol>
+<li>静态服务 &amp; 动态服务</li>
+</ol>
+</li>
+<li>静态服务返回资源-静态资源（不可变）</li>
+<li>动态服务返回资源-动态资源（根据数据改变）</li>
+</ul>
+<hr>
+<h2 id="2、各服务器概念"><a href="#2、各服务器概念" class="headerlink" title="2、各服务器概念"></a>2、各服务器概念</h2><ul>
+<li>Web服务器<br>响应用户需求，提供服务</li>
+<li>HTTP服务器<br>基本上HTTP服务器就是Web服务器，传递静态资源传输支持（理解为静态服务器）。</li>
+<li>应用服务器<br>动态服务器、Web容器、应用容器都是相等的概念，不同用户拿到的返回的内容不一样。<br>应用服务器也可以做HTTP服务器来用，但是不常这么做。</li>
+</ul>
+<hr>
+<h2 id="3、各种服务器"><a href="#3、各种服务器" class="headerlink" title="3、各种服务器"></a>3、各种服务器</h2><ul>
+<li><p>Nginx<br>静态服务器，抗冲击，可以二次开发编程，变成应用服务器。</p>
+</li>
+<li><p>Tomcat<br>动态服务器。Java web容器，提供动态服务，需要Java环境，做JavaEE动态服务器。也可以提供静态服务。轻量级的服务器。</p>
+</li>
+<li><p>Tengine<br>大型服务器</p>
+</li>
+<li><p>Apache HTTP Server<br>静态服务器。</p>
+</li>
+<li><p>IIS 微软的服务器<br>不开源，具有应用服务器功能的HTTP服务器。</p>
+</li>
+<li><p>Jetty<br>类似Tomcat，Jetty开源的提供动态和静态服务，功能上等于Tomcat，配置上更简单。</p>
+</li>
+<li><p>JBoss<br>动态应用服务器，JavaEE重量级应用服务平台。</p>
+</li>
+<li><p>Wildfly</p>
+</li>
+<li><p>WebLogic<br>Olace，商业软件，商业化组件。</p>
+</li>
+<li><p>Websphere<br>IBM公司的。</p>
+</li>
+</ul>
+<p><strong><em>截取笔记</em></strong><br>静态服务：主要提供静态资源，不同用户访问到的资源相同<br>动态服务：提供动态服务，不同用户访问到的资源不同<br>服务器的几个叫法：<br> web服务器：广义上来说，就是响应用户的需求，提供服务，当下所有的服务器软件都可以称之为web服务器软件<br> HTTP服务器(静态服务)：使用HTTP协议传输资源，提供服务<br> 应用服务器(动态服务)：一个特定应用的承载容器<br>常见的轻量级服务器软件：<br> 1、Nginx：典型的静态服务器，可做反向代理、负载均衡，一般放在最前面直面用户，和后端Tomcat打配合；纯C写的，性能贼高、内存消耗极少、稳定性也相当好，互联网公司重度使用<br> 2、Tengine：阿里出品，基于Nginx服务器做的改造(加强和封装)，对大流量场景做了很多高级功能，性能、稳定性优秀<br> 3、Apache http server：也是静态服务器，但是不如Nginx<br> 3、IIS：微软开发，只能用在Windows下，具有应用服务器能力的http服务器<br> 4、Tomcat：Apache出品，典型的应用服务器软件，符合Servlet标准的应用容器，也可以提供http服务，但一般不会作为http服务器；是Spring Boot框架默认的内置服务器<br> 5、Jetty：跟Tomcat是一个性质的东西，符合Servlet标准的应用容器，也是Spring Boot框架支持的服务器，但不是默认的<br> 6、Undertow：红帽子出品，跟Tomcat、Jetty一样也是Spring Boot框架支持的服务器，但不是默认的；高并发时性能优于Tomcat、Jetty<br>几款商用重量级的服务器软件：<br> 1、JBoss(从8版开始更名为WildFly)：不仅是Servlet应用容器，更是EJB的应用容器，整套JavaEE框架部署的解决方案<br> 2、WebLogic：Oracle公司出品，用于部署企业级JavaEE应用，全能型，几乎支持JavaEE所有的应用规范<br> 3、WebSphere：IBM公司出品，支持更多JavaEE的应用规范的综合应用服务器</p>
+]]></content>
+      <categories>
+        <category>计算机知识</category>
+      </categories>
+      <tags>
+        <tag>计算机知识</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>张宇2012直播</title>
     <url>/2020/02/28/6_%E5%85%B6%E4%BB%96%EF%BC%88%E4%B8%8D%E5%A5%BD%E5%88%86%E7%B1%BB%EF%BC%89/%E5%BC%A0%E5%AE%87%E7%9B%B4%E6%92%AD_0212/</url>
     <content><![CDATA[<h1 id="张宇2012直播"><a href="#张宇2012直播" class="headerlink" title="张宇2012直播"></a>张宇2012直播</h1><blockquote class="blockquote-center"><p>张宇2012直播 </p>
