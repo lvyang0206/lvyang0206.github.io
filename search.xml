@@ -24,22 +24,22 @@
 <blockquote>
 <p>算数表达式包含多个基本数据类型，算数表达式的类型会自动进行提升。<br>byte，short，char 会自动提升至 int<br>若有较高数据类型，则会自动提升至较高数据类型</p>
 </blockquote>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	字符的"+"操作</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OperatorDemo02</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">//定义两个变量</span></span><br><span class="line">		<span class="keyword">int</span> i = <span class="number">10</span>;</span><br><span class="line">		<span class="keyword">char</span> c = <span class="string">'A'</span>; <span class="comment">//'A'的值是65</span></span><br><span class="line">		c = <span class="string">'a'</span>; <span class="comment">//'a'的值是97</span></span><br><span class="line">		c = <span class="string">'0'</span>; <span class="comment">//'0'的值是48</span></span><br><span class="line">		System.out.println(i + c);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//char ch = i + c;</span></span><br><span class="line">		<span class="comment">//char类型会被自动提升为int类型</span></span><br><span class="line">		<span class="keyword">int</span> j = i + c;</span><br><span class="line">		System.out.println(j);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//int k = 10 + 13.14;</span></span><br><span class="line">		<span class="keyword">double</span> d = <span class="number">10</span> + <span class="number">13.14</span>;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">/*</span><br><span class="line">	字符的&quot;+&quot;操作</span><br><span class="line">*/</span><br><span class="line">public class OperatorDemo02 &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		//定义两个变量</span><br><span class="line">		int i = 10;</span><br><span class="line">		char c = &apos;A&apos;; //&apos;A&apos;的值是65</span><br><span class="line">		c = &apos;a&apos;; //&apos;a&apos;的值是97</span><br><span class="line">		c = &apos;0&apos;; //&apos;0&apos;的值是48</span><br><span class="line">		System.out.println(i + c);</span><br><span class="line">		</span><br><span class="line">		//char ch = i + c;</span><br><span class="line">		//char类型会被自动提升为int类型</span><br><span class="line">		int j = i + c;</span><br><span class="line">		System.out.println(j);</span><br><span class="line">		</span><br><span class="line">		//int k = 10 + 13.14;</span><br><span class="line">		double d = 10 + 13.14;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>字符串＋操作，是拼接操作。顺序执行</p>
 </blockquote>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	字符串的"+"操作</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OperatorDemo03</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"it"</span> + <span class="string">"heima"</span>);</span><br><span class="line">		System.out.println(<span class="string">"itheima"</span> + <span class="number">666</span>);</span><br><span class="line">		System.out.println(<span class="number">666</span> + <span class="string">"itheima"</span>);</span><br><span class="line">		</span><br><span class="line">		System.out.println(<span class="string">"黑马"</span> + <span class="number">6</span> + <span class="number">66</span>);<span class="comment">//先拼接，再运算</span></span><br><span class="line">		System.out.println(<span class="number">1</span> + <span class="number">99</span> + <span class="string">"年黑马"</span>);<span class="comment">//先运算，再拼接</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">/*</span><br><span class="line">	字符串的&quot;+&quot;操作</span><br><span class="line">*/</span><br><span class="line">public class OperatorDemo03 &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		System.out.println(&quot;it&quot; + &quot;heima&quot;);</span><br><span class="line">		System.out.println(&quot;itheima&quot; + 666);</span><br><span class="line">		System.out.println(666 + &quot;itheima&quot;);</span><br><span class="line">		</span><br><span class="line">		System.out.println(&quot;黑马&quot; + 6 + 66);//先拼接，再运算</span><br><span class="line">		System.out.println(1 + 99 + &quot;年黑马&quot;);//先运算，再拼接</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>End</p>
 <hr>
 <h2 id="3、赋值运算符"><a href="#3、赋值运算符" class="headerlink" title="3、赋值运算符"></a>3、赋值运算符</h2><ul>
-<li>扩展的赋值运算符+=，-=类隐藏了强制类型转换。<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*	</span></span><br><span class="line"><span class="comment">	赋值运算符</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">OperatorDemo</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">//把10赋值给int类型的变量i</span></span><br><span class="line">		<span class="keyword">int</span> i = <span class="number">10</span>;</span><br><span class="line">		System.out.println(<span class="string">"i:"</span> + i);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">// += 把左边和右边的数据做加法操作，结果赋值给左边</span></span><br><span class="line">		i += <span class="number">20</span>;</span><br><span class="line">		<span class="comment">//i = i + 20;</span></span><br><span class="line">		System.out.println(<span class="string">"i:"</span> + i);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//注意：扩展的赋值运算符底层隐含了强制类型转换</span></span><br><span class="line">		<span class="keyword">short</span> s = <span class="number">10</span>;</span><br><span class="line">		s += <span class="number">20</span>;</span><br><span class="line">		<span class="comment">//s = (short)(s + 20);</span></span><br><span class="line">		System.out.println(<span class="string">"s:"</span> + s);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>扩展的赋值运算符+=，-=类隐藏了强制类型转换。<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">/*	</span><br><span class="line">	赋值运算符</span><br><span class="line">*/</span><br><span class="line">public class OperatorDemo &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		//把10赋值给int类型的变量i</span><br><span class="line">		int i = 10;</span><br><span class="line">		System.out.println(&quot;i:&quot; + i);</span><br><span class="line">		</span><br><span class="line">		// += 把左边和右边的数据做加法操作，结果赋值给左边</span><br><span class="line">		i += 20;</span><br><span class="line">		//i = i + 20;</span><br><span class="line">		System.out.println(&quot;i:&quot; + i);</span><br><span class="line">		</span><br><span class="line">		//注意：扩展的赋值运算符底层隐含了强制类型转换</span><br><span class="line">		short s = 10;</span><br><span class="line">		s += 20;</span><br><span class="line">		//s = (short)(s + 20);</span><br><span class="line">		System.out.println(&quot;s:&quot; + s);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
 <p>End</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Untitled</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">short</span> s = <span class="number">10</span> ;</span><br><span class="line">		s = s + <span class="number">20</span> ;</span><br><span class="line">		System.out.prinln(s);</span><br><span class="line">        <span class="comment">//Untitled.java:5: error: incompatible types: possible lossy conversion from int to short</span></span><br><span class="line">		s = s + <span class="number">20</span> ;<span class="comment">//不能输出，没有强制类型转换</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Untitled &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		short s = 10 ;</span><br><span class="line">		s = s + 20 ;</span><br><span class="line">		System.out.prinln(s);</span><br><span class="line">        //Untitled.java:5: error: incompatible types: possible lossy conversion from int to short</span><br><span class="line">		s = s + 20 ;//不能输出，没有强制类型转换</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>End</p>
 <hr>
@@ -3350,25 +3350,6 @@
       </tags>
   </entry>
   <entry>
-    <title>JSP不用学</title>
-    <url>/2019/12/28/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/4_%E5%AD%A6%E4%B9%A0%E9%81%BF%E5%9D%91/JSP%E4%B8%8D%E7%94%A8%E5%AD%A6/</url>
-    <content><![CDATA[<h1 id="JSP不用学"><a href="#JSP不用学" class="headerlink" title="JSP不用学"></a>JSP不用学</h1><blockquote class="blockquote-center"><p>JSP不用学 </p>
-</blockquote>
-<hr>
-<a id="more"></a>
-<p>1.JSP不用学<br>前后端耦合和依赖比较强，所以被淘汰出局</p>
-<p>2.什么是JSP<br>Jsp Java Server page<br>Java 服务器页面<br>HTML文件中插入JAVA程序段和JSP标记，形成JSP文件<br>高耦合东西，网页模板技术。<br>网页=样式+数据<br>构建和驱动由服务器进行，叫服务端网页模板。</p>
-<p>控制层<br>业务层<br>DAO层</p>
-<p>3、目前都是前后端分离<br>JSP模板技术全部出局</p>
-]]></content>
-      <categories>
-        <category>计算机科学与技术</category>
-      </categories>
-      <tags>
-        <tag>JSP</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>编写简历</title>
     <url>/2019/12/28/3_%E6%8B%9B%E8%81%98%E8%80%83%E7%A0%94%E7%9B%B8%E5%85%B3/1_%E7%AE%80%E5%8E%86%E7%BC%96%E5%86%99/%E7%BC%96%E5%86%99%E7%AE%80%E5%8E%86%E6%A1%86%E6%9E%B6_1/</url>
     <content><![CDATA[<h1 id="如何编写简历"><a href="#如何编写简历" class="headerlink" title="如何编写简历"></a>如何编写简历</h1><blockquote class="blockquote-center"><p>如何编写简历 </p>
@@ -3389,6 +3370,25 @@
       </categories>
       <tags>
         <tag>工作招聘</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JSP不用学</title>
+    <url>/2019/12/28/1_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF/4_%E5%AD%A6%E4%B9%A0%E9%81%BF%E5%9D%91/JSP%E4%B8%8D%E7%94%A8%E5%AD%A6/</url>
+    <content><![CDATA[<h1 id="JSP不用学"><a href="#JSP不用学" class="headerlink" title="JSP不用学"></a>JSP不用学</h1><blockquote class="blockquote-center"><p>JSP不用学 </p>
+</blockquote>
+<hr>
+<a id="more"></a>
+<p>1.JSP不用学<br>前后端耦合和依赖比较强，所以被淘汰出局</p>
+<p>2.什么是JSP<br>Jsp Java Server page<br>Java 服务器页面<br>HTML文件中插入JAVA程序段和JSP标记，形成JSP文件<br>高耦合东西，网页模板技术。<br>网页=样式+数据<br>构建和驱动由服务器进行，叫服务端网页模板。</p>
+<p>控制层<br>业务层<br>DAO层</p>
+<p>3、目前都是前后端分离<br>JSP模板技术全部出局</p>
+]]></content>
+      <categories>
+        <category>计算机科学与技术</category>
+      </categories>
+      <tags>
+        <tag>JSP</tag>
       </tags>
   </entry>
   <entry>
