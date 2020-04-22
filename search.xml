@@ -30,10 +30,13 @@
 <p>方法体代码：</p>
 <p>​    功能代码</p>
 <ul>
-<li><p>方法生命类型，必须return 返回相应数据</p>
-</li>
-<li><p>void ，则方法中一定不能返回数据，不能用return。</p>
-</li>
+<li>方法生命类型，必须return 返回相应数据</li>
+<li>void ，则方法中一定不能返回数据，不能用return。</li>
+</ul>
+<p>方法必须写到main方法后面吗?</p>
+<p>答：</p>
+<ul>
+<li>写到前面也可以 位置不影响 但是不能写在mian方法里面。</li>
 </ul>
 <h2 id="02-方法使用"><a href="#02-方法使用" class="headerlink" title="02 方法使用"></a>02 方法使用</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MethodDemo01P</span></span>&#123;</span><br><span class="line">    <span class="comment">// main 方法是最重要的方法</span></span><br><span class="line">    <span class="comment">// main 方法是JVM 自动触发执行的</span></span><br><span class="line">    	<span class="comment">//修饰符 public static</span></span><br><span class="line">    <span class="comment">/* 方法名称 main</span></span><br><span class="line"><span class="comment">    * 形参列表 String[] args</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="comment">//定义方法的两个明确，根据需求判断。</span></span><br><span class="line">        <span class="comment">//1、方法是否需要申明返回值类型。</span></span><br><span class="line">        <span class="comment">//2、方法是否需要申明形参列表。</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//方法封装相同功能代码。提高代码复用。</span></span><br><span class="line">    <span class="comment">//方法必须调用才可以执行。</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -48,7 +51,19 @@
 <li>直接调用</li>
 </ul>
 <h2 id="03-return"><a href="#03-return" class="headerlink" title="03 return"></a>03 return</h2><h3 id="return-结束方法，无论在循环还是if中。"><a href="#return-结束方法，无论在循环还是if中。" class="headerlink" title="return 结束方法，无论在循环还是if中。"></a>return 结束方法，无论在循环还是if中。</h3><p>类似循环中的break；</p>
-<h2 id="04-实参和形参"><a href="#04-实参和形参" class="headerlink" title="04 实参和形参"></a>04 实参和形参</h2><ul>
+<p>无返回的方法，后面可以写return，但是return后面不返回任何东西吗?</p>
+<p>答：</p>
+<ul>
+<li>对的,当方法的返回值类型为void时,方法体中的return只能单独存在,表示结束方法执行,后面不能跟任何内容。</li>
+<li>无返回值的return 用来结束方法 无返回值的void方法默认隐含一个无返回值的return。</li>
+</ul>
+<p>return变量，该变量在main方法中有意义吗？</p>
+<p>答：</p>
+<ul>
+<li>我们在main方法中调用的方法,被调用的方法return 变量,在main方法的调用处会接收到这个被return的变量代表的值,有意义。</li>
+</ul>
+<h2 id="04-实参和形参"><a href="#04-实参和形参" class="headerlink" title="04 实参和形参"></a>04 实参和形参</h2><p>方法的调用时传进来的参数为实参，在方法定义时的参数时形参。</p>
+<ul>
 <li><p>形参变量接受数据</p>
 <ul>
 <li>形参定义的时候绝对不能给初始值</li>
